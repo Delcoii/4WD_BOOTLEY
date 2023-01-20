@@ -19,13 +19,14 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
-#include "tim.h"
+// #include "tim.h"   // 모터 라이브러리에 추가됨
 #include "usart.h"
 #include "gpio.h"
 
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "MY36GP_3650.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -113,8 +114,10 @@ int main(void)
       HAL_ADC_Stop(&hadc1);
 
       voltage = float_map(adc_value, 0, 4095, 0, 3.3);
-      
 
+      motorVelocityCheck(adc_value, CW);
+
+      printf("voltage : %d \r\n", voltage);
 
 
   }

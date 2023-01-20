@@ -55,7 +55,7 @@ void FL_RunMotor(uint16_t rpm, uint8_t dir)
     FL_BrakeDisable();
     
     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
-    TIM1->CCR1 = map(rpm, 0, MAX_RPM, 0, 999);           // 0 ~ 3.3V의 전압을 0~571RPM으로 매핑
+    TIM1->CCR1 = uint32_map(rpm, 0, MAX_RPM, 0, 999);           // 0 ~ 3.3V의 전압을 0~571RPM으로 매핑
 
 }
 
@@ -68,6 +68,6 @@ void motorVelocityCheck(uint16_t adc_value, uint8_t dir)
     FL_BrakeDisable();
 
     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
-    TIM1->CCR1 = map(adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+    TIM1->CCR1 = uint32_map(adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
 
 }
