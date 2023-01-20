@@ -1,15 +1,11 @@
-/*
- * Author   : Delcoii
- * Date     : 23.01.20
+/* 
+ *
+ * MY36GP_3650.c
  * 
- * 건국대학교 팀카이 미니자율주행자동차 소모임
- * 행복찾아 멀리 가지 말자.
- * 다들 성공합시다
+ * Author       : Delcoii
+ * Date         : 23.01.20
+ * parameter    : TIM1, GPIO outputs
  * 
- * adc, 타이머(pwm), 핀 번호 define
- * 
- * 수신기에서 6채널의 pwm신호를 lpf를 통해 analog값으로 변환한 후
- * adc1 모듈을 통해 multi-channel single-conversion 구현
  * 
 */
 
