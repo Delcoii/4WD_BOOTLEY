@@ -19,9 +19,14 @@ extern TIM_HandleTypeDef htim1;     // 모터 속도 신호를 pwm으로 보냄
 */
 
 
-long map(long x, long in_min, long in_max, long out_min, long out_max)
+float float_map(float x, float in_min, float in_max, float out_min, float out_max)
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max)
+{
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 

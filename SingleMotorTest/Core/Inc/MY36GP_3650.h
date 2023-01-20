@@ -44,7 +44,8 @@
 
 #define MAX_RPM     571
 
-
+float float_map(float x, float in_min, float in_max, float out_min, float out_max);
+uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max);
 
 void FL_BrakeEnable(void);
 void FL_BrakeDisable(void);

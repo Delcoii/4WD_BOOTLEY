@@ -66,6 +66,11 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+    
+    uint16_t adc_value;
+    uint16_t ccr_value;
+    float voltage;
+
 
   /* USER CODE END 1 */
 
@@ -101,6 +106,17 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+      HAL_ADC_Start(&hadc1);
+      HAL_ADC_PollForConversion(&hadc1, 100);   // adc값 읽힐 때까지 최대 100ms 대기
+      adc_value = HAL_ADC_GetValue(&hadc1);
+      HAL_ADC_Stop(&hadc1);
+
+      voltage = float_map(adc_value, 0, 4095, 0, 3.3);
+      
+
+
+
   }
   /* USER CODE END 3 */
 }
