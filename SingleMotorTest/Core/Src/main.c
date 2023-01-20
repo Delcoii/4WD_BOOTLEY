@@ -19,14 +19,15 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
-// #include "tim.h"   // 모터 라이브러리에 추가됨
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
 #include "MY36GP_3650.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,9 +68,9 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-    
-    uint16_t adc_value;
-    uint16_t ccr_value;
+
+    uint32_t adc_value;
+    uint32_t ccr_value;
     float voltage;
 
 
@@ -98,6 +99,8 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
 
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,11 +116,13 @@ int main(void)
       adc_value = HAL_ADC_GetValue(&hadc1);
       HAL_ADC_Stop(&hadc1);
 
-      voltage = float_map(adc_value, 0, 4095, 0, 3.3);
+      voltage = float_map((float)adc_value, 0.0, 4095.0, 0.0, 3.3);
+      ccr_value = uint32_map(adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+//      TIM1->CCR1 = ccr_value;
+      motorVelocityCheck(adc_value, CCW);
+//      TIM1->CCR1 = uint16_map(adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
 
-      motorVelocityCheck(adc_value, CW);
-
-      printf("voltage : %d \r\n", voltage);
+      printf("adc value : %d\tvoltage : %f\tccr : %d \r\n", adc_value, voltage, ccr_value);
 
 
   }
