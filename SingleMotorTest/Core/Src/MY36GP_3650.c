@@ -68,6 +68,6 @@ void motorVelocityCheck(uint16_t adc_value, uint8_t dir)
     FL_BrakeDisable();
 
     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
-    TIM1->CCR1 = map(adc_value, 0, MAX_RPM, 0, 999);
+    TIM1->CCR1 = map(adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
 
 }

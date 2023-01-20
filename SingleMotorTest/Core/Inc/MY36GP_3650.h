@@ -11,6 +11,11 @@
  * 
  * 
  * TIM1 이용, 목표 RPM에 따라 pulse신호 발생
+ * FCPU			: 84Mhz
+ * Prescaler	: 84 - 1
+ * Counter		: 400 - 1
+ * 약 25Khz.?
+ 
  * CW / CCW 핀으로 모터 방향 신호 인가
  * 경우에 따라 BRAKE 핀에 신호 인가
  * 
@@ -36,7 +41,8 @@
 
 ///////////////////////////////////////////////////
 
-
+#define ADC_MAX_VALUE       4095
+#define PWM_MAX_VALUE       999
 
 
 #define CW          0
