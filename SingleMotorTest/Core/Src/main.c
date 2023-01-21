@@ -59,6 +59,24 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+uint32_t u32_FL_captured_val_us;
+
+/*
+ * 모터 pulse의 주파수를 측정
+ * rising, falling edge에서 주파수값 갱신
+ * TIM3에서 prescaler (84-1)로 설정함
+ */
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+{
+
+	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)  // if FL pulse edge detected
+	{
+		u32_FL_captured_val_us = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+
+	}
+
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -69,10 +87,10 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
-    uint32_t adc_value;
-    uint32_t ccr_value;
-    float voltage;
-
+	uint32_t u32_adc_value;
+    uint32_t u32_ccr_value;
+    float f_voltage;
+    float f_FL_period_ms;
 
   /* USER CODE END 1 */
 
@@ -97,9 +115,11 @@ int main(void)
   MX_USART2_UART_Init();
   MX_ADC1_Init();
   MX_TIM1_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  	  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  	  HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
 
   /* USER CODE END 2 */
 
@@ -113,17 +133,18 @@ int main(void)
 
       HAL_ADC_Start(&hadc1);
       HAL_ADC_PollForConversion(&hadc1, 100);   // adc값 읽힐 때까지 최대 100ms 대기
-      adc_value = HAL_ADC_GetValue(&hadc1);
+      u32_adc_value = HAL_ADC_GetValue(&hadc1);
       HAL_ADC_Stop(&hadc1);
 
-      voltage = float_map((float)adc_value, 0.0, 4095.0, 0.0, 3.3);
-      ccr_value = uint32_map(adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
-//      TIM1->CCR1 = ccr_value;
-      motorVelocityCheck(adc_value, CCW);
-//      TIM1->CCR1 = uint16_map(adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      f_voltage = float_map((float)u32_adc_value, 0.0, 4095.0, 0.0, 3.3);
+      u32_ccr_value = uint32_map(u32_adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
 
-      printf("adc value : %d\tvoltage : %f\tccr : %d \r\n", adc_value, voltage, ccr_value);
+      motorVelocityCheck(u32_adc_value, CCW);
 
+      f_FL_period_ms = (float)u32_FL_captured_val_us / 1000;	// ms 단위로 변환
+
+      printf("adc value : %d\tvoltage : %f\tccr : %d \r\n", u32_adc_value, f_voltage, u32_ccr_value);
+      printf("motor pulse : %f \r\n\n", f_FL_period_ms);
 
   }
   /* USER CODE END 3 */
