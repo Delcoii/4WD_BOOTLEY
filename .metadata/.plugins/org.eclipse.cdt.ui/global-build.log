@@ -272,3 +272,59 @@ Finished building: default.size.stdout
  
 Finished building: SingleMotorTest.list
  
+02:08:54 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32688	    484	   1876	  35048	   88e8	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+02:08:57 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32688	    484	   1876	  35048	   88e8	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+02:10:10 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:146:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  146 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:146:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:146:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  146 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:146:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  146 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+arm-none-eabi-gcc -o "SingleMotorTest.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest.elf
+ 
+arm-none-eabi-size   SingleMotorTest.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest.elf  > "SingleMotorTest.list"
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1876	  35040	   88e0	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest.list
+ 
+02:10:11 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1876	  35040	   88e0	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 

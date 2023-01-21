@@ -2,6 +2,7 @@
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
 CONTENT_ASSIST_BACKGROUND_COLOR=207,227,247
 CONTENT_ASSIST_FOREGROUND_COLOR=5,15,26
+UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
 content_assist_parameters_background=207,227,247
 content_assist_parameters_foreground=5,15,26
 content_assist_proposals_background=207,227,247
