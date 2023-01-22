@@ -43,7 +43,7 @@ void FL_BrakeDisable(void)
 // CW 일 때 pin reset, CCW일 때 set
 void FL_SetDir(uint8_t dir)
 {
-	HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PNI, dir);
+	HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
 }
 
 /*
