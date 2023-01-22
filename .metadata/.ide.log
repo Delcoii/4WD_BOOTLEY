@@ -1787,3 +1787,11 @@
 2023-01-22 01:19:08,613 [INFO] CADModel:164 - CPN selected for project levelSTM32F446RET6
 2023-01-22 01:19:08,613 [INFO] CADModel:113 - Register for checkConnection events
 2023-01-22 01:19:08,653 [INFO] OpenFileManager:327 - Restore cursor
+2023-01-22 02:24:57,986 [INFO] JxBrowserEngine:114 - Initiate JxBrowser Engine with user profile folder
+2023-01-22 02:24:58,923 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-01-22 02:24:58,928 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-01-22 02:24:59,226 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-01-23 02:51:22,184 [INFO] Activator:179 - 
+
+
+2023-01-23 02:51:22,184 [INFO] Activator:180 - !SESSION log4j initialized

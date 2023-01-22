@@ -21,9 +21,13 @@
  * CW / CCW 핀으로 모터 방향 신호 인가
  * 경우에 따라 BRAKE 핀에 신호 인가
  *
+ *********************************************
+ * 모터 스펙
+ * 최대 571 RPM, 정격 450 RPM
+ * 정격 토크 3kg*cm
+ * 6 ppr
+ * datasheet랑은 다르게 0V일 때 최대속도, 1.3V 이상일 때 멈춤
  *******************************************/
-
-
 
 
 #ifndef __MY36GP_3650_H__
@@ -60,6 +64,7 @@ uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_m
 
 void FL_BrakeEnable(void);
 void FL_BrakeDisable(void);
+void FL_SetDir(uint8_t dir);
 void FL_RunMotor(uint16_t rpm, uint8_t dir);
 void motorVelocityCheck(uint16_t adc_value, uint8_t dir);
 

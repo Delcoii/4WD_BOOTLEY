@@ -40,6 +40,11 @@ void FL_BrakeDisable(void)
     HAL_GPIO_WritePin(FL_BRAKE_PORT, FL_BRAKE_PIN, GPIO_PIN_SET);
 }
 
+// CW 일 때 pin reset, CCW일 때 set
+void FL_SetDir(uint8_t dir)
+{
+	HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PNI, dir);
+}
 
 /*
  * 모터 스펙

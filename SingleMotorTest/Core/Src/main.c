@@ -144,7 +144,7 @@ int main(void)
       f_FL_period_ms = (float)u32_FL_captured_val_us / 1000;	// ms 단위로 변환
 
       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
-      printf("motor pulse : %f \r\n", f_FL_period_ms);
+      printf("motor pulse : %f ms\r\n", f_FL_period_ms);
 
   }
   /* USER CODE END 3 */
