@@ -2875,8 +2875,8 @@ void MX_TIM3_Init(void)
     Error_Handler();
  8001814:	f7ff fe0a 	bl	800142c <Error_Handler>
   }
-  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_BOTHEDGE;
- 8001818:	230a      	movs	r3, #10
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+ 8001818:	2300      	movs	r3, #0
  800181a:	603b      	str	r3, [r7, #0]
   sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
  800181c:	2301      	movs	r3, #1

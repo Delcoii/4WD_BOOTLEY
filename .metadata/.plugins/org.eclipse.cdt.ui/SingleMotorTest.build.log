@@ -1,17 +1,10 @@
-03:06:47 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+21:27:16 **** Incremental Build of configuration Debug for project SingleMotorTest ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/MY36GP_3650.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
-arm-none-eabi-gcc -o "SingleMotorTest.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: SingleMotorTest.elf
- 
 arm-none-eabi-size   SingleMotorTest.elf 
-arm-none-eabi-objdump -h -S  SingleMotorTest.elf  > "SingleMotorTest.list"
    text	   data	    bss	    dec	    hex	filename
   32688	    484	   1876	  35048	   88e8	SingleMotorTest.elf
 Finished building: default.size.stdout
  
-Finished building: SingleMotorTest.list
- 
 
-03:06:47 Build Finished. 0 errors, 0 warnings. (took 442ms)
+21:27:16 Build Finished. 0 errors, 0 warnings. (took 182ms)
 
