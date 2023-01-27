@@ -658,3 +658,782 @@ arm-none-eabi-size   SingleMotorTest.elf
   32688	    484	   1876	  35048	   88e8	SingleMotorTest.elf
 Finished building: default.size.stdout
  
+21:45:06 **** Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
+arm-none-eabi-gcc "../Core/Src/MY36GP_3650.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:161:25: error: 'htim3' undeclared (first use in this function); did you mean 'htim1'?
+  161 |    HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
+      |                         ^~~~~
+      |                         htim1
+../Core/Src/main.c:161:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:189:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  189 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:189:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:189:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  189 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:189:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  189 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+../Core/Src/main.c:190:41: error: 'f_FL_period_ms' undeclared (first use in this function); did you mean 'u32_FL_period_ms'?
+  190 |       printf("motor pulse : %f ms\r\n", f_FL_period_ms);
+      |                                         ^~~~~~~~~~~~~~
+      |                                         u32_FL_period_ms
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:45:33 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:161:25: error: 'htim3' undeclared (first use in this function); did you mean 'htim1'?
+  161 |    HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
+      |                         ^~~~~
+      |                         htim1
+../Core/Src/main.c:161:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:189:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  189 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:189:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:189:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  189 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:189:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  189 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+../Core/Src/main.c:190:30: warning: format '%f' expects argument of type 'double', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("motor pulse : %f ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              double     uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:45:54 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:188:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  188 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:188:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:188:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  188 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:188:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  188 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+../Core/Src/main.c:189:30: warning: format '%f' expects argument of type 'double', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  189 |       printf("motor pulse : %f ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              double     uint32_t {aka long unsigned int}
+      |                             %ld
+arm-none-eabi-gcc -o "SpeedUpdate.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SpeedUpdate/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SpeedUpdate.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SpeedUpdate.elf
+ 
+arm-none-eabi-size   SpeedUpdate.elf 
+arm-none-eabi-objdump -h -S  SpeedUpdate.elf  > "SpeedUpdate.list"
+   text	   data	    bss	    dec	    hex	filename
+  31224	    484	   1884	  33592	   8338	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+Finished building: SpeedUpdate.list
+ 
+21:46:13 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:188:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  188 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:188:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:188:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  188 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:188:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  188 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+../Core/Src/main.c:189:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  189 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+arm-none-eabi-gcc -o "SpeedUpdate.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SpeedUpdate/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SpeedUpdate.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SpeedUpdate.elf
+ 
+arm-none-eabi-size   SpeedUpdate.elf 
+arm-none-eabi-objdump -h -S  SpeedUpdate.elf  > "SpeedUpdate.list"
+   text	   data	    bss	    dec	    hex	filename
+  31224	    484	   1884	  33592	   8338	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+Finished building: SpeedUpdate.list
+ 
+21:46:44 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:188:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  188 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:188:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:188:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  188 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:188:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  188 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:189:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  189 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+arm-none-eabi-gcc -o "SpeedUpdate.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SpeedUpdate/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SpeedUpdate.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SpeedUpdate.elf
+ 
+arm-none-eabi-size   SpeedUpdate.elf 
+arm-none-eabi-objdump -h -S  SpeedUpdate.elf  > "SpeedUpdate.list"
+   text	   data	    bss	    dec	    hex	filename
+  31224	    484	   1884	  33592	   8338	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+Finished building: SpeedUpdate.list
+ 
+21:49:20 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:81:22: error: 'PORTA' undeclared (first use in this function)
+   81 |   HAL_GPIO_TogglePin(PORTA, GPIO_PIN_5)// for test
+      |                      ^~~~~
+../Core/Src/main.c:81:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:81:40: error: expected ';' before 'u32_FL_tick_ms'
+   81 |   HAL_GPIO_TogglePin(PORTA, GPIO_PIN_5)// for test
+      |                                        ^
+      |                                        ;
+   82 | 
+   83 |   u32_FL_tick_ms[0] = u32_FL_tick_ms[1];
+      |   ~~~~~~~~~~~~~~                        
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:49:31 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:81:22: error: 'PORTA' undeclared (first use in this function)
+   81 |   HAL_GPIO_TogglePin(PORTA, GPIO_PIN_5);  // for test
+      |                      ^~~~~
+../Core/Src/main.c:81:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:49:49 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:81:22: error: 'GPIO_PORTA' undeclared (first use in this function); did you mean 'GPIO_Pin'?
+   81 |   HAL_GPIO_TogglePin(GPIO_PORTA, GPIO_PIN_5);  // for test
+      |                      ^~~~~~~~~~
+      |                      GPIO_Pin
+../Core/Src/main.c:81:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:50:08 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:81:22: error: 'GPIO_PIN_A' undeclared (first use in this function); did you mean 'GPIO_PIN_1'?
+   81 |   HAL_GPIO_TogglePin(GPIO_PIN_A, GPIO_PIN_5);  // for test
+      |                      ^~~~~~~~~~
+      |                      GPIO_PIN_1
+../Core/Src/main.c:81:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:50:28 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:81:22: error: 'PORTA' undeclared (first use in this function)
+   81 |   HAL_GPIO_TogglePin(PORTA, GPIO_PIN_5);  // for test
+      |                      ^~~~~
+../Core/Src/main.c:81:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:50:48 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+../Core/Src/main.c:81:22: error: 'GPIO_PORT_A' undeclared (first use in this function)
+   81 |   HAL_GPIO_TogglePin(GPIO_PORT_A, GPIO_PIN_5);  // for test
+      |                      ^~~~~~~~~~~
+../Core/Src/main.c:81:22: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+21:50:57 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+arm-none-eabi-gcc -o "SpeedUpdate.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SpeedUpdate/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SpeedUpdate.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SpeedUpdate.elf
+ 
+arm-none-eabi-size   SpeedUpdate.elf 
+arm-none-eabi-objdump -h -S  SpeedUpdate.elf  > "SpeedUpdate.list"
+   text	   data	    bss	    dec	    hex	filename
+  31288	    484	   1884	  33656	   8378	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+Finished building: SpeedUpdate.list
+ 
+22:41:16 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-size   SpeedUpdate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31288	    484	   1884	  33656	   8378	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+22:41:54 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-size   SpeedUpdate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31288	    484	   1884	  33656	   8378	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+22:42:09 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-size   SpeedUpdate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31288	    484	   1884	  33656	   8378	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+22:45:06 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+arm-none-eabi-gcc -o "SpeedUpdate.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SpeedUpdate/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SpeedUpdate.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SpeedUpdate.elf
+ 
+arm-none-eabi-size   SpeedUpdate.elf 
+arm-none-eabi-objdump -h -S  SpeedUpdate.elf  > "SpeedUpdate.list"
+   text	   data	    bss	    dec	    hex	filename
+  31224	    484	   1884	  33592	   8338	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+Finished building: SpeedUpdate.list
+ 
+22:45:10 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-size   SpeedUpdate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31224	    484	   1884	  33592	   8338	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+22:46:22 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:190:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:190:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:190:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                               ~~~~~~~~~~~~~
+      |                            |                               |
+      |                            int                             uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:190:54: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  190 |       printf("adc value : %d\t voltage : %f\t ccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                     ~^                               ~~~~~~~~~~~~~
+      |                                                      |                               |
+      |                                                      int                             uint32_t {aka long unsigned int}
+      |                                                     %ld
+../Core/Src/main.c:191:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("motor pulse : %d ms\r\n", u32_FL_period_ms);
+      |                             ~^          ~~~~~~~~~~~~~~~~
+      |                              |          |
+      |                              int        uint32_t {aka long unsigned int}
+      |                             %ld
+arm-none-eabi-gcc -o "SpeedUpdate.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SpeedUpdate/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SpeedUpdate.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SpeedUpdate.elf
+ 
+arm-none-eabi-size   SpeedUpdate.elf 
+arm-none-eabi-objdump -h -S  SpeedUpdate.elf  > "SpeedUpdate.list"
+   text	   data	    bss	    dec	    hex	filename
+  30992	    484	   1884	  33360	   8250	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+Finished building: SpeedUpdate.list
+ 
+22:46:25 **** Incremental Build of configuration Debug for project SpeedUpdate ****
+make -j16 all 
+arm-none-eabi-size   SpeedUpdate.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30992	    484	   1884	  33360	   8250	SpeedUpdate.elf
+Finished building: default.size.stdout
+ 
+22:48:54 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:165:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:165:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:165:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:165:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+arm-none-eabi-gcc -o "SingleMotorTest.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest.elf
+ 
+arm-none-eabi-size   SingleMotorTest.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest.elf  > "SingleMotorTest.list"
+   text	   data	    bss	    dec	    hex	filename
+  32512	    484	   1876	  34872	   8838	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest.list
+ 
+22:48:59 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32512	    484	   1876	  34872	   8838	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+22:52:21 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32512	    484	   1876	  34872	   8838	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+22:52:26 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32512	    484	   1876	  34872	   8838	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+22:52:53 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:165:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:165:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:165:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:165:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+arm-none-eabi-gcc -o "SingleMotorTest.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest.elf
+ 
+arm-none-eabi-size   SingleMotorTest.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest.elf  > "SingleMotorTest.list"
+   text	   data	    bss	    dec	    hex	filename
+  32512	    484	   1876	  34872	   8838	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest.list
+ 
+22:53:00 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32512	    484	   1876	  34872	   8838	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+22:55:57 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
+arm-none-eabi-gcc "../Core/Src/MY36GP_3650.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:165:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |       ^~~~~~
+../Core/Src/main.c:165:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:165:28: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                           ~^                             ~~~~~~~~~~~~~
+      |                            |                             |
+      |                            int                           uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/main.c:165:52: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  165 |       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
+      |                                                   ~^                               ~~~~~~~~~~~~~
+      |                                                    |                               |
+      |                                                    int                             uint32_t {aka long unsigned int}
+      |                                                   %ld
+arm-none-eabi-gcc -o "SingleMotorTest.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest.elf
+ 
+arm-none-eabi-size   SingleMotorTest.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest.elf  > "SingleMotorTest.list"
+   text	   data	    bss	    dec	    hex	filename
+  32744	    484	   1884	  35112	   8928	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest.list
+ 
+22:56:02 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32744	    484	   1884	  35112	   8928	SingleMotorTest.elf
+Finished building: default.size.stdout
+ 

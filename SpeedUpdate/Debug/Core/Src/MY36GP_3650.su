@@ -1,7 +1,0 @@
-../Core/Src/MY36GP_3650.c:22:7:float_map	32	static
-../Core/Src/MY36GP_3650.c:27:10:uint32_map	24	static
-../Core/Src/MY36GP_3650.c:33:6:FL_BrakeEnable	8	static
-../Core/Src/MY36GP_3650.c:38:6:FL_BrakeDisable	8	static
-../Core/Src/MY36GP_3650.c:44:6:FL_SetDir	16	static
-../Core/Src/MY36GP_3650.c:58:6:FL_RunMotor	32	static
-../Core/Src/MY36GP_3650.c:71:6:motorVelocityCheck	32	static

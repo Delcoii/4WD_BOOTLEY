@@ -59,23 +59,42 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-uint32_t u32_FL_captured_val_us;
+//uint32_t u32_FL_captured_val_us;
+//
+///*
+// * 모터 pulse의 주파수를 측정
+// * rising, falling edge에서 주파수값 갱신
+// * TIM3에서 prescaler (84-1)로 설정함
+// */
+//void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+//{
+//
+//	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)  // if FL pulse edge detected
+//	{
+//		u32_FL_captured_val_us = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+//
+//	}
+//
+//}
 
-/*
- * 모터 pulse의 주파수를 측정
- * rising, falling edge에서 주파수값 갱신
- * TIM3에서 prescaler (84-1)로 설정함
- */
-void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
+uint32_t u32_FL_period_ms;
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+	static uint32_t u32_FL_tick_ms[2];
 
-	if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)  // if FL pulse edge detected
+	if(GPIO_Pin == GPIO_PIN_4)
 	{
-		u32_FL_captured_val_us = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
 
+		u32_FL_tick_ms[0] = u32_FL_tick_ms[1];
+		u32_FL_tick_ms[1] = HAL_GetTick();
+
+		u32_FL_period_ms = u32_FL_tick_ms[1] - u32_FL_tick_ms[0];
 	}
-
 }
+
+
 
 /* USER CODE END 0 */
 
@@ -141,7 +160,7 @@ int main(void)
 
       motorVelocityCheck(u32_adc_value, CCW);
 
-      f_FL_period_ms = (float)u32_FL_captured_val_us / 1000;	// ms 단위로 변환
+      f_FL_period_ms = (float)u32_FL_period_ms;
 
       printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
       printf("motor pulse : %f ms\r\n", f_FL_period_ms);

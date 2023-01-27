@@ -1,10 +1,10 @@
-21:27:16 **** Incremental Build of configuration Debug for project SingleMotorTest ****
+22:56:02 **** Incremental Build of configuration Debug for project SingleMotorTest ****
 make -j16 all 
 arm-none-eabi-size   SingleMotorTest.elf 
    text	   data	    bss	    dec	    hex	filename
-  32688	    484	   1876	  35048	   88e8	SingleMotorTest.elf
+  32744	    484	   1884	  35112	   8928	SingleMotorTest.elf
 Finished building: default.size.stdout
  
 
-21:27:16 Build Finished. 0 errors, 0 warnings. (took 182ms)
+22:56:02 Build Finished. 0 errors, 0 warnings. (took 177ms)
 
