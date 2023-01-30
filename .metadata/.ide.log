@@ -8949,3 +8949,11 @@
 2023-01-30 15:10:08,567 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 992mS.
 2023-01-30 15:10:08,568 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
 2023-01-30 15:10:08,568 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-01-30 20:33:14,564 [INFO] JxBrowserEngine:114 - Initiate JxBrowser Engine with user profile folder
+2023-01-30 20:33:15,497 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-01-30 20:33:15,502 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-01-30 20:33:15,815 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-01-30 23:01:21,941 [INFO] Activator:179 - 
+
+
+2023-01-30 23:01:21,942 [INFO] Activator:180 - !SESSION log4j initialized

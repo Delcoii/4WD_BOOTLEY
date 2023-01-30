@@ -80,7 +80,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	{
 		u32_counter_10us += 1;
 	}
-//	u32_counter_us++;
+
 }
 
 
@@ -91,9 +91,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  * TIM10으로 구현한 1us ticker를 이용하여 인터럽트 발생 시마다
  * 현재의 측정 tick값에서 이전의 tick값의 차를 주기로 설정
  *
- * 전역변수 u32_FL_period_us에 계산한 주기값 저장
+ * 전역변수 u32_FL_half_period_10us에 계산한 주기값 저장
+ * us 단위로 변환시킬려면 해당 변수에 *10을 하여 이용
  */
-uint32_t u32_FL_period_10us;
+uint32_t u32_FL_half_period_10us;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
@@ -106,7 +107,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 		u32_FL_tick_10us[0] = u32_FL_tick_10us[1];
 		u32_FL_tick_10us[1] = u32_counter_10us;		// from global variable
 
-		u32_FL_period_10us = u32_FL_tick_10us[1] - u32_FL_tick_10us[0];
+		u32_FL_half_period_10us = u32_FL_tick_10us[1] - u32_FL_tick_10us[0];
 	}
 }
 
@@ -126,9 +127,11 @@ int main(void)
 	uint32_t u32_adc_steering_value;
     uint32_t u32_ccr_value;
     float f_voltage;
+    float f_FL_input_RPM;
 
-    uint32_t u32_FL_RPM;
-    uint32_t u32_period_us;
+    float f_FL_measured_RPM;
+    uint32_t u32_half_period_us;
+
 
 
   /* USER CODE END 1 */
@@ -184,21 +187,32 @@ int main(void)
 
 
       f_voltage = float_map((float)u32_adc_accel_value, 0.0, (float)ADC_MAX_VALUE, 0.0, 3.3);		// 3.3은 stm32 구동전압
-      u32_ccr_value = uint32_map(u32_adc_accel_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+//      u32_ccr_value = uint32_map(u32_adc_accel_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      f_FL_input_RPM = float_map((float)u32_adc_accel_value, ADC_MIN_VALUE, ADC_MAX_VALUE, 0.0, RATED_RPM);
+      if (f_FL_input_RPM < 0.0)	f_FL_input_RPM = 0.0;		// 필수
 
-      if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
-    	  motorVelocityCheck(u32_adc_accel_value, CCW);
+
+//
+//      if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
+//    	  motorVelocityCheck(u32_adc_accel_value, CCW);
+//      else
+//    	  motorVelocityCheck(u32_adc_accel_value, CW);
+
+
+	  if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
+		  FL_RunMotor(f_FL_input_RPM, CCW);
       else
-    	  motorVelocityCheck(u32_adc_accel_value, CW);
+    	  FL_RunMotor(f_FL_input_RPM, CW);
 
 
-      u32_period_us = u32_FL_period_10us * 10;
-      u32_FL_RPM = (60 * 1000000) / ((u32_period_us * 12) * 14);
+      u32_half_period_us = u32_FL_half_period_10us * 10;
+//      f_FL_measured_RPM = (60 * 1000000) / ((u32_half_period_us * 12) * 14);
+      f_FL_measured_RPM = Period2RPM(u32_half_period_us * 2);
 
 //      printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
 //      printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
-      printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
-      printf("RPM %d \r\n", u32_FL_RPM);
+      printf("adc1 : %d\t (half)period : %d us\t", u32_adc_accel_value, u32_half_period_us);
+      printf("input RPM %f\t meas RPM %f \r\n", f_FL_input_RPM, f_FL_measured_RPM);
 
 
   }
