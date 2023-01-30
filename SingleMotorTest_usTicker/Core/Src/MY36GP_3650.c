@@ -26,7 +26,7 @@ uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_m
 }
 
 
-float AvgFilter(float f_new_data)
+float f_AvgFilter(float f_new_data)
 {
 	static float f_value[2] = {0., 0.};
 
@@ -35,6 +35,17 @@ float AvgFilter(float f_new_data)
 
 	return (AVG_FILTERING_VAL * f_value[0]) + (1. - AVG_FILTERING_VAL) * f_value[1];
 }
+
+uint32_t u32_AvgFilter(uint32_t u32_new_data)
+{
+	static uint32_t u32_value[2] = {0, 0};
+
+	u32_value[0] = u32_value[1];
+	u32_value[1] = u32_new_data;
+
+	return (AVG_FILTERING_VAL * u32_value[0]) + (1 - AVG_FILTERING_VAL) * u32_value[1];
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////

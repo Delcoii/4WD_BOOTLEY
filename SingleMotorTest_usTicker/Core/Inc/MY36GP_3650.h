@@ -37,7 +37,7 @@
 #include "stm32f4xx_hal.h"
 
 
-#define AVG_FILTERING_VAL	0.95
+#define AVG_FILTERING_VAL	0.9999
 
 
 ///////////////////////////////////////////////////
@@ -76,7 +76,8 @@
 
 float float_map(float x, float in_min, float in_max, float out_min, float out_max);
 uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max);
-float AvgFilter(float f_new_data);
+float f_AvgFilter(float f_new_data);
+uint32_t u32_AvgFilter(uint32_t u32_new_data);
 
 
 float Period2RPM(uint32_t u32_period_us);

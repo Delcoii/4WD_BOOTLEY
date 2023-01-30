@@ -130,7 +130,8 @@ int main(void)
     float f_FL_input_RPM;
 
     float f_FL_measured_RPM;
-    uint32_t u32_half_period_us;
+//    float f_FL_measured_RPM, f_FL_filtered_RPM;
+    uint32_t u32_half_period_us, u32_filtered_half_period_us;
 
 
 
@@ -206,13 +207,19 @@ int main(void)
 
 
       u32_half_period_us = u32_FL_half_period_10us * 10;
+      u32_filtered_half_period_us = u32_AvgFilter(u32_half_period_us);
+
 //      f_FL_measured_RPM = (60 * 1000000) / ((u32_half_period_us * 12) * 14);
-      f_FL_measured_RPM = Period2RPM(u32_half_period_us * 2);
+      f_FL_measured_RPM = Period2RPM(u32_filtered_half_period_us * 2);
+//      f_FL_filtered_RPM = AvgFilter(f_FL_measured_RPM);
 
 //      printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
 //      printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
-      printf("adc1 : %d\t (half)period : %d us\t", u32_adc_accel_value, u32_half_period_us);
+      printf("adc1 : %d\t (half)period : %d us\t filt : %d\t", u32_adc_accel_value, u32_half_period_us, u32_filtered_half_period_us);
       printf("input RPM %f\t meas RPM %f \r\n", f_FL_input_RPM, f_FL_measured_RPM);
+//      printf("input RPM %f\t filt RPM %f \r\n", f_FL_input_RPM, f_FL_filtered_RPM);
+
+
 
 
   }
