@@ -48,6 +48,7 @@ uint32_t u32_AvgFilter(uint32_t u32_new_data)
 
 
 
+
 ////////////////////////////////////////////////////////////////////////////////////
 void FL_BrakeEnable(void)
 {
@@ -101,8 +102,8 @@ void FL_RunMotor(float rpm, uint8_t dir)
     TIM1->CCR1 = u32_input_CCR;
 
 
-    printf("\r\n\nCCR1 : %d\t", u32_input_CCR);	// for debugging
-    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
+//    printf("\r\n\nCCR1 : %d\t", u32_input_CCR);	// for debugging
+//    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
 }
 
 

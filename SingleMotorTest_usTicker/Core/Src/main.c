@@ -129,8 +129,8 @@ int main(void)
     float f_voltage;
     float f_FL_input_RPM;
 
-    float f_FL_measured_RPM;
-//    float f_FL_measured_RPM, f_FL_filtered_RPM;
+//    float f_FL_measured_RPM;
+    float f_FL_measured_RPM, f_FL_filtered_RPM;
     uint32_t u32_half_period_us, u32_filtered_half_period_us;
 
 
@@ -166,6 +166,19 @@ int main(void)
   	  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 
 
+
+
+//  	uint32_t index = 0;
+//	uint32_t u32_sum = 0;
+//	uint32_t u32_data[WINDOW_SIZE] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+//	uint32_t u32_result;
+
+  	uint8_t filter_index = 0;
+	float f_sum = 0;
+	float f_data[WINDOW_SIZE] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+	float f_result;
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -193,13 +206,6 @@ int main(void)
       if (f_FL_input_RPM < 0.0)	f_FL_input_RPM = 0.0;		// 필수
 
 
-//
-//      if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
-//    	  motorVelocityCheck(u32_adc_accel_value, CCW);
-//      else
-//    	  motorVelocityCheck(u32_adc_accel_value, CW);
-
-
 	  if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
 		  FL_RunMotor(f_FL_input_RPM, CCW);
       else
@@ -207,18 +213,34 @@ int main(void)
 
 
       u32_half_period_us = u32_FL_half_period_10us * 10;
-      u32_filtered_half_period_us = u32_AvgFilter(u32_half_period_us);
+//      u32_filtered_half_period_us = u32_AvgFilter(u32_half_period_us);
 
 //      f_FL_measured_RPM = (60 * 1000000) / ((u32_half_period_us * 12) * 14);
-      f_FL_measured_RPM = Period2RPM(u32_filtered_half_period_us * 2);
+      f_FL_measured_RPM = Period2RPM(u32_half_period_us * 2.);
 //      f_FL_filtered_RPM = AvgFilter(f_FL_measured_RPM);
+//      f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);
 
-//      printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
-//      printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
-      printf("adc1 : %d\t (half)period : %d us\t filt : %d\t", u32_adc_accel_value, u32_half_period_us, u32_filtered_half_period_us);
-      printf("input RPM %f\t meas RPM %f \r\n", f_FL_input_RPM, f_FL_measured_RPM);
-//      printf("input RPM %f\t filt RPM %f \r\n", f_FL_input_RPM, f_FL_filtered_RPM);
 
+	  f_sum = 0.;
+//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
+
+	  f_data[filter_index] = f_FL_measured_RPM;
+//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
+
+	  for(int i = 0; i < WINDOW_SIZE; i++)
+	  {
+		  f_sum += f_data[i];
+	  }
+//	  printf("f_sum : %f \r\n", f_sum);
+
+	  filter_index = (filter_index+1) % WINDOW_SIZE;
+//	  printf("index : %d \r\n", index);
+
+	  f_result = f_sum / (float)WINDOW_SIZE;
+//	  printf("result : %d \r\n\n", u32_result);
+
+      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_result);
+//	  printf("%f\t%f\t%d\r\n", f_FL_input_RPM, f_FL_measured_RPM, u32_result);
 
 
 

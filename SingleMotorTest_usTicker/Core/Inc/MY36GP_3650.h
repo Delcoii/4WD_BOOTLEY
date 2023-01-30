@@ -38,7 +38,7 @@
 
 
 #define AVG_FILTERING_VAL	0.9999
-
+#define WINDOW_SIZE			10
 
 ///////////////////////////////////////////////////
 /* configuration define */
@@ -69,7 +69,7 @@
 
 
 #define MIN_SPEED_CCR		400
-#define RATED_SPEED_CCR		250
+#define RATED_SPEED_CCR		230
 
 
 
@@ -78,9 +78,11 @@ float float_map(float x, float in_min, float in_max, float out_min, float out_ma
 uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max);
 float f_AvgFilter(float f_new_data);
 uint32_t u32_AvgFilter(uint32_t u32_new_data);
+float f_MovingAverage(float f_input);
 
 
 float Period2RPM(uint32_t u32_period_us);
+
 
 void FL_BrakeEnable(void);
 void FL_BrakeDisable(void);
