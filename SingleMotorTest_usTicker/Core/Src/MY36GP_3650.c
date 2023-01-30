@@ -47,6 +47,37 @@ uint32_t u32_AvgFilter(uint32_t u32_new_data)
 }
 
 
+///////////////////////////////////////////////////////////////////
+float f_MovingAverage(float f_input)
+{
+
+  	static uint8_t filter_index = 0;
+  	static float f_sum = 0;
+  	static float f_data[WINDOW_SIZE] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+
+	float f_result;
+
+	f_sum = 0.;
+//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
+
+	f_data[filter_index] = f_input;
+//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
+
+	for(int i = 0; i < WINDOW_SIZE; i++)
+	{
+		f_sum += f_data[i];
+	}
+//	  printf("f_sum : %f \r\n", f_sum);
+
+	filter_index = (filter_index+1) % WINDOW_SIZE;
+//	  printf("index : %d \r\n", index);
+
+	f_result = f_sum / (float)WINDOW_SIZE;
+//	  printf("result : %d \r\n\n", u32_result);
+
+	return f_result;
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////

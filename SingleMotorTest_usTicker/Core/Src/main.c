@@ -173,11 +173,11 @@ int main(void)
 //	uint32_t u32_data[WINDOW_SIZE] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 //	uint32_t u32_result;
 
-  	uint8_t filter_index = 0;
-	float f_sum = 0;
-	float f_data[WINDOW_SIZE] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
-	float f_result;
-
+//  uint8_t filter_index = 0;
+//	float f_sum = 0;
+//	float f_data[WINDOW_SIZE] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+//	float f_result;
+//
 
   /* USER CODE END 2 */
 
@@ -201,9 +201,9 @@ int main(void)
 
 
       f_voltage = float_map((float)u32_adc_accel_value, 0.0, (float)ADC_MAX_VALUE, 0.0, 3.3);		// 3.3은 stm32 구동전압
-//      u32_ccr_value = uint32_map(u32_adc_accel_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+
       f_FL_input_RPM = float_map((float)u32_adc_accel_value, ADC_MIN_VALUE, ADC_MAX_VALUE, 0.0, RATED_RPM);
-      if (f_FL_input_RPM < 0.0)	f_FL_input_RPM = 0.0;		// 필수
+      if (f_FL_input_RPM < 0.0)	f_FL_input_RPM = 0.0;
 
 
 	  if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
@@ -213,34 +213,14 @@ int main(void)
 
 
       u32_half_period_us = u32_FL_half_period_10us * 10;
-//      u32_filtered_half_period_us = u32_AvgFilter(u32_half_period_us);
-
-//      f_FL_measured_RPM = (60 * 1000000) / ((u32_half_period_us * 12) * 14);
       f_FL_measured_RPM = Period2RPM(u32_half_period_us * 2.);
 //      f_FL_filtered_RPM = AvgFilter(f_FL_measured_RPM);
-//      f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);
+      f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);
 
 
-	  f_sum = 0.;
-//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
+//      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_result);
 
-	  f_data[filter_index] = f_FL_measured_RPM;
-//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
-
-	  for(int i = 0; i < WINDOW_SIZE; i++)
-	  {
-		  f_sum += f_data[i];
-	  }
-//	  printf("f_sum : %f \r\n", f_sum);
-
-	  filter_index = (filter_index+1) % WINDOW_SIZE;
-//	  printf("index : %d \r\n", index);
-
-	  f_result = f_sum / (float)WINDOW_SIZE;
-//	  printf("result : %d \r\n\n", u32_result);
-
-      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_result);
-//	  printf("%f\t%f\t%d\r\n", f_FL_input_RPM, f_FL_measured_RPM, u32_result);
+      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_FL_filtered_RPM);
 
 
 

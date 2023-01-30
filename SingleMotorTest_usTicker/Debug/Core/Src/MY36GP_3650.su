@@ -2,9 +2,10 @@
 ../Core/Src/MY36GP_3650.c:23:10:uint32_map	24	static
 ../Core/Src/MY36GP_3650.c:29:7:f_AvgFilter	24	static
 ../Core/Src/MY36GP_3650.c:39:10:u32_AvgFilter	24	static
-../Core/Src/MY36GP_3650.c:53:6:FL_BrakeEnable	8	static
-../Core/Src/MY36GP_3650.c:58:6:FL_BrakeDisable	8	static
-../Core/Src/MY36GP_3650.c:64:6:FL_SetDir	16	static
-../Core/Src/MY36GP_3650.c:82:6:FL_RunMotor	24	static
-../Core/Src/MY36GP_3650.c:116:7:Period2RPM	24	static
-../Core/Src/MY36GP_3650.c:125:6:motorVelocityCheck	32	static
+../Core/Src/MY36GP_3650.c:51:7:f_MovingAverage	24	static
+../Core/Src/MY36GP_3650.c:84:6:FL_BrakeEnable	8	static
+../Core/Src/MY36GP_3650.c:89:6:FL_BrakeDisable	8	static
+../Core/Src/MY36GP_3650.c:95:6:FL_SetDir	16	static
+../Core/Src/MY36GP_3650.c:113:6:FL_RunMotor	24	static
+../Core/Src/MY36GP_3650.c:147:7:Period2RPM	24	static
+../Core/Src/MY36GP_3650.c:156:6:motorVelocityCheck	32	static

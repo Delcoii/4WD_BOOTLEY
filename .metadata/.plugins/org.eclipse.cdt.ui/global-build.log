@@ -9623,3 +9623,96 @@ Finished building: default.size.stdout
  
 Finished building: SingleMotorTest_usTicker.list
  
+04:26:36 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MY36GP_3650.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:246:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  246 |       printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_FL_filtered_RPM);
+      |       ^~~~~~
+../Core/Src/main.c:246:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:134:34: warning: unused variable 'u32_filtered_half_period_us' [-Wunused-variable]
+  134 |     uint32_t u32_half_period_us, u32_filtered_half_period_us;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:129:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  129 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c:128:14: warning: unused variable 'u32_ccr_value' [-Wunused-variable]
+  128 |     uint32_t u32_ccr_value;
+      |              ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:317:4: warning: incompatible implicit declaration of built-in function 'printf'
+  317 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:317:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/MY36GP_3650.c: In function 'f_MovingAverage':
+../Core/Src/MY36GP_3650.c:63:25: error: 'f_FL_measured_RPM' undeclared (first use in this function)
+   63 |  f_data[filter_index] = f_FL_measured_RPM;
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/MY36GP_3650.c:63:25: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/MY36GP_3650.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+04:26:48 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MY36GP_3650.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32648	    484	   1940	  35072	   8900	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+04:27:13 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32648	    484	   1940	  35072	   8900	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+04:29:18 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:223:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  223 |       printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_FL_filtered_RPM);
+      |       ^~~~~~
+../Core/Src/main.c:223:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:134:34: warning: unused variable 'u32_filtered_half_period_us' [-Wunused-variable]
+  134 |     uint32_t u32_half_period_us, u32_filtered_half_period_us;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:129:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  129 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c:128:14: warning: unused variable 'u32_ccr_value' [-Wunused-variable]
+  128 |     uint32_t u32_ccr_value;
+      |              ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:294:4: warning: incompatible implicit declaration of built-in function 'printf'
+  294 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:294:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32648	    484	   1940	  35072	   8900	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
