@@ -61,7 +61,7 @@ void SystemClock_Config(void);
 
 
 
-uint32_t u32_counter_us = 0;
+uint32_t u32_counter_10us = 0;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -73,13 +73,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	 * APB2 = 84Mhz
 	 *
 	 * TIM10
-	 * prescaler 	: 84 - 1
-	 * counter		: 0
+	 * prescaler 	: 42 - 1
+	 * counter		: 2 - 1
 	 */
-	if(htim->Instance == TIM10)
+	if(htim->Instance == TIM2)
 	{
-		u32_counter_us++;
+		u32_counter_10us += 1;
 	}
+//	u32_counter_us++;
 }
 
 
@@ -92,20 +93,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  *
  * 전역변수 u32_FL_period_us에 계산한 주기값 저장
  */
-uint32_t u32_FL_period_us;
+uint32_t u32_FL_period_10us;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	static uint32_t u32_FL_tick_us[2];
+	static uint32_t u32_FL_tick_10us[2];
 
 	if(GPIO_Pin == GPIO_PIN_4)
 	{
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
 
-		u32_FL_tick_us[0] = u32_FL_tick_us[1];
-		u32_FL_tick_us[1] = u32_counter_us;
+		u32_FL_tick_10us[0] = u32_FL_tick_10us[1];
+		u32_FL_tick_10us[1] = u32_counter_10us;		// from global variable
 
-		u32_FL_period_us = u32_FL_tick_us[1] - u32_FL_tick_us[0];
+		u32_FL_period_10us = u32_FL_tick_10us[1] - u32_FL_tick_10us[0];
 	}
 }
 
@@ -123,7 +124,7 @@ int main(void)
 
 	uint32_t u32_adc_accel_value;
 	uint32_t u32_adc_steering_value;
-//    uint32_t u32_ccr_value;
+    uint32_t u32_ccr_value;
     float f_voltage;
 
 
@@ -150,8 +151,10 @@ int main(void)
   MX_USART2_UART_Init();
   MX_ADC1_Init();
   MX_TIM1_Init();
-  MX_TIM10_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
+
+ 	  HAL_TIM_Base_Start_IT(&htim2);
 
   	  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 
@@ -171,19 +174,22 @@ int main(void)
       u32_adc_accel_value = HAL_ADC_GetValue(&hadc1);
 //      HAL_ADC_Stop(&hadc1);
 
-      HAL_ADC_Start(&hadc1);
       HAL_ADC_PollForConversion(&hadc1, 100);   // adc값 읽힐 때까지 최대 100ms 대기
       u32_adc_steering_value = HAL_ADC_GetValue(&hadc1);
 
+      HAL_ADC_Stop(&hadc1);
+
 
       f_voltage = float_map((float)u32_adc_accel_value, 0.0, (float)ADC_MAX_VALUE, 0.0, 3.3);		// 3.3은 stm32 구동전압
-//      u32_ccr_value = uint32_map(u32_adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      u32_ccr_value = uint32_map(u32_adc_accel_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
 
-      if (u32_adc_steering_value < 2047)	motorVelocityCheck(u32_adc_accel_value, CCW);
-      else									motorVelocityCheck(u32_adc_accel_value, CW);
+      if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
+    	  motorVelocityCheck(u32_adc_accel_value, CCW);
+      else
+    	  motorVelocityCheck(u32_adc_accel_value, CW);
 
-      printf("adc_accel : %d\t adc_steering : %d\t voltage : %f \r\n", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
-      printf("motor pulse : %d us\r\n", u32_FL_period_us);
+      printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      printf("ccr : %d\t pulse : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10);	// 10us 단위 저장값이라 * 10을 하여 표기
 
   }
 
