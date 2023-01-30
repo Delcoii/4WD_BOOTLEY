@@ -3036,3 +3036,1223 @@ arm-none-eabi-size   SingleMotorTest_usTicker.elf
   32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
 Finished building: default.size.stdout
  
+15:39:41 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+15:47:24 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:191:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |       ^~~~~~
+../Core/Src/main.c:191:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:191:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                      ~^                           ~~~~~~~~~~~~~~~~~~~
+      |                       |                           |
+      |                       int                         uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:191:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                                  ~^                                    ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                                    |
+      |                                   int                                  uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:192:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  192 |       printf("ccr : %d\t (half)pulse : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                             ~~~~~~~~~~~~~
+      |                      |                             |
+      |                      int                           uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:192:41: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  192 |       printf("ccr : %d\t (half)pulse : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                        ~^                         ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                         |                                            |
+      |                                         int                                          long unsigned int
+      |                                        %ld
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:261:4: warning: incompatible implicit declaration of built-in function 'printf'
+  261 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:261:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+15:47:27 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+15:53:53 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:191:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |       ^~~~~~
+../Core/Src/main.c:191:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:191:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                      ~^                           ~~~~~~~~~~~~~~~~~~~
+      |                       |                           |
+      |                       int                         uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:191:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                                  ~^                                    ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                                    |
+      |                                   int                                  uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:192:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  192 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                            ~~~~~~~~~~~~~
+      |                      |                            |
+      |                      int                          uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:192:42: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  192 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                         ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          |                                          |
+      |                                          int                                        long unsigned int
+      |                                         %ld
+../Core/Src/main.c:193:37: error: 'u32_FL_period_us' undeclared (first use in this function); did you mean 'u32_FL_period_10us'?
+  193 |       printf("RPM : %d \r\n", 60 / (u32_FL_period_us * 12));
+      |                                     ^~~~~~~~~~~~~~~~
+      |                                     u32_FL_period_10us
+../Core/Src/main.c:193:37: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:263:4: warning: incompatible implicit declaration of built-in function 'printf'
+  263 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:263:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:54:08 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:191:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |       ^~~~~~
+../Core/Src/main.c:191:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:191:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                      ~^                           ~~~~~~~~~~~~~~~~~~~
+      |                       |                           |
+      |                       int                         uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:191:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                                  ~^                                    ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                                    |
+      |                                   int                                  uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:192:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  192 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                            ~~~~~~~~~~~~~
+      |                      |                            |
+      |                      int                          uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:192:42: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  192 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                         ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          |                                          |
+      |                                          int                                        long unsigned int
+      |                                         %ld
+../Core/Src/main.c:193:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long unsigned int' [-Wformat=]
+  193 |       printf("RPM : %d \r\n", 60 / (u32_FL_period_10us * 12));
+      |                     ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |           |
+      |                      int         long unsigned int
+      |                     %ld
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:263:4: warning: incompatible implicit declaration of built-in function 'printf'
+  263 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:263:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32264	    484	   1892	  34640	   8750	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+15:54:09 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32264	    484	   1892	  34640	   8750	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+15:55:23 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:191:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |       ^~~~~~
+../Core/Src/main.c:191:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:191:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                      ~^                           ~~~~~~~~~~~~~~~~~~~
+      |                       |                           |
+      |                       int                         uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:191:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  191 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                                  ~^                                    ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                                    |
+      |                                   int                                  uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:192:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  192 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                            ~~~~~~~~~~~~~
+      |                      |                            |
+      |                      int                          uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:192:42: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  192 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                         ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          |                                          |
+      |                                          int                                        long unsigned int
+      |                                         %ld
+../Core/Src/main.c:193:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long unsigned int' [-Wformat=]
+  193 |       printf("RPM : %d \r\n", 60 / ((u32_FL_period_10us/1000000) * 12));
+      |                     ~^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |           |
+      |                      int         long unsigned int
+      |                     %ld
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:263:4: warning: incompatible implicit declaration of built-in function 'printf'
+  263 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:263:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32280	    484	   1892	  34656	   8760	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+15:55:26 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32280	    484	   1892	  34656	   8760	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+16:00:15 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:194:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |       ^~~~~~
+../Core/Src/main.c:194:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:194:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                      ~^                           ~~~~~~~~~~~~~~~~~~~
+      |                       |                           |
+      |                       int                         uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:194:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                                  ~^                                    ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                                    |
+      |                                   int                                  uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:195:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("ccr : %d\t (half)period : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                              ~~~~~~~~~~~~~
+      |                      |                              |
+      |                      int                            uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:195:42: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  195 |       printf("ccr : %d\t (half)period : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                         ~^                         ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          |                                            |
+      |                                          int                                          long unsigned int
+      |                                         %ld
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:266:4: warning: incompatible implicit declaration of built-in function 'printf'
+  266 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:266:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32272	    484	   1892	  34648	   8758	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+16:00:17 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32272	    484	   1892	  34648	   8758	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:03:46 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:194:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |       ^~~~~~
+../Core/Src/main.c:194:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:194:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                      ~^                           ~~~~~~~~~~~~~~~~~~~
+      |                       |                           |
+      |                       int                         uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:194:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                                  ~^                                    ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                                    |
+      |                                   int                                  uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:195:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("ccr : %d\t (half)period : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                              ~~~~~~~~~~~~~
+      |                      |                              |
+      |                      int                            uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:195:42: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  195 |       printf("ccr : %d\t (half)period : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                         ~^                         ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          |                                            |
+      |                                          int                                          long unsigned int
+      |                                         %ld
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:266:4: warning: incompatible implicit declaration of built-in function 'printf'
+  266 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:266:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32288	    484	   1892	  34664	   8768	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:03:49 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32288	    484	   1892	  34664	   8768	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:06:08 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:194:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |       ^~~~~~
+../Core/Src/main.c:194:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:194:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                      ~^                           ~~~~~~~~~~~~~~~~~~~
+      |                       |                           |
+      |                       int                         uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:194:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  194 |       printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+      |                                  ~^                                    ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                                    |
+      |                                   int                                  uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:195:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("ccr : %d\t (half)period : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                              ~~~~~~~~~~~~~
+      |                      |                              |
+      |                      int                            uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:195:42: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  195 |       printf("ccr : %d\t (half)period : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                         ~^                         ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          |                                            |
+      |                                          int                                          long unsigned int
+      |                                         %ld
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:266:4: warning: incompatible implicit declaration of built-in function 'printf'
+  266 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:266:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32272	    484	   1892	  34648	   8758	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:06:12 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32272	    484	   1892	  34648	   8758	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:07:22 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  195 |       printf("adc1 : %d\t adc2 : %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |       ^~~~~~
+../Core/Src/main.c:195:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:195:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 : %d\t adc2 : %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                      ~^                 ~~~~~~~~~~~~~~~~~~~
+      |                       |                 |
+      |                       int               uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/main.c:195:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 : %d\t adc2 : %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                                  ~^                          ~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                          |
+      |                                   int                        uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/main.c:196:22: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  196 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                     ~^                            ~~~~~~~~~~~~~
+      |                      |                            |
+      |                      int                          uint32_t {aka long unsigned int}
+      |                     %ld
+../Core/Src/main.c:196:42: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  196 |       printf("ccr : %d\t (half)period : %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                         ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          |                                          |
+      |                                          int                                        long unsigned int
+      |                                         %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:267:4: warning: incompatible implicit declaration of built-in function 'printf'
+  267 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:267:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32256	    484	   1892	  34632	   8748	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:07:25 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32256	    484	   1892	  34632	   8748	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:08:56 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |       ^~~~~~
+../Core/Src/main.c:195:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:195:21: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                    ~^               ~~~~~~~~~~~~~~~~~~~
+      |                     |               |
+      |                     int             uint32_t {aka long unsigned int}
+      |                    %ld
+../Core/Src/main.c:195:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                              ~^                          ~~~~~~~~~~~~~~~~~~~~~~
+      |                               |                          |
+      |                               int                        uint32_t {aka long unsigned int}
+      |                              %ld
+../Core/Src/main.c:196:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  196 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:196:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  196 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:267:4: warning: incompatible implicit declaration of built-in function 'printf'
+  267 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:267:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32248	    484	   1892	  34624	   8740	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:08:59 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32248	    484	   1892	  34624	   8740	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:09:58 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |       ^~~~~~
+../Core/Src/main.c:195:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:195:21: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                    ~^               ~~~~~~~~~~~~~~~~~~~
+      |                     |               |
+      |                     int             uint32_t {aka long unsigned int}
+      |                    %ld
+../Core/Src/main.c:195:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                              ~^                          ~~~~~~~~~~~~~~~~~~~~~~
+      |                               |                          |
+      |                               int                        uint32_t {aka long unsigned int}
+      |                              %ld
+../Core/Src/main.c:196:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  196 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:196:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  196 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:267:4: warning: incompatible implicit declaration of built-in function 'printf'
+  267 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:267:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32248	    484	   1892	  34624	   8740	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:13:57 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |       ^~~~~~
+../Core/Src/main.c:195:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:195:21: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                    ~^               ~~~~~~~~~~~~~~~~~~~
+      |                     |               |
+      |                     int             uint32_t {aka long unsigned int}
+      |                    %ld
+../Core/Src/main.c:195:31: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  195 |       printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      |                              ~^                          ~~~~~~~~~~~~~~~~~~~~~~
+      |                               |                          |
+      |                               int                        uint32_t {aka long unsigned int}
+      |                              %ld
+../Core/Src/main.c:196:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  196 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:196:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  196 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:267:4: warning: incompatible implicit declaration of built-in function 'printf'
+  267 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:267:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32256	    484	   1892	  34632	   8748	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:13:59 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32256	    484	   1892	  34632	   8748	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:15:20 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:198:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |       ^~~~~~
+../Core/Src/main.c:198:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:198:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:198:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:269:4: warning: incompatible implicit declaration of built-in function 'printf'
+  269 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:269:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:18:35 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:198:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |       ^~~~~~
+../Core/Src/main.c:198:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:198:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:198:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:199:29: error: 'u32_FL_RPM' undeclared (first use in this function); did you mean 'f_FL_RPM'?
+  199 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                             ^~~~~~~~~~
+      |                             f_FL_RPM
+../Core/Src/main.c:199:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:129:11: warning: variable 'f_FL_RPM' set but not used [-Wunused-but-set-variable]
+  129 |     float f_FL_RPM;
+      |           ^~~~~~~~
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:269:4: warning: incompatible implicit declaration of built-in function 'printf'
+  269 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:269:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:18:52 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:198:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |       ^~~~~~
+../Core/Src/main.c:198:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:198:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:198:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:269:4: warning: incompatible implicit declaration of built-in function 'printf'
+  269 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:269:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32232	    484	   1892	  34608	   8730	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:18:54 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32232	    484	   1892	  34608	   8730	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:18:57 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32232	    484	   1892	  34608	   8730	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:19:00 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32232	    484	   1892	  34608	   8730	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:21:11 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:198:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |       ^~~~~~
+../Core/Src/main.c:198:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:198:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:198:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:199:20: warning: format '%f' expects argument of type 'double', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  199 |       printf("RPM %f \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    double   uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:269:4: warning: incompatible implicit declaration of built-in function 'printf'
+  269 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:269:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:21:15 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:21:31 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:198:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |       ^~~~~~
+../Core/Src/main.c:198:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:198:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:198:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  198 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_FL_period_10us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                      |                                          |
+      |                                      int                                        long unsigned int
+      |                                     %ld
+../Core/Src/main.c:199:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  199 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    int      uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:269:4: warning: incompatible implicit declaration of built-in function 'printf'
+  269 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:269:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:21:34 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:23:52 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:5: error: unknown type name 'uin32_t'; did you mean 'uint32_t'?
+  131 |     uin32_t u32_period_us;
+      |     ^~~~~~~
+      |     uint32_t
+../Core/Src/main.c:200:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |       ^~~~~~
+../Core/Src/main.c:200:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:200:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:201:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  201 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    int      uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:271:4: warning: incompatible implicit declaration of built-in function 'printf'
+  271 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:271:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:24:27 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |       ^~~~~~
+../Core/Src/main.c:200:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:200:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:200:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10); // 10us 단위 저장값이라 * 10을 하여 표기
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~
+      |                                      |                                     |
+      |                                      int                                   long unsigned int
+      |                                     %ld
+../Core/Src/main.c:201:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  201 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    int      uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:271:4: warning: incompatible implicit declaration of built-in function 'printf'
+  271 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:271:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32224	    484	   1892	  34600	   8728	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:26:47 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_s);
+      |       ^~~~~~
+../Core/Src/main.c:200:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:200:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_s);
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:200:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_s);
+      |                                     ~^                       ~~~~~~~~~~~~
+      |                                      |                       |
+      |                                      int                     uint32_t {aka long unsigned int}
+      |                                     %ld
+../Core/Src/main.c:201:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  201 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    int      uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:271:4: warning: incompatible implicit declaration of built-in function 'printf'
+  271 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:271:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32200	    484	   1892	  34576	   8710	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:30:56 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10);
+      |       ^~~~~~
+../Core/Src/main.c:200:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:200:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10);
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:200:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'long unsigned int' [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us * 10);
+      |                                     ~^                       ~~~~~~~~~~~~~~~~~~
+      |                                      |                                     |
+      |                                      int                                   long unsigned int
+      |                                     %ld
+../Core/Src/main.c:201:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  201 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    int      uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:271:4: warning: incompatible implicit declaration of built-in function 'printf'
+  271 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:271:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32216	    484	   1892	  34592	   8720	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:31:14 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
+      |       ^~~~~~
+../Core/Src/main.c:200:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:200:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:200:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
+      |                                     ~^                       ~~~~~~~~~~~~~
+      |                                      |                       |
+      |                                      int                     uint32_t {aka long unsigned int}
+      |                                     %ld
+../Core/Src/main.c:201:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  201 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    int      uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:271:4: warning: incompatible implicit declaration of built-in function 'printf'
+  271 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:271:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32208	    484	   1892	  34584	   8718	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:31:16 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32208	    484	   1892	  34584	   8718	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+18:53:15 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
+      |       ^~~~~~
+../Core/Src/main.c:200:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:200:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
+      |                   ~^                          ~~~~~~~~~~~~~
+      |                    |                          |
+      |                    int                        uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:200:38: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  200 |       printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
+      |                                     ~^                       ~~~~~~~~~~~~~
+      |                                      |                       |
+      |                                      int                     uint32_t {aka long unsigned int}
+      |                                     %ld
+../Core/Src/main.c:201:20: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  201 |       printf("RPM %d \r\n", u32_FL_RPM);
+      |                   ~^        ~~~~~~~~~~
+      |                    |        |
+      |                    int      uint32_t {aka long unsigned int}
+      |                   %ld
+../Core/Src/main.c:128:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  128 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:271:4: warning: incompatible implicit declaration of built-in function 'printf'
+  271 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:271:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/MiniSuperCar/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32200	    484	   1892	  34576	   8710	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:53:17 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32200	    484	   1892	  34576	   8710	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 

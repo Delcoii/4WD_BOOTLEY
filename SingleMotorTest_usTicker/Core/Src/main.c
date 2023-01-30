@@ -127,6 +127,9 @@ int main(void)
     uint32_t u32_ccr_value;
     float f_voltage;
 
+    uint32_t u32_FL_RPM;
+    uint32_t u32_period_us;
+
 
   /* USER CODE END 1 */
 
@@ -188,8 +191,15 @@ int main(void)
       else
     	  motorVelocityCheck(u32_adc_accel_value, CW);
 
-      printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
-      printf("ccr : %d\t pulse : %d us\r\n", u32_ccr_value, u32_FL_period_10us * 10);	// 10us 단위 저장값이라 * 10을 하여 표기
+
+      u32_period_us = u32_FL_period_10us * 10;
+      u32_FL_RPM = (60 * 1000000) / ((u32_period_us * 12) * 14);
+
+//      printf("adc1 : %d\t adc2 : %d\t v : %f \t", u32_adc_accel_value, u32_adc_steering_value, f_voltage);
+//      printf("adc1 %d\t adc2 %d\t", u32_adc_accel_value, u32_adc_steering_value);
+      printf("ccr %d\t (half)period %d us\t", u32_ccr_value, u32_period_us);
+      printf("RPM %d \r\n", u32_FL_RPM);
+
 
   }
 
