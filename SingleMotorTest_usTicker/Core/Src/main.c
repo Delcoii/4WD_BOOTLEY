@@ -229,7 +229,7 @@ int main(void)
       f_FL_measured_RPM = Period2RPM(u32_half_period_us * 2.);
 //      f_FL_filtered_RPM = AvgFilter(f_FL_measured_RPM);
 
-      if(f_FL_measured_RPM < 600)	f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);
+      if(f_FL_measured_RPM < 600)	f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);		// 이거 함수 하나로 묶어야함
 
 //      printf("%d\t%f \r\n", u32_half_period_us, f_FL_measured_RPM);
 //      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_result);
