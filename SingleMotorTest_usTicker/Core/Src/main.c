@@ -61,7 +61,7 @@ void SystemClock_Config(void);
 
 
 
-uint32_t u32_counter_10us = 0;
+uint16_t u16_counter_10us = 0;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -74,11 +74,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	 *
 	 * TIM10
 	 * prescaler 	: 42 - 1
-	 * counter		: 2 - 1
+	 * counter		: 20 - 1
 	 */
 	if(htim->Instance == TIM2)
 	{
-		u32_counter_10us += 1;
+		u16_counter_10us += 1;
 	}
 
 }
@@ -94,20 +94,32 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  * 전역변수 u32_FL_half_period_10us에 계산한 주기값 저장
  * us 단위로 변환시킬려면 해당 변수에 *10을 하여 이용
  */
-uint32_t u32_FL_half_period_10us;
+uint16_t u16_FL_half_period_10us;
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	static uint32_t u32_FL_tick_10us[2];
+//	static uint16_t u16_FL_tick_10us[2];
+//
+//
+//	if(GPIO_Pin == GPIO_PIN_4)
+//	{
+////		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+//
+//		u16_FL_tick_10us[0] = u16_FL_tick_10us[1];
+//		u16_FL_tick_10us[1] = u16_counter_10us;		// from global variable
+//
+//		u16_FL_half_period_10us = u16_FL_tick_10us[1] - u16_FL_tick_10us[0];
+//	}
+	static uint16_t u16_FL_tick_10us;
 
 	if(GPIO_Pin == GPIO_PIN_4)
 	{
-		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+//		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+		uint16_t u16_ret_val = u16_counter_10us - u16_FL_tick_10us;
+		u16_FL_tick_10us = u16_counter_10us;		// 미리 값 저장
 
-		u32_FL_tick_10us[0] = u32_FL_tick_10us[1];
-		u32_FL_tick_10us[1] = u32_counter_10us;		// from global variable
-
-		u32_FL_half_period_10us = u32_FL_tick_10us[1] - u32_FL_tick_10us[0];
+//		if(u16_ret_val > 600)	u16_FL_half_period_10us = u16_ret_val;
+		u16_FL_half_period_10us = u16_ret_val;
 	}
 }
 
@@ -212,15 +224,18 @@ int main(void)
     	  FL_RunMotor(f_FL_input_RPM, CW);
 
 
-      u32_half_period_us = u32_FL_half_period_10us * 10;
+      u32_half_period_us = u16_FL_half_period_10us * 10;
+
       f_FL_measured_RPM = Period2RPM(u32_half_period_us * 2.);
 //      f_FL_filtered_RPM = AvgFilter(f_FL_measured_RPM);
-      f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);
 
+      if(f_FL_measured_RPM < 600)	f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);
 
+//      printf("%d\t%f \r\n", u32_half_period_us, f_FL_measured_RPM);
 //      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_result);
 
       printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_FL_filtered_RPM);
+//      printf("filt %f \r\n", f_FL_filtered_RPM);
 
 
 
