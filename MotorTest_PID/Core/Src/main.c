@@ -206,21 +206,29 @@ int main(void)
       if (f_FL_input_RPM < 0.0)	f_FL_input_RPM = 0.0;
 
 
-	  if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
-		  FL_RunMotor(f_FL_input_RPM, CCW);
-      else
-    	  FL_RunMotor(f_FL_input_RPM, CW);
-
-
       u32_half_period_us = u32_FL_half_period_10us * 10;
       f_FL_measured_RPM = Period2RPM(u32_half_period_us * 2.);
 //      f_FL_filtered_RPM = AvgFilter(f_FL_measured_RPM);
-      f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);
+      if(f_FL_measured_RPM < 600)	f_FL_filtered_RPM = f_MovingAverage(f_FL_measured_RPM);		// 이거 함수 하나로 묶어야함
+
+
+
+//	  if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
+//		  FL_RunMotor(f_FL_input_RPM, CCW);
+//	  else
+//		  FL_RunMotor(f_FL_input_RPM, CW);
+
+
+
+	  if (u32_adc_steering_value < (ADC_MAX_VALUE / 2))
+		  FL_FeebackMotorControl(f_FL_input_RPM, f_FL_filtered_RPM, CCW);
+      else
+    	  FL_FeebackMotorControl(f_FL_input_RPM, f_FL_filtered_RPM, CW);
 
 
 //      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_result);
 
-      printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_FL_filtered_RPM);
+      printf("input RPM %f\t meas %f\t filt %f \r\n\n\n", f_FL_input_RPM, f_FL_measured_RPM, f_FL_filtered_RPM);
 
 
 

@@ -78,18 +78,6 @@ float f_MovingAverage(float f_input)
 	return f_result;
 }
 
-uint32_t u32_pControl(float f_input, float f_meas)
-{
-	float f_error, f_output;
-
-	f_error = f_input - f_meas;
-
-	// if (motor == FL)
-	f_output = f_error * (float)FL_P_GAIN;
-	printf("\r\nerror : %f", f_output);
-
-}
-
 
 ////////////////////////////////////////////////////////////////////////////////////
 void FL_BrakeEnable(void)
@@ -148,6 +136,51 @@ void FL_RunMotor(float rpm, uint8_t dir)
 //    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
 }
 
+
+
+void FL_FeebackMotorControl(float f_input_rpm, float f_meas_rpm, uint8_t u8_dir)
+{
+	uint32_t u32_input_CCR;
+
+	float f_ff_RPMtoCCR = 0.;
+
+    float f_error;
+    float f_p_control_value;
+    float f_p_controled_RPMtoCCR = 0.;
+
+//    printf("\r\n\n");
+
+
+    f_ff_RPMtoCCR = float_map(f_input_rpm, 0.0, RATED_RPM, MIN_SPEED_CCR, RATED_SPEED_CCR);	//개루프제어
+//    printf("ff CCR : %f\r\n", f_ff_RPMtoCCR);
+
+    f_error = f_input_rpm - f_meas_rpm;
+    f_p_control_value = (-1.) * f_error * FL_P_GAIN;
+//    printf("p val : %f \r\n", f_p_control_value);
+
+
+//    u32_input_CCR = (uint32_t)f_RPMtoCCR;		// 개루프만 할 때
+    u32_input_CCR = (uint32_t)(f_ff_RPMtoCCR + f_p_control_value);
+
+
+    // 존나 짜치네 진짜 중국산모터
+    if (u32_input_CCR > 380) {
+    	u32_input_CCR = 500;
+    }
+    else if (u32_input_CCR < RATED_SPEED_CCR) {
+    	u32_input_CCR = RATED_SPEED_CCR;
+    }
+
+//    printf("CCR : %d\r\n\n", u32_input_CCR);
+
+	FL_BrakeDisable();
+    HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, u8_dir);
+    TIM1->CCR1 = u32_input_CCR;
+
+
+//    printf("\r\n\nCCR1 : %d\t", u32_input_CCR);	// for debugging
+//    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
+}
 
 /*
  * us 단위의 주기를 RPM으로 환산

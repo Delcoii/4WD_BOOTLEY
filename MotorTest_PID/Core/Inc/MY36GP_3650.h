@@ -71,8 +71,8 @@
 #define MIN_SPEED_CCR		400
 #define RATED_SPEED_CCR		230
 
-#define FL_P_GAIN			0.5
-
+//#define FL_P_GAIN			4		// 개루프없음
+#define FL_P_GAIN			0.685	// 개루프있음
 
 float float_map(float x, float in_min, float in_max, float out_min, float out_max);
 uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max);
@@ -87,7 +87,9 @@ float Period2RPM(uint32_t u32_period_us);
 void FL_BrakeEnable(void);
 void FL_BrakeDisable(void);
 void FL_SetDir(uint8_t dir);
+
 void FL_RunMotor(float rpm, uint8_t dir);
+void FL_FeebackMotorControl(float f_input_rpm, float f_meas_rpm, uint8_t u8_dir);
 void motorVelocityCheck(uint16_t adc_value, uint8_t dir);
 
 
