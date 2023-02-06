@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
+markOccurrences=false
+scalability.detect=false
+>>>>>>> 48ae8a1c3e62536f17c6dcd0e0aac8c119bd389d
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
