@@ -68,10 +68,16 @@
 #define RATED_RPM			450
 
 
-#define MIN_SPEED_CCR		400
-#define RATED_SPEED_CCR		230
+//#define MIN_SPEED_CCR		400
+//#define RATED_SPEED_CCR		230
 
-
+// Counter Period 800
+#define MIN_SPEED_CCR		800		// 평균 2.5V의 pulse width
+#define RATED_SPEED_CCR		460		// 450 RPM일 때 CCR
+//#define RATED_SPEED_CCR		450		// 450 RPM일 때 CCR
+#define MAX_SPEED_CCR		606
+#define MIN_ACTIVATING_CCR	760
+#define MOTOR_STOP_CCR		900
 
 
 float float_map(float x, float in_min, float in_max, float out_min, float out_max);

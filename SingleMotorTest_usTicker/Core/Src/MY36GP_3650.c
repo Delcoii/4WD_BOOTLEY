@@ -126,15 +126,15 @@ void FL_RunMotor(float rpm, uint8_t dir)
     u32_input_CCR = (uint32_t)f_RPMtoCCR;
 
     // 존나 짜치네 진짜 중국산모터
-    if (u32_input_CCR > 380)	u32_input_CCR = 500;
+    if (u32_input_CCR > MIN_ACTIVATING_CCR)	u32_input_CCR = MOTOR_STOP_CCR;
 
 	FL_BrakeDisable();
     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
     TIM1->CCR1 = u32_input_CCR;
 
 
-//    printf("\r\n\nCCR1 : %d\t", u32_input_CCR);	// for debugging
-//    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
+    printf("\r\n\nCCR1 : %d\t", u32_input_CCR);	// for debugging
+    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
 }
 
 
