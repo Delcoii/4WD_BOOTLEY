@@ -1,19 +1,26 @@
+=\=\=\=\=\=\=
 //org.eclipse.ui.commands/state/com.st.stm32cube.ide.mcu.buildanalyzer.showstate/org.eclipse.ui.commands.radioState=human
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
-<<<<<<< HEAD
-eclipse.preferences.version=1
-=======
+<<<<<<<=HEAD
+>>>>>>>=48ae8a1c3e62536f17c6dcd0e0aac8c119bd389d
+CONTENT_ASSIST_BACKGROUND_COLOR=224,224,224
+CONTENT_ASSIST_FOREGROUND_COLOR=15,15,15
 UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
+content_assist_parameters_background=224,224,224
+content_assist_parameters_foreground=15,15,15
+content_assist_proposals_background=224,224,224
+content_assist_proposals_foreground=15,15,15
 eclipse.preferences.version=1
+org.eclipse.egit.ui.DiffAddBackgroundColor=219,255,148
+org.eclipse.egit.ui.DiffHeadlineBackgroundColor=245,245,245
+org.eclipse.egit.ui.DiffHunkBackgroundColor=245,245,245
+org.eclipse.egit.ui.DiffRemoveBackgroundColor=255,172,172
 org.eclipse.ui.r30.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END=255,255,255
 org.eclipse.ui.r30.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=255,255,255
 org.eclipse.ui.r30.org.eclipse.ui.workbench.ACTIVE_TAB_TEXT_COLOR=61,61,61
->>>>>>> 48ae8a1c3e62536f17c6dcd0e0aac8c119bd389d
-org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=255,255,255
-org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=255,255,255
+org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=232,232,232
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_TEXT_COLOR=16,16,16
-org.eclipse.ui.workbench.ACTIVE_TAB_BG_END=255,255,255
-org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=255,255,255
+org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=232,232,232
 org.eclipse.ui.workbench.ACTIVE_TAB_TEXT_COLOR=61,61,61
-org.eclipse.ui.workbench.INACTIVE_TAB_BG_END=246,245,244
-org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=246,245,244
+org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=219,219,219
+overriddenByCSS=,CONTENT_ASSIST_BACKGROUND_COLOR,CONTENT_ASSIST_FOREGROUND_COLOR,content_assist_parameters_background,content_assist_parameters_foreground,content_assist_proposals_background,content_assist_proposals_foreground,org.eclipse.egit.ui.DiffAddBackgroundColor,org.eclipse.egit.ui.DiffHeadlineBackgroundColor,org.eclipse.egit.ui.DiffHunkBackgroundColor,org.eclipse.egit.ui.DiffRemoveBackgroundColor,

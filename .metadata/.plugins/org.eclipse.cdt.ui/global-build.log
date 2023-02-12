@@ -14860,3 +14860,946 @@ Finished building: default.size.stdout
  
 Finished building: SingleMotorTest_usTicker.list
  
+03:09:03 **** Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f446retx.d" -MT"Core/Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f446retx.o" "../Core/Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Core/Src/MY36GP_3650.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-gcc "../Core/Src/adc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/adc.d" -MT"Core/Src/adc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/adc.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/MY36GP_3650.c: In function 'FL_RunMotor':
+../Core/Src/MY36GP_3650.c:136:27: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  136 |     printf("\r\n\nCCR1 : %d\t", u32_input_CCR); // for debugging
+      |                          ~^     ~~~~~~~~~~~~~
+      |                           |     |
+      |                           int   uint32_t {aka long unsigned int}
+      |                          %ld
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:237:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  237 |       printf("input RPM %f\t meas %f\t filt %f \r\n", f_FL_input_RPM, f_FL_measured_RPM, f_FL_filtered_RPM);
+      |       ^~~~~~
+../Core/Src/main.c:237:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include "MY36GP_3650.h"
+  +++ |+#include <stdio.h>
+   30 | 
+../Core/Src/main.c:146:34: warning: unused variable 'u32_filtered_half_period_us' [-Wunused-variable]
+  146 |     uint32_t u32_half_period_us, u32_filtered_half_period_us;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:141:11: warning: variable 'f_voltage' set but not used [-Wunused-but-set-variable]
+  141 |     float f_voltage;
+      |           ^~~~~~~~~
+../Core/Src/main.c:140:14: warning: unused variable 'u32_ccr_value' [-Wunused-variable]
+  140 |     uint32_t u32_ccr_value;
+      |              ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:309:4: warning: incompatible implicit declaration of built-in function 'printf'
+  309 |    printf("you can't sleep now");
+      |    ^~~~~~
+../Core/Src/main.c:309:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "SingleMotorTest_usTicker.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/SingleMotorTest_usTicker/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SingleMotorTest_usTicker.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SingleMotorTest_usTicker.elf
+ 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+arm-none-eabi-objdump -h -S  SingleMotorTest_usTicker.elf  > "SingleMotorTest_usTicker.list"
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1932	  35096	   8918	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+Finished building: SingleMotorTest_usTicker.list
+ 
+18:42:59 **** Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f446retx.d" -MT"Core/Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f446retx.o" "../Core/Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+In file included from ../Core/Src/Bootley.c:1:
+../Core/Inc/Bootley.h:17:7: error: field 'Bootley_Init' declared as a function
+   17 |  void Bootley_Init();
+      |       ^~~~~~~~~~~~
+../Core/Src/Bootley.c:6:1: error: unknown type name 'bool'
+    6 | bool b_g_steering_ch1_done = false;
+      | ^~~~
+../Core/Src/Bootley.c:6:30: error: 'false' undeclared here (not in a function)
+    6 | bool b_g_steering_ch1_done = false;
+      |                              ^~~~~
+../Core/Src/Bootley.c:7:1: error: unknown type name 'bool'
+    7 | bool b_g_steering_ch2_done = false;
+      | ^~~~
+../Core/Src/Bootley.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/Src/Bootley.c:18:27: error: 'true' undeclared (first use in this function)
+   18 |   b_g_steering_ch1_done = true;
+      |                           ^~~~
+../Core/Src/Bootley.c:18:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:27:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before '::' token
+   27 | void Bootley::Bootley_Init()
+      |             ^~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:45:31 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+In file included from ../Core/Src/Bootley.c:4:
+../Core/Inc/Bootley.h:19:7: error: field 'Bootley_Init' declared as a function
+   19 |  void Bootley_Init();
+      |       ^~~~~~~~~~~~
+../Core/Src/Bootley.c:9:1: error: unknown type name 'bool'
+    9 | bool b_g_steering_ch1_done = false;
+      | ^~~~
+../Core/Src/Bootley.c:9:30: error: 'false' undeclared here (not in a function); did you mean 'fclose'?
+    9 | bool b_g_steering_ch1_done = false;
+      |                              ^~~~~
+      |                              fclose
+../Core/Src/Bootley.c:10:1: error: unknown type name 'bool'
+   10 | bool b_g_steering_ch2_done = false;
+      | ^~~~
+../Core/Src/Bootley.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/Src/Bootley.c:21:27: error: 'true' undeclared (first use in this function)
+   21 |   b_g_steering_ch1_done = true;
+      |                           ^~~~
+../Core/Src/Bootley.c:21:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:30:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before '::' token
+   30 | void Bootley::Bootley_Init()
+      |             ^~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:46:26 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+In file included from ../Core/Src/Bootley.c:4:
+../Core/Inc/Bootley.h:19:7: error: field 'Bootley_Init' declared as a function
+   19 |  void Bootley_Init();
+      |       ^~~~~~~~~~~~
+../Core/Src/Bootley.c:9:1: error: unknown type name 'bool'
+    9 | bool b_g_steering_ch1_done = false;
+      | ^~~~
+../Core/Src/Bootley.c:9:30: error: 'false' undeclared here (not in a function); did you mean 'fclose'?
+    9 | bool b_g_steering_ch1_done = false;
+      |                              ^~~~~
+      |                              fclose
+../Core/Src/Bootley.c:10:1: error: unknown type name 'bool'
+   10 | bool b_g_steering_ch2_done = false;
+      | ^~~~
+../Core/Src/Bootley.c: In function 'HAL_TIM_IC_CaptureCallback':
+../Core/Src/Bootley.c:21:27: error: 'true' undeclared (first use in this function)
+   21 |   b_g_steering_ch1_done = true;
+      |                           ^~~~
+../Core/Src/Bootley.c:21:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:30:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before '::' token
+   30 | void Bootley::Bootley_Init()
+      |             ^~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:48:08 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+In file included from ../Core/Src/Bootley.c:4:
+../Core/Inc/Bootley.h:20:7: error: field 'Bootley_Init' declared as a function
+   20 |  void Bootley_Init();
+      |       ^~~~~~~~~~~~
+../Core/Src/Bootley.c:30:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before '::' token
+   30 | void Bootley::Bootley_Init()
+      |             ^~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:01:23 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+In file included from ../Core/Src/Bootley.c:4:
+../Core/Inc/Bootley.h:20:7: error: field 'Bootley_Init' declared as a function
+   20 |  void Bootley_Init();
+      |       ^~~~~~~~~~~~
+../Core/Src/Bootley.c:30:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before '::' token
+   30 | void Bootley::Bootley_Init()
+      |             ^~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:01:45 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+In file included from ../Core/Src/Bootley.c:4:
+../Core/Inc/Bootley.h:20:7: error: field 'Bootley_Init' declared as a function
+   20 |  void Bootley_Init();
+      |       ^~~~~~~~~~~~
+../Core/Src/Bootley.c:31:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before '::' token
+   31 | void _bootley::Bootley_Init()
+      |              ^~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:03:31 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:26: error: 'htim3' undeclared (first use in this function); did you mean 'htim1'?
+   33 |    HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_1, (uint32_t *)capture1, 2);
+      |                          ^~~~~
+      |                          htim1
+../Core/Src/Bootley.c:33:26: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:33:60: error: 'capture1' undeclared (first use in this function)
+   33 |    HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_1, (uint32_t *)capture1, 2);
+      |                                                            ^~~~~~~~
+../Core/Src/Bootley.c:35:60: error: 'capture2' undeclared (first use in this function)
+   35 |    HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_2, (uint32_t *)capture2, 2);
+      |                                                            ^~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:04:13 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:34:4: error: 'htim3' undeclared (first use in this function); did you mean 'htim1'?
+   34 |    htim3.State = HAL_TIM_STATE_READY;
+      |    ^~~~~
+      |    htim1
+../Core/Src/Bootley.c:34:4: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:35:60: error: 'capture2' undeclared (first use in this function)
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)capture2, 2);
+      |                                                            ^~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:04:21 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:60: error: 'capture2' undeclared (first use in this function)
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)capture2, 2);
+      |                                                            ^~~~~~~~
+../Core/Src/Bootley.c:35:60: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:04:39 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "Bootley.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bootley.elf
+ 
+arm-none-eabi-size   Bootley.elf 
+arm-none-eabi-objdump -h -S  Bootley.elf  > "Bootley.list"
+   text	   data	    bss	    dec	    hex	filename
+  14032	     20	   1908	  15960	   3e58	Bootley.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley.list
+ 
+19:05:27 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'Bootley_Init' [-Wimplicit-function-declaration]
+   95 |   Bootley_Init();
+      |   ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "Bootley.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bootley.elf
+ 
+arm-none-eabi-size   Bootley.elf 
+arm-none-eabi-objdump -h -S  Bootley.elf  > "Bootley.list"
+   text	   data	    bss	    dec	    hex	filename
+  15772	     20	   1916	  17708	   452c	Bootley.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley.list
+ 
+19:20:46 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:49:59: error: expected expression before '[' token
+   49 |    u32_g_receiver_ch1_period = u16_steering_capture1[1] - [0];
+      |                                                           ^
+../Core/Src/Bootley.c:52:3: error: 'freq' undeclared (first use in this function)
+   52 |   freq = (HAL_RCC_GetPCLK1Freq() * 2) / (htim3.Instance->PSC + 1);  //84000000
+      |   ^~~~
+../Core/Src/Bootley.c:52:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:52:42: error: 'htim3' undeclared (first use in this function); did you mean 'htim1'?
+   52 |   freq = (HAL_RCC_GetPCLK1Freq() * 2) / (htim3.Instance->PSC + 1);  //84000000
+      |                                          ^~~~~
+      |                                          htim1
+../Core/Src/Bootley.c:53:17: error: 'period' undeclared (first use in this function); did you mean 'perror'?
+   53 |   freq = freq / period;
+      |                 ^~~~~~
+      |                 perror
+../Core/Src/Bootley.c:55:1: error: 'ch1done' undeclared (first use in this function)
+   55 | ch1done = false;
+      | ^~~~~~~
+../Core/Src/Bootley.c:58:4: error: 'ch2done' undeclared (first use in this function)
+   58 | if(ch2done)
+      |    ^~~~~~~
+../Core/Src/Bootley.c:60:4: error: 'capture2' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |    ^~~~~~~~
+../Core/Src/Bootley.c:60:19: error: 'capture1' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |                   ^~~~~~~~
+../Core/Src/Bootley.c:62:1: error: 'active' undeclared (first use in this function)
+   62 | active = capture2[0] - capture1[0];
+      | ^~~~~~
+../Core/Src/Bootley.c:69:1: error: 'duty' undeclared (first use in this function)
+   69 | duty = active * 100 / period;
+      | ^~~~
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:73:1: error: expected identifier or '(' before '}' token
+   73 | }
+      | ^
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:20:47 **** Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1932	  35096	   8918	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+19:20:56 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:52:3: error: 'freq' undeclared (first use in this function)
+   52 |   freq = (HAL_RCC_GetPCLK1Freq() * 2) / (htim1.Instance->PSC + 1);  //84000000
+      |   ^~~~
+../Core/Src/Bootley.c:52:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:53:17: error: 'period' undeclared (first use in this function); did you mean 'perror'?
+   53 |   freq = freq / period;
+      |                 ^~~~~~
+      |                 perror
+../Core/Src/Bootley.c:55:1: error: 'ch1done' undeclared (first use in this function)
+   55 | ch1done = false;
+      | ^~~~~~~
+../Core/Src/Bootley.c:58:4: error: 'ch2done' undeclared (first use in this function)
+   58 | if(ch2done)
+      |    ^~~~~~~
+../Core/Src/Bootley.c:60:4: error: 'capture2' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |    ^~~~~~~~
+../Core/Src/Bootley.c:60:19: error: 'capture1' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |                   ^~~~~~~~
+../Core/Src/Bootley.c:62:1: error: 'active' undeclared (first use in this function)
+   62 | active = capture2[0] - capture1[0];
+      | ^~~~~~
+../Core/Src/Bootley.c:69:1: error: 'duty' undeclared (first use in this function)
+   69 | duty = active * 100 / period;
+      | ^~~~
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:73:1: error: expected identifier or '(' before '}' token
+   73 | }
+      | ^
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:20:57 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1932	  35096	   8918	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+19:21:03 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:52:3: error: 'freq' undeclared (first use in this function)
+   52 |   freq = (HAL_RCC_GetPCLK1Freq() * 2) / (htim1.Instance->PSC + 1);  //84000000
+      |   ^~~~
+../Core/Src/Bootley.c:52:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:53:17: error: 'period' undeclared (first use in this function); did you mean 'perror'?
+   53 |   freq = freq / period;
+      |                 ^~~~~~
+      |                 perror
+../Core/Src/Bootley.c:55:1: error: 'ch1done' undeclared (first use in this function)
+   55 | ch1done = false;
+      | ^~~~~~~
+../Core/Src/Bootley.c:58:4: error: 'ch2done' undeclared (first use in this function)
+   58 | if(ch2done)
+      |    ^~~~~~~
+../Core/Src/Bootley.c:60:4: error: 'capture2' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |    ^~~~~~~~
+../Core/Src/Bootley.c:60:19: error: 'capture1' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |                   ^~~~~~~~
+../Core/Src/Bootley.c:62:1: error: 'active' undeclared (first use in this function)
+   62 | active = capture2[0] - capture1[0];
+      | ^~~~~~
+../Core/Src/Bootley.c:69:1: error: 'duty' undeclared (first use in this function)
+   69 | duty = active * 100 / period;
+      | ^~~~
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:73:1: error: expected identifier or '(' before '}' token
+   73 | }
+      | ^
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:21:03 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1932	  35096	   8918	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+19:21:10 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:52:3: error: 'freq' undeclared (first use in this function)
+   52 |   freq = (HAL_RCC_GetPCLK1Freq() * 2) / (htim1.Instance->PSC + 1);  //84000000
+      |   ^~~~
+../Core/Src/Bootley.c:52:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:53:17: error: 'period' undeclared (first use in this function); did you mean 'perror'?
+   53 |   freq = freq / period;
+      |                 ^~~~~~
+      |                 perror
+../Core/Src/Bootley.c:55:1: error: 'ch1done' undeclared (first use in this function)
+   55 | ch1done = false;
+      | ^~~~~~~
+../Core/Src/Bootley.c:58:4: error: 'ch2done' undeclared (first use in this function)
+   58 | if(ch2done)
+      |    ^~~~~~~
+../Core/Src/Bootley.c:60:4: error: 'capture2' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |    ^~~~~~~~
+../Core/Src/Bootley.c:60:19: error: 'capture1' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |                   ^~~~~~~~
+../Core/Src/Bootley.c:62:1: error: 'active' undeclared (first use in this function)
+   62 | active = capture2[0] - capture1[0];
+      | ^~~~~~
+../Core/Src/Bootley.c:69:1: error: 'duty' undeclared (first use in this function)
+   69 | duty = active * 100 / period;
+      | ^~~~
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:73:1: error: expected identifier or '(' before '}' token
+   73 | }
+      | ^
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:21:10 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1932	  35096	   8918	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+19:21:15 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:52:3: error: 'freq' undeclared (first use in this function)
+   52 |   freq = (HAL_RCC_GetPCLK1Freq() * 2) / (htim1.Instance->PSC + 1);  //84000000
+      |   ^~~~
+../Core/Src/Bootley.c:52:3: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:53:17: error: 'period' undeclared (first use in this function); did you mean 'perror'?
+   53 |   freq = freq / period;
+      |                 ^~~~~~
+      |                 perror
+../Core/Src/Bootley.c:55:1: error: 'ch1done' undeclared (first use in this function)
+   55 | ch1done = false;
+      | ^~~~~~~
+../Core/Src/Bootley.c:58:4: error: 'ch2done' undeclared (first use in this function)
+   58 | if(ch2done)
+      |    ^~~~~~~
+../Core/Src/Bootley.c:60:4: error: 'capture2' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |    ^~~~~~~~
+../Core/Src/Bootley.c:60:19: error: 'capture1' undeclared (first use in this function)
+   60 | if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |                   ^~~~~~~~
+../Core/Src/Bootley.c:62:1: error: 'active' undeclared (first use in this function)
+   62 | active = capture2[0] - capture1[0];
+      | ^~~~~~
+../Core/Src/Bootley.c:69:1: error: 'duty' undeclared (first use in this function)
+   69 | duty = active * 100 / period;
+      | ^~~~
+../Core/Src/Bootley.c: At top level:
+../Core/Src/Bootley.c:73:1: error: expected identifier or '(' before '}' token
+   73 | }
+      | ^
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:29:28 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:58:5: error: 'ch2done' undeclared (first use in this function)
+   58 |  if(ch2done)
+      |     ^~~~~~~
+../Core/Src/Bootley.c:58:5: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/Bootley.c:60:6: error: 'capture2' undeclared (first use in this function)
+   60 |   if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |      ^~~~~~~~
+../Core/Src/Bootley.c:60:21: error: 'capture1' undeclared (first use in this function)
+   60 |   if(capture2[0] >= capture1[0] && capture2[0] <= capture1[1])
+      |                     ^~~~~~~~
+../Core/Src/Bootley.c:62:4: error: 'active' undeclared (first use in this function)
+   62 |    active = capture2[0] - capture1[0];
+      |    ^~~~~~
+../Core/Src/Bootley.c:69:3: error: 'duty' undeclared (first use in this function)
+   69 |   duty = active * 100 / period;
+      |   ^~~~
+../Core/Src/Bootley.c:69:25: error: 'period' undeclared (first use in this function); did you mean 'perror'?
+   69 |   duty = active * 100 / period;
+      |                         ^~~~~~
+      |                         perror
+make: *** [Core/Src/subdir.mk:49: Core/Src/Bootley.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:32:53 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "Bootley.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bootley.elf
+ 
+arm-none-eabi-size   Bootley.elf 
+arm-none-eabi-objdump -h -S  Bootley.elf  > "Bootley.list"
+   text	   data	    bss	    dec	    hex	filename
+  15772	     20	   1916	  17708	   452c	Bootley.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley.list
+ 
+19:32:53 **** Incremental Build of configuration Debug for project SingleMotorTest_usTicker ****
+make -j16 all 
+arm-none-eabi-size   SingleMotorTest_usTicker.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32680	    484	   1932	  35096	   8918	SingleMotorTest_usTicker.elf
+Finished building: default.size.stdout
+ 
+19:32:58 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-size   Bootley.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15772	     20	   1916	  17708	   452c	Bootley.elf
+Finished building: default.size.stdout
+ 
+19:57:56 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:73:16: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   73 |  printf("pw : %d \r\n", u32_g_steering_pw_us);
+      |               ~^        ~~~~~~~~~~~~~~~~~~~~
+      |                |        |
+      |                int      uint32_t {aka long unsigned int}
+      |               %ld
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'Bootley_Init' [-Wimplicit-function-declaration]
+   95 |   Bootley_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:107:4: warning: implicit declaration of function 'Bootley_GetPulseWidth' [-Wimplicit-function-declaration]
+  107 |    Bootley_GetPulseWidth()
+      |    ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:107:27: error: expected ';' before '}' token
+  107 |    Bootley_GetPulseWidth()
+      |                           ^
+      |                           ;
+  108 |   }
+      |   ~                        
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:58:03 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'Bootley_Init' [-Wimplicit-function-declaration]
+   95 |   Bootley_Init();
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:107:4: warning: implicit declaration of function 'Bootley_GetPulseWidth' [-Wimplicit-function-declaration]
+  107 |    Bootley_GetPulseWidth();
+      |    ^~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Bootley.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bootley.elf
+ 
+arm-none-eabi-size   Bootley.elf 
+arm-none-eabi-objdump -h -S  Bootley.elf  > "Bootley.list"
+   text	   data	    bss	    dec	    hex	filename
+  31384	    484	   1948	  33816	   8418	Bootley.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley.list
+ 
+19:58:32 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-size   Bootley.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31384	    484	   1948	  33816	   8418	Bootley.elf
+Finished building: default.size.stdout
+ 
+19:58:41 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-size   Bootley.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31384	    484	   1948	  33816	   8418	Bootley.elf
+Finished building: default.size.stdout
+ 
+20:04:33 **** Incremental Build of configuration Debug for project Bootley ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/Bootley.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.c: In function 'Bootley_Init':
+../Core/Src/Bootley.c:33:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   33 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c:35:48: warning: passing argument 3 of 'HAL_TIM_IC_Start_DMA' from incompatible pointer type [-Wincompatible-pointer-types]
+   35 |    HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                |
+      |                                                uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:402,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/Bootley.h:6,
+                 from ../Core/Src/Bootley.c:4:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:1965:93: note: expected 'uint32_t *' {aka 'long unsigned int *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+ 1965 | HAL_StatusTypeDef HAL_TIM_IC_Start_DMA(TIM_HandleTypeDef *htim, uint32_t Channel, uint32_t *pData, uint16_t Length);
+      |                                                                                   ~~~~~~~~~~^~~~~
+../Core/Src/Bootley.c: In function 'Bootley_GetPulseWidth':
+../Core/Src/Bootley.c:73:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   73 |  printf("%d %d %d \r\n",
+      |          ~^
+      |           |
+      |           int
+      |          %ld
+   74 |    u32_g_receiver_ch1_freq_Hz, u32_g_receiver_ch1_duty, u32_g_steering_pw_us);
+      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |    |
+      |    uint32_t {aka long unsigned int}
+../Core/Src/Bootley.c:73:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   73 |  printf("%d %d %d \r\n",
+      |             ~^
+      |              |
+      |              int
+      |             %ld
+   74 |    u32_g_receiver_ch1_freq_Hz, u32_g_receiver_ch1_duty, u32_g_steering_pw_us);
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~
+      |                                |
+      |                                uint32_t {aka long unsigned int}
+../Core/Src/Bootley.c:73:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   73 |  printf("%d %d %d \r\n",
+      |                ~^
+      |                 |
+      |                 int
+      |                %ld
+   74 |    u32_g_receiver_ch1_freq_Hz, u32_g_receiver_ch1_duty, u32_g_steering_pw_us);
+      |                                                         ~~~~~~~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         uint32_t {aka long unsigned int}
+arm-none-eabi-gcc -o "Bootley.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Bootley.elf
+ 
+arm-none-eabi-size   Bootley.elf 
+arm-none-eabi-objdump -h -S  Bootley.elf  > "Bootley.list"
+   text	   data	    bss	    dec	    hex	filename
+  31392	    484	   1948	  33824	   8420	Bootley.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley.list
+ 
