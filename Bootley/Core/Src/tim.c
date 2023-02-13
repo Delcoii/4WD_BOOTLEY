@@ -27,6 +27,8 @@
 TIM_HandleTypeDef htim1;
 DMA_HandleTypeDef hdma_tim1_ch1;
 DMA_HandleTypeDef hdma_tim1_ch2;
+DMA_HandleTypeDef hdma_tim1_ch3;
+DMA_HandleTypeDef hdma_tim1_ch4_trig_com;
 
 /* TIM1 init function */
 void MX_TIM1_Init(void)
@@ -74,6 +76,20 @@ void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  sConfigIC.ICFilter = 15;
+  if (HAL_TIM_IC_ConfigChannel(&htim1, &sConfigIC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_FALLING;
+  sConfigIC.ICSelection = TIM_ICSELECTION_INDIRECTTI;
+  sConfigIC.ICFilter = 0;
+  if (HAL_TIM_IC_ConfigChannel(&htim1, &sConfigIC, TIM_CHANNEL_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
   /* USER CODE BEGIN TIM1_Init 2 */
 
   /* USER CODE END TIM1_Init 2 */
@@ -95,8 +111,9 @@ void HAL_TIM_IC_MspInit(TIM_HandleTypeDef* tim_icHandle)
     __HAL_RCC_GPIOA_CLK_ENABLE();
     /**TIM1 GPIO Configuration
     PA8     ------> TIM1_CH1
+    PA10     ------> TIM1_CH3
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_8;
+    GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_10;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -140,6 +157,46 @@ void HAL_TIM_IC_MspInit(TIM_HandleTypeDef* tim_icHandle)
 
     __HAL_LINKDMA(tim_icHandle,hdma[TIM_DMA_ID_CC2],hdma_tim1_ch2);
 
+    /* TIM1_CH3 Init */
+    hdma_tim1_ch3.Instance = DMA2_Stream6;
+    hdma_tim1_ch3.Init.Channel = DMA_CHANNEL_6;
+    hdma_tim1_ch3.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_tim1_ch3.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_tim1_ch3.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_tim1_ch3.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_tim1_ch3.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_tim1_ch3.Init.Mode = DMA_CIRCULAR;
+    hdma_tim1_ch3.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_tim1_ch3.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+    if (HAL_DMA_Init(&hdma_tim1_ch3) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(tim_icHandle,hdma[TIM_DMA_ID_CC3],hdma_tim1_ch3);
+
+    /* TIM1_CH4_TRIG_COM Init */
+    hdma_tim1_ch4_trig_com.Instance = DMA2_Stream4;
+    hdma_tim1_ch4_trig_com.Init.Channel = DMA_CHANNEL_6;
+    hdma_tim1_ch4_trig_com.Init.Direction = DMA_PERIPH_TO_MEMORY;
+    hdma_tim1_ch4_trig_com.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_tim1_ch4_trig_com.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_tim1_ch4_trig_com.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_tim1_ch4_trig_com.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_tim1_ch4_trig_com.Init.Mode = DMA_CIRCULAR;
+    hdma_tim1_ch4_trig_com.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_tim1_ch4_trig_com.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+    if (HAL_DMA_Init(&hdma_tim1_ch4_trig_com) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    /* Several peripheral DMA handle pointers point to the same DMA handle.
+     Be aware that there is only one stream to perform all the requested DMAs. */
+    __HAL_LINKDMA(tim_icHandle,hdma[TIM_DMA_ID_CC4],hdma_tim1_ch4_trig_com);
+    __HAL_LINKDMA(tim_icHandle,hdma[TIM_DMA_ID_TRIGGER],hdma_tim1_ch4_trig_com);
+    __HAL_LINKDMA(tim_icHandle,hdma[TIM_DMA_ID_COMMUTATION],hdma_tim1_ch4_trig_com);
+
     /* TIM1 interrupt Init */
     HAL_NVIC_SetPriority(TIM1_CC_IRQn, 0, 0);
     HAL_NVIC_EnableIRQ(TIM1_CC_IRQn);
@@ -162,12 +219,17 @@ void HAL_TIM_IC_MspDeInit(TIM_HandleTypeDef* tim_icHandle)
 
     /**TIM1 GPIO Configuration
     PA8     ------> TIM1_CH1
+    PA10     ------> TIM1_CH3
     */
-    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_8);
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_8|GPIO_PIN_10);
 
     /* TIM1 DMA DeInit */
     HAL_DMA_DeInit(tim_icHandle->hdma[TIM_DMA_ID_CC1]);
     HAL_DMA_DeInit(tim_icHandle->hdma[TIM_DMA_ID_CC2]);
+    HAL_DMA_DeInit(tim_icHandle->hdma[TIM_DMA_ID_CC3]);
+    HAL_DMA_DeInit(tim_icHandle->hdma[TIM_DMA_ID_CC4]);
+    HAL_DMA_DeInit(tim_icHandle->hdma[TIM_DMA_ID_TRIGGER]);
+    HAL_DMA_DeInit(tim_icHandle->hdma[TIM_DMA_ID_COMMUTATION]);
 
     /* TIM1 interrupt Deinit */
     HAL_NVIC_DisableIRQ(TIM1_CC_IRQn);
