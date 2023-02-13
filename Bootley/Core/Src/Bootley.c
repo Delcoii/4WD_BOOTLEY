@@ -3,9 +3,11 @@
 
 #include "Bootley.h"
 
-/* 수신기 ch1 계산 관련 변수 */
-uint16_t u16_steering_capture1[2];
-uint16_t u16_steering_capture2[2];
+/* 수신기 ch1 계산 관련 변수
+ * 조향 스위치 (ch1) 읽어서 추후에 조향 수치 정함
+ */
+uint16_t u16_steering_capture1[2];		// dma를 통해 us 단위의 시간 저장됨
+uint16_t u16_steering_capture2[2];		// dma를 통해 us 단위의 시간 저장됨
 bool b_g_steering_ch1_done = false;
 bool b_g_steering_ch2_done = false;
 uint32_t u32_g_receiver_ch1_period;
@@ -14,7 +16,9 @@ uint32_t u32_g_receiver_ch1_freq_Hz;
 uint32_t u32_g_receiver_ch1_duty;
 
 
-/* 수신기 ch2 계산 관련 변수 */
+/* 수신기 ch2 계산 관련 변수
+ * 엑셀 스위치 (ch2) 읽어서 추후에 엑셀(전진, 후진) 수치 정함
+ */
 uint16_t u16_accel_capture1[2];			// dma를 통해 us 단위의 시간 저장됨
 uint16_t u16_accel_capture2[2];			// dma를 통해 us 단위의 시간 저장됨
 bool b_g_accel_ch3_done = false;
@@ -24,13 +28,28 @@ uint32_t u32_g_accel_pw_us;
 uint32_t u32_g_receiver_ch2_freq_Hz;
 uint32_t u32_g_receiver_ch2_duty;
 
+
+/* 수신기 ch3 계산 관련 변수
+ * 잠금 스위치 (ch3) 읽어서 추후에 수동주행, 자율주행(ROS subscribe) 모드 변경
+ */
+uint16_t u16_auto_mode_capture1[2];			// dma를 통해 us 단위의 시간 저장됨
+uint16_t u16_auto_mode_capture2[2];			// dma를 통해 us 단위의 시간 저장됨
+bool b_g_auto_mode_ch1_done = false;
+bool b_g_auto_mode_ch2_done = false;
+uint32_t u32_g_receiver_ch3_period;
+uint32_t u32_g_auto_mode_pw_us;
+uint32_t u32_g_receiver_ch3_freq_Hz;
+uint32_t u32_g_receiver_ch3_duty;
+
+
+
+
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
 	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
 	{
 		b_g_steering_ch1_done = true;
 	}
-
 	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
 	{
 		b_g_steering_ch2_done = true;
@@ -40,10 +59,18 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 	{
 		b_g_accel_ch3_done = true;
 	}
-
 	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_4)
 	{
 		b_g_accel_ch4_done = true;
+	}
+
+	if(htim->Instance == TIM3 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
+	{
+		b_g_auto_mode_ch1_done = true;
+	}
+	if(htim->Instance == TIM3 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
+	{
+		b_g_auto_mode_ch2_done = true;
 	}
 }
 
@@ -68,6 +95,9 @@ void Bootley_Init()
 	HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t *)u16_accel_capture1, 2);
 	HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t *)u16_accel_capture2, 2);
 
+	HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_1, (uint32_t *)u16_auto_mode_capture1, 2);
+	HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_2, (uint32_t *)u16_auto_mode_capture2, 2);
+
 }
 
 /*
@@ -77,7 +107,7 @@ void Bootley_Init()
  */
 void Bootley_GetPulseWidth()
 {
-	/* 수신기 ch1 게산 부분 시작 */
+	/* 수신기 ch1 계산 부분 시작 */
 	if(b_g_steering_ch1_done)
 	{
 		if(u16_steering_capture1[0] > u16_steering_capture1[1])
@@ -110,7 +140,7 @@ void Bootley_GetPulseWidth()
 	}
 	/* 수신기 ch1 계산 부분 끝 */
 
-	/* 수신기 ch2 게산 부분 시작 */
+	/* 수신기 ch2 계산 부분 시작 */
 	if(b_g_accel_ch3_done)
 		{
 			if(u16_accel_capture1[0] > u16_accel_capture1[1])
@@ -127,24 +157,56 @@ void Bootley_GetPulseWidth()
 
 			b_g_accel_ch3_done = false;
 		}
-
-		if(b_g_accel_ch4_done)
+	if(b_g_accel_ch4_done)
+	{
+		if(u16_accel_capture2[0] >= u16_accel_capture1[0] && u16_accel_capture2[0] <= u16_accel_capture1[1])
 		{
-			if(u16_accel_capture2[0] >= u16_accel_capture1[0] && u16_accel_capture2[0] <= u16_accel_capture1[1])
-			{
-				u32_g_accel_pw_us = u16_accel_capture2[0] - u16_accel_capture1[0];
-			}
-			else if(u16_accel_capture2[1] >= u16_accel_capture1[0] && u16_accel_capture2[1] <= u16_accel_capture1[1])
-			{
-				u32_g_accel_pw_us = u16_accel_capture2[1] - u16_accel_capture1[0];
-			}
-
-			u32_g_receiver_ch2_duty = u32_g_accel_pw_us * 100 / u32_g_receiver_ch2_period;
-			b_g_accel_ch4_done = false;
+			u32_g_accel_pw_us = u16_accel_capture2[0] - u16_accel_capture1[0];
+		}
+		else if(u16_accel_capture2[1] >= u16_accel_capture1[0] && u16_accel_capture2[1] <= u16_accel_capture1[1])
+		{
+			u32_g_accel_pw_us = u16_accel_capture2[1] - u16_accel_capture1[0];
 		}
 
+		u32_g_receiver_ch2_duty = u32_g_accel_pw_us * 100 / u32_g_receiver_ch2_period;
+		b_g_accel_ch4_done = false;
+	}
 
-	printf("%d %d\r\n", u32_g_steering_pw_us, u32_g_accel_pw_us);		// for debugging
+	/* 수신기 ch3 계산 부분 시작 */
+	if(b_g_auto_mode_ch1_done)
+	{
+		if(u16_auto_mode_capture1[0] > u16_auto_mode_capture1[1])
+		{
+			u32_g_receiver_ch2_period = htim3.Instance->ARR + u16_auto_mode_capture1[1] - u16_auto_mode_capture1[0];
+		}
+		else
+		{
+			u32_g_receiver_ch2_period = u16_auto_mode_capture1[1] - u16_auto_mode_capture1[0];
+		}
+
+		u32_g_receiver_ch3_freq_Hz = (HAL_RCC_GetPCLK1Freq() * 2) / (htim3.Instance->PSC + 1);  //84000000
+		u32_g_receiver_ch3_freq_Hz = u32_g_receiver_ch3_freq_Hz / u32_g_receiver_ch3_period;
+
+		b_g_auto_mode_ch1_done = false;
+	}
+	if(b_g_auto_mode_ch2_done)
+	{
+		if(u16_auto_mode_capture2[0] >= u16_auto_mode_capture1[0] && u16_auto_mode_capture2[0] <= u16_auto_mode_capture1[1])
+		{
+			u32_g_auto_mode_pw_us = u16_auto_mode_capture2[0] - u16_auto_mode_capture1[0];
+		}
+		else if(u16_auto_mode_capture2[1] >= u16_auto_mode_capture1[0] && u16_auto_mode_capture2[1] <= u16_auto_mode_capture1[1])
+		{
+			u32_g_auto_mode_pw_us = u16_auto_mode_capture2[1] - u16_auto_mode_capture1[0];
+		}
+
+		u32_g_receiver_ch3_duty = u32_g_auto_mode_pw_us * 100 / u32_g_receiver_ch3_period;
+		b_g_auto_mode_ch2_done = false;
+	}
+
+	// for debugging
+	printf("%d %d ", u32_g_steering_pw_us, u32_g_accel_pw_us);
+	printf("%d \r\n", u32_g_auto_mode_pw_us);
 
 }
 
