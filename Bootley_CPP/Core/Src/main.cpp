@@ -57,8 +57,6 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
-
 /* USER CODE END 0 */
 
 /**
@@ -95,9 +93,8 @@ int main(void)
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 
-  
-  	  Bootley bootley;
-  	  bootley.InitModule();
+	  Bootley bootley;
+	  bootley.InitModule();
 
 
   /* USER CODE END 2 */
@@ -108,10 +105,12 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-
     /* USER CODE BEGIN 3 */
 
+//	  check_IC();
 	  bootley.GetPulseWidth();
+
+
   }
   /* USER CODE END 3 */
 }

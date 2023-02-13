@@ -13,6 +13,7 @@
 
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim);
+void check_IC();
 
 
 class Bootley {
@@ -33,14 +34,16 @@ private:
     uint32_t u32_receiver_ch3_freq_Hz;
     uint32_t u32_receiver_ch3_duty;
 
+    uint32_t u32_receiver_ch4_period;
+    uint32_t u32_drive_mode_pw_us;
+    uint32_t u32_receiver_ch4_freq_Hz;
+    uint32_t u32_receiver_ch4_duty;
+
 public:
     Bootley();
 
     void InitModule();
     void GetPulseWidth();
-
-
-
 
 };
 
