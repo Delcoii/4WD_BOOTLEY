@@ -204,6 +204,37 @@ void Bootley_GetPulseWidth()
 		b_g_auto_mode_ch2_done = false;
 	}
 
+	if(b_g_auto_mode_ch1_done)
+	{
+		if(u16_auto_mode_capture1[0] > u16_auto_mode_capture1[1])
+		{
+			u32_g_receiver_ch2_period = htim3.Instance->ARR + u16_auto_mode_capture1[1] - u16_auto_mode_capture1[0];
+		}
+		else
+		{
+			u32_g_receiver_ch2_period = u16_auto_mode_capture1[1] - u16_auto_mode_capture1[0];
+		}
+
+		u32_g_receiver_ch3_freq_Hz = (HAL_RCC_GetPCLK1Freq() * 2) / (htim3.Instance->PSC + 1);  //84000000
+		u32_g_receiver_ch3_freq_Hz = u32_g_receiver_ch3_freq_Hz / u32_g_receiver_ch3_period;
+
+		b_g_auto_mode_ch1_done = false;
+	}
+	if(b_g_auto_mode_ch2_done)
+	{
+		if(u16_auto_mode_capture2[0] >= u16_auto_mode_capture1[0] && u16_auto_mode_capture2[0] <= u16_auto_mode_capture1[1])
+		{
+			u32_g_auto_mode_pw_us = u16_auto_mode_capture2[0] - u16_auto_mode_capture1[0];
+		}
+		else if(u16_auto_mode_capture2[1] >= u16_auto_mode_capture1[0] && u16_auto_mode_capture2[1] <= u16_auto_mode_capture1[1])
+		{
+			u32_g_auto_mode_pw_us = u16_auto_mode_capture2[1] - u16_auto_mode_capture1[0];
+		}
+
+		u32_g_receiver_ch3_duty = u32_g_auto_mode_pw_us * 100 / u32_g_receiver_ch3_period;
+		b_g_auto_mode_ch2_done = false;
+	} 
+
 	// for debugging
 	printf("%d %d ", u32_g_steering_pw_us, u32_g_accel_pw_us);
 	printf("%d \r\n", u32_g_auto_mode_pw_us);
