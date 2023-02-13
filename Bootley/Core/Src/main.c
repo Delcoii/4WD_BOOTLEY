@@ -105,6 +105,11 @@ int main(void)
 
 
 	  Bootley_GetPulseWidth();
+//	  check_IC();
+
+
+
+//	  HAL_Delay(200);
   }
   /* USER CODE END 3 */
 }

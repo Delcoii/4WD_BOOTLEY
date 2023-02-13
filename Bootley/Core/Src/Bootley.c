@@ -6,6 +6,9 @@
 
 uint16_t u16_steering_capture1[2];
 uint16_t u16_steering_capture2[2];
+//uint32_t u16_steering_capture1[2];
+//uint32_t u16_steering_capture2[2];
+
 bool b_g_steering_ch1_done = false;
 bool b_g_steering_ch2_done = false;
 uint32_t u32_g_receiver_ch1_period;
@@ -27,12 +30,21 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 	}
 }
 
+void check_IC()
+{
+	printf("check in : %d %d \r\n\n", b_g_steering_ch1_done, b_g_steering_ch2_done);
+}
+
+
+
 
 void Bootley_Init()
 {
-	  HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint16_t *)u16_steering_capture1, 2);
-	  htim1.State = HAL_TIM_STATE_READY;
-	  HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint16_t *)u16_steering_capture2, 2);
+
+	HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_1, (uint32_t *)u16_steering_capture1, 2);
+//	htim1.State = HAL_TIM_STATE_READY;
+	HAL_TIM_IC_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t *)u16_steering_capture2, 2);
+
 }
 
 
@@ -70,7 +82,8 @@ void Bootley_GetPulseWidth()
 		b_g_steering_ch2_done = false;
 	}
 
-	printf("%d %d %d \r\n",
+	printf("%d %d %d\r\n",
 			u32_g_receiver_ch1_freq_Hz, u32_g_receiver_ch1_duty, u32_g_steering_pw_us);
+
 }
 
