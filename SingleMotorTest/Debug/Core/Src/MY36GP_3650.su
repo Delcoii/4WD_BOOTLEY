@@ -3,5 +3,7 @@
 ../Core/Src/MY36GP_3650.c:33:6:FL_BrakeEnable	8	static
 ../Core/Src/MY36GP_3650.c:38:6:FL_BrakeDisable	8	static
 ../Core/Src/MY36GP_3650.c:44:6:FL_SetDir	16	static
-../Core/Src/MY36GP_3650.c:58:6:FL_RunMotor	32	static
-../Core/Src/MY36GP_3650.c:71:6:motorVelocityCheck	32	static
+../Core/Src/MY36GP_3650.c:50:7:Period2RPM	24	static
+../Core/Src/MY36GP_3650.c:66:6:FL_RunMotor	24	static
+../Core/Src/MY36GP_3650.c:95:7:f_MovingAverage	24	static
+../Core/Src/MY36GP_3650.c:127:6:motorVelocityCheck	32	static
