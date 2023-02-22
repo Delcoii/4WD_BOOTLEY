@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#include "MY36GP_3650.hpp"
+
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim);
 void check_IC();
@@ -44,6 +46,8 @@ public:
 
     void InitModule();
     void GetPulseWidth();
+
+    
 
 };
 
