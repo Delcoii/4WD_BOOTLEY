@@ -47,41 +47,7 @@ bool b_g_drive_mode_ch4_done = false;
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
-//	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
-//	{
-//		b_g_steering_ch1_done = true;
-//	}
-//	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
-//	{
-//		b_g_steering_ch2_done = true;
-//	}
-//
-//	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3)
-//	{
-//		b_g_accel_ch3_done = true;
-//	}
-//	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_4)
-//	{
-//		b_g_accel_ch4_done = true;
-//	}
-//
-//	if(htim->Instance == TIM3 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
-//	{
-//		b_g_auto_mode_ch1_done = true;
-//	}
-//	if(htim->Instance == TIM3 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
-//	{
-//		b_g_auto_mode_ch2_done = true;
-//	}
-//
-//	if(htim->Instance == TIM3 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_3)
-//	{
-//		b_g_drive_mode_ch3_done = true;
-//	}
-//	if(htim->Instance == TIM3 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_4)
-//	{
-//		b_g_drive_mode_ch4_done = true;
-//	}
+
 	if(htim->Instance == TIM1 && htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
 	{
 		b_g_steering_ch1_done = true;
@@ -149,6 +115,12 @@ void Bootley::InitModule()
 
 	HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_3, (uint32_t *)u16_drive_mode_capture1, 2);
 	HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_4, (uint32_t *)u16_drive_mode_capture2, 2);
+
+	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_3);
+	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_4);
+
 
 }
 
@@ -299,3 +271,49 @@ void Bootley::GetPulseWidth()
 
 }
 
+
+
+void Bootley::GetSteeringVal()
+{
+	float pulse_width_us = (float)u32_steering_pw_us - STEERING_PW_ERROR_US;
+
+	if(pulse_width_us < RECEIVER_MIN_PW) 		pulse_width_us = RECEIVER_MIN_PW;
+	else if(pulse_width_us > RECEIVER_MAX_PW)	pulse_width_us = RECEIVER_MAX_PW;
+
+	else	printf("receiver ch1 detect error");
+	
+	f_steering_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, RIGHT_MAX_STEERING_VAL, LEFT_MAX_STEERING_VAL);
+	
+}
+
+void Bootley::GetAccelVal()
+{
+	float pulse_width_us = (float)u32_accel_pw_us - ACCEL_PW_ERROR_US;
+
+	if(pulse_width_us < RECEIVER_MIN_PW) 		pulse_width_us = RECEIVER_MIN_PW;
+	else if(pulse_width_us > RECEIVER_MAX_PW)	pulse_width_us = RECEIVER_MAX_PW;
+
+	else	printf("receiver ch2 detect error");
+
+	f_accel_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, FORWARD_MAX_ACCEL_VAL, BACKWARD_MAX_ACCEL_VAL);
+
+}
+
+
+void Bootley::SetAutoMode()
+{
+	if ((u32_auto_mode_pw_us > 900) && (u32_auto_mode_pw_us < 1500))		b_auto_mode = MANUAL_MODE;
+	else if ((u32_auto_mode_pw_us > 1500) && u32_auto_mode_pw_us < 2200)	b_auto_mode = AUTO_MODE;
+
+	else	printf("receiver ch3 detect error");
+}
+
+
+void Bootley::SetDriveMode()
+{
+	if ((u32_auto_mode_pw_us > 900) && (u32_auto_mode_pw_us < 1300))		u8_drive_mode = SPINNING_MODE;
+	else if ((u32_auto_mode_pw_us > 1301) && u32_auto_mode_pw_us < 1700)	u8_drive_mode = NORMAL_MODE;
+	else if ((u32_auto_mode_pw_us > 1701) && u32_auto_mode_pw_us < 2200)	u8_drive_mode = LOCK_MODE;
+
+	else	printf("receiver ch4 detect error");
+}
