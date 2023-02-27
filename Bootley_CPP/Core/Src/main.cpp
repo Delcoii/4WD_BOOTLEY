@@ -108,7 +108,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
 //	  check_IC();
-	  bootley.GetPulseWidth();
+	  bootley.SetCarState();
 
 
   }

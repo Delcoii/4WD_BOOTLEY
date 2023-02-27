@@ -8,27 +8,29 @@
  *
  *
 */
+#include <stdio.h>
 
 #include "tim.h"            // TIM1 이 모터 속도값 출력에 쓰임
+
 #include "MY36GP_3650.hpp"
 
 
 
 void FL_BrakeEnable(void) { HAL_GPIO_WritePin(FL_BRAKE_PORT, FL_BRAKE_PIN, GPIO_PIN_RESET); }
 void FL_BrakeDisable(void) { HAL_GPIO_WritePin(FL_BRAKE_PORT, FL_BRAKE_PIN, GPIO_PIN_SET); }
-void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
+void FL_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
 
 void FR_BrakeEnable(void) { HAL_GPIO_WritePin(FR_BRAKE_PORT, FR_BRAKE_PIN, GPIO_PIN_RESET); }
 void FR_BrakeDisable(void) { HAL_GPIO_WritePin(FR_BRAKE_PORT, FR_BRAKE_PIN, GPIO_PIN_SET); }
-void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
+void FR_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
 
 void RL_BrakeEnable(void) { HAL_GPIO_WritePin(RL_BRAKE_PORT, RL_BRAKE_PIN, GPIO_PIN_RESET); }
 void RL_BrakeDisable(void) { HAL_GPIO_WritePin(RL_BRAKE_PORT, RL_BRAKE_PIN, GPIO_PIN_SET); }
-void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
+void RL_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
 
 void RR_BrakeEnable(void) { HAL_GPIO_WritePin(RR_BRAKE_PORT, RR_BRAKE_PIN, GPIO_PIN_RESET); }
 void RR_BrakeDisable(void) { HAL_GPIO_WritePin(RR_BRAKE_PORT, RR_BRAKE_PIN, GPIO_PIN_SET); }
-void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
+void RR_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); }	// CW 일 때 pin reset, CCW일 때 set
 
 
 
@@ -44,7 +46,7 @@ void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); }
  * 최소 RPM -> CCR = 750
  * dir  : CW or CCW
 */
-void FL_RunMotor(float rpm, uint8_t dir)
+void FL_RunMotor(float rpm, GPIO_PinState dir)
 {
     float f_RPMtoCCR;
     uint32_t u32_input_CCR;
@@ -61,14 +63,14 @@ void FL_RunMotor(float rpm, uint8_t dir)
 
 
 	FL_BrakeDisable();
-    FL_SetDir();
+    FL_SetDir(dir);
     TIM2->CCR1 = u32_input_CCR;
 
     printf("\r\n\nFL CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
-void FR_RunMotor(float rpm, uint8_t dir)
+void FR_RunMotor(float rpm, GPIO_PinState dir)
 {
     float f_RPMtoCCR;
     uint32_t u32_input_CCR;
@@ -85,14 +87,14 @@ void FR_RunMotor(float rpm, uint8_t dir)
 
 
 	FR_BrakeDisable();
-    FR_SetDir();
+    FR_SetDir(dir);
     TIM2->CCR2 = u32_input_CCR;
 
     printf("\r\n\nFR CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
-void RL_RunMotor(float rpm, uint8_t dir)
+void RL_RunMotor(float rpm, GPIO_PinState dir)
 {
     float f_RPMtoCCR;
     uint32_t u32_input_CCR;
@@ -109,7 +111,7 @@ void RL_RunMotor(float rpm, uint8_t dir)
 
 
 	RL_BrakeDisable();
-    RL_SetDir();
+    RL_SetDir(dir);
     TIM2->CCR3 = u32_input_CCR;
 
     printf("\r\n\nRL CCR : %d\t", u32_input_CCR);	// for debugging
@@ -118,7 +120,7 @@ void RL_RunMotor(float rpm, uint8_t dir)
 
 
 
-void RR_RunMotor(float rpm, uint8_t dir)
+void RR_RunMotor(float rpm, GPIO_PinState dir)
 {
     float f_RPMtoCCR;
     uint32_t u32_input_CCR;
@@ -135,7 +137,7 @@ void RR_RunMotor(float rpm, uint8_t dir)
 
 
 	RR_BrakeDisable();
-    RR_SetDir();
+    RR_SetDir(dir);
     TIM2->CCR4 = u32_input_CCR;
 
     printf("\r\n\nRR CCR : %d\t", u32_input_CCR);	// for debugging
@@ -289,7 +291,11 @@ uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_m
 
 /////////////////////////////////////////////////////////
 /* 테스트용 함수 */
-void motorVelocityCheck(uint16_t adc_val, uint8_t dir)
+
+#define ADC_MAX_VALUE	4095
+#define PWM_MAX_VALUE	820
+
+void motorVelocityCheck(uint16_t adc_val, GPIO_PinState dir)
 {
     FL_BrakeDisable();
 

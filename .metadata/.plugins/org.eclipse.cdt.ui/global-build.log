@@ -2151,3 +2151,1426 @@ Finished building: default.size.stdout
  
 Finished building: SingleMotorTest.list
  
+13:25:36 **** Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:19:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/Bootley.cpp: In member function 'void Bootley::InitModule()':
+../Core/Src/Bootley.cpp:119:24: error: 'htim2' was not declared in this scope; did you mean 'htim3'?
+  119 |  HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
+      |                        ^~~~~
+      |                        htim3
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:269:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:269:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:269:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:270:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  270 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:23:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:27:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:31:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:64:15: error: too few arguments to function 'void FL_SetDir(uint8_t)'
+   64 |     FL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:19:6: note: declared here
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:67:5: error: 'printf' was not declared in this scope
+   67 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:14:1: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+   13 | #include "MY36GP_3650.hpp"
+  +++ |+#include <cstdio>
+   14 | 
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:88:15: error: too few arguments to function 'void FR_SetDir(uint8_t)'
+   88 |     FR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:23:6: note: declared here
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: error: 'printf' was not declared in this scope
+   91 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:112:15: error: too few arguments to function 'void RL_SetDir(uint8_t)'
+  112 |     RL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:27:6: note: declared here
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: error: 'printf' was not declared in this scope
+  115 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:138:15: error: too few arguments to function 'void RR_SetDir(uint8_t)'
+  138 |     RR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:31:6: note: declared here
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: error: 'printf' was not declared in this scope
+  141 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:296:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  296 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/Bootley.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/MY36GP_3650.cpp:297:41: error: 'ADC_MAX_VALUE' was not declared in this scope
+  297 |     TIM1->CCR1 = uint32_map(adc_val, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      |                                         ^~~~~~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:297:59: error: 'PWM_MAX_VALUE' was not declared in this scope
+  297 |     TIM1->CCR1 = uint32_map(adc_val, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      |                                                           ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:26:10 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:19:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:23:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:27:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:31:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:64:15: error: too few arguments to function 'void FL_SetDir(uint8_t)'
+   64 |     FL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:19:6: note: declared here
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:67:5: error: 'printf' was not declared in this scope
+   67 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:14:1: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+   13 | #include "MY36GP_3650.hpp"
+  +++ |+#include <cstdio>
+   14 | 
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:88:15: error: too few arguments to function 'void FR_SetDir(uint8_t)'
+   88 |     FR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:23:6: note: declared here
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: error: 'printf' was not declared in this scope
+   91 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:112:15: error: too few arguments to function 'void RL_SetDir(uint8_t)'
+  112 |     RL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:27:6: note: declared here
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: error: 'printf' was not declared in this scope
+  115 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:138:15: error: too few arguments to function 'void RR_SetDir(uint8_t)'
+  138 |     RR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:31:6: note: declared here
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: error: 'printf' was not declared in this scope
+  141 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:296:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  296 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/Bootley.cpp: In member function 'void Bootley::InitModule()':
+../Core/Src/Bootley.cpp:119:24: error: 'htim2' was not declared in this scope; did you mean 'htim3'?
+  119 |  HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
+      |                        ^~~~~
+      |                        htim3
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:269:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:269:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:269:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:270:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  270 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/MY36GP_3650.cpp:297:41: error: 'ADC_MAX_VALUE' was not declared in this scope
+  297 |     TIM1->CCR1 = uint32_map(adc_val, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      |                                         ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/Bootley.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/MY36GP_3650.cpp:297:59: error: 'PWM_MAX_VALUE' was not declared in this scope
+  297 |     TIM1->CCR1 = uint32_map(adc_val, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      |                                                           ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:40:21 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-gcc "../Core/Src/dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/dma.d" -MT"Core/Src/dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:19:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:23:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:27:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:31:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:64:15: error: too few arguments to function 'void FL_SetDir(uint8_t)'
+   64 |     FL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:19:6: note: declared here
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:67:5: error: 'printf' was not declared in this scope
+   67 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:14:1: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+   13 | #include "MY36GP_3650.hpp"
+  +++ |+#include <cstdio>
+   14 | 
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:88:15: error: too few arguments to function 'void FR_SetDir(uint8_t)'
+   88 |     FR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:23:6: note: declared here
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: error: 'printf' was not declared in this scope
+   91 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:112:15: error: too few arguments to function 'void RL_SetDir(uint8_t)'
+  112 |     RL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:27:6: note: declared here
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: error: 'printf' was not declared in this scope
+  115 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:138:15: error: too few arguments to function 'void RR_SetDir(uint8_t)'
+  138 |     RR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:31:6: note: declared here
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: error: 'printf' was not declared in this scope
+  141 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:296:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  296 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:269:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:269:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:269:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:270:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  270 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/MY36GP_3650.cpp:297:41: error: 'ADC_MAX_VALUE' was not declared in this scope
+  297 |     TIM1->CCR1 = uint32_map(adc_val, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      |                                         ^~~~~~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:297:59: error: 'PWM_MAX_VALUE' was not declared in this scope
+  297 |     TIM1->CCR1 = uint32_map(adc_val, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
+      |                                                           ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:41:04 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:19:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:23:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:27:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:31:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:64:15: error: too few arguments to function 'void FL_SetDir(uint8_t)'
+   64 |     FL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:19:6: note: declared here
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:67:5: error: 'printf' was not declared in this scope
+   67 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:14:1: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+   13 | #include "MY36GP_3650.hpp"
+  +++ |+#include <cstdio>
+   14 | 
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:88:15: error: too few arguments to function 'void FR_SetDir(uint8_t)'
+   88 |     FR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:23:6: note: declared here
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: error: 'printf' was not declared in this scope
+   91 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:112:15: error: too few arguments to function 'void RL_SetDir(uint8_t)'
+  112 |     RL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:27:6: note: declared here
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: error: 'printf' was not declared in this scope
+  115 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:138:15: error: too few arguments to function 'void RR_SetDir(uint8_t)'
+  138 |     RR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:31:6: note: declared here
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: error: 'printf' was not declared in this scope
+  141 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:300:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  300 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:45:40 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:19:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:23:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:27:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:31:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:64:15: error: too few arguments to function 'void FL_SetDir(uint8_t)'
+   64 |     FL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:19:6: note: declared here
+   19 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:67:5: error: 'printf' was not declared in this scope
+   67 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:14:1: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+   13 | #include "MY36GP_3650.hpp"
+  +++ |+#include <cstdio>
+   14 | 
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:88:15: error: too few arguments to function 'void FR_SetDir(uint8_t)'
+   88 |     FR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:23:6: note: declared here
+   23 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: error: 'printf' was not declared in this scope
+   91 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:91:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:112:15: error: too few arguments to function 'void RL_SetDir(uint8_t)'
+  112 |     RL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:27:6: note: declared here
+   27 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: error: 'printf' was not declared in this scope
+  115 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:115:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:138:15: error: too few arguments to function 'void RR_SetDir(uint8_t)'
+  138 |     RR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:31:6: note: declared here
+   31 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: error: 'printf' was not declared in this scope
+  141 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |     ^~~~~~
+../Core/Src/MY36GP_3650.cpp:141:5: note: 'printf' is defined in header '<cstdio>'; did you forget to '#include <cstdio>'?
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:300:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  300 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:12:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:269:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:269:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:269:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  269 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:270:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  270 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:46:13 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:21:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   21 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:25:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   25 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:29:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   29 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:33:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   33 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:66:15: error: too few arguments to function 'void FL_SetDir(uint8_t)'
+   66 |     FL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:21:6: note: declared here
+   21 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:69:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   69 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:90:15: error: too few arguments to function 'void FR_SetDir(uint8_t)'
+   90 |     FR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:25:6: note: declared here
+   25 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:93:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   93 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:114:15: error: too few arguments to function 'void RL_SetDir(uint8_t)'
+  114 |     RL_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:29:6: note: declared here
+   29 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:117:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  117 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:140:15: error: too few arguments to function 'void RR_SetDir(uint8_t)'
+  140 |     RR_SetDir();
+      |               ^
+../Core/Src/MY36GP_3650.cpp:33:6: note: declared here
+   33 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |      ^~~~~~~~~
+../Core/Src/MY36GP_3650.cpp:143:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  143 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:302:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  302 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:47:26 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:21:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   21 | void FL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:25:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   25 | void FR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:29:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   29 | void RL_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_SetDir(uint8_t)':
+../Core/Src/MY36GP_3650.cpp:33:74: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   33 | void RR_SetDir(uint8_t dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                                                                          ^~~
+      |                                                                          |
+      |                                                                          uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:69:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   69 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:93:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   93 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:117:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  117 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:143:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  143 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:302:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  302 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:49:29 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:66:15: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   66 |     FL_SetDir(dir);
+      |               ^~~
+      |               |
+      |               uint8_t {aka unsigned char}
+../Core/Src/MY36GP_3650.cpp:21:30: note:   initializing argument 1 of 'void FL_SetDir(GPIO_PinState)'
+   21 | void FL_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                ~~~~~~~~~~~~~~^~~
+../Core/Src/MY36GP_3650.cpp:69:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   69 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:90:15: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+   90 |     FR_SetDir(dir);
+      |               ^~~
+      |               |
+      |               uint8_t {aka unsigned char}
+../Core/Src/MY36GP_3650.cpp:25:30: note:   initializing argument 1 of 'void FR_SetDir(GPIO_PinState)'
+   25 | void FR_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(FR_DIR_PORT, FR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                ~~~~~~~~~~~~~~^~~
+../Core/Src/MY36GP_3650.cpp:93:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   93 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:114:15: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  114 |     RL_SetDir(dir);
+      |               ^~~
+      |               |
+      |               uint8_t {aka unsigned char}
+../Core/Src/MY36GP_3650.cpp:29:30: note:   initializing argument 1 of 'void RL_SetDir(GPIO_PinState)'
+   29 | void RL_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(RL_DIR_PORT, RL_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                ~~~~~~~~~~~~~~^~~
+../Core/Src/MY36GP_3650.cpp:117:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  117 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:140:15: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  140 |     RR_SetDir(dir);
+      |               ^~~
+      |               |
+      |               uint8_t {aka unsigned char}
+../Core/Src/MY36GP_3650.cpp:33:30: note:   initializing argument 1 of 'void RR_SetDir(GPIO_PinState)'
+   33 | void RR_SetDir(GPIO_PinState dir) { HAL_GPIO_WritePin(RR_DIR_PORT, RR_DIR_PIN, dir); } // CW 일 때 pin reset, CCW일 때 set
+      |                ~~~~~~~~~~~~~~^~~
+../Core/Src/MY36GP_3650.cpp:143:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  143 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:302:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  302 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:50:03 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:69:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   69 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:93:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   93 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:117:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  117 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:143:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  143 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void motorVelocityCheck(uint16_t, uint8_t)':
+../Core/Src/MY36GP_3650.cpp:302:48: error: invalid conversion from 'uint8_t' {aka 'unsigned char'} to 'GPIO_PinState' [-fpermissive]
+  302 |     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
+      |                                                ^~~
+      |                                                |
+      |                                                uint8_t {aka unsigned char}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:278,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/tim.h:29,
+                 from ../Core/Src/MY36GP_3650.cpp:13:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h:235:78: note:   initializing argument 3 of 'void HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t, GPIO_PinState)'
+  235 | void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+      |                                                                ~~~~~~~~~~~~~~^~~~~~~~
+make: *** [Core/Src/subdir.mk:56: Core/Src/MY36GP_3650.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+13:50:21 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:69:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   69 |     printf("\r\n\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:93:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   93 |     printf("\r\n\nFR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:117:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  117 |     printf("\r\n\nRL CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:143:29: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  143 |     printf("\r\n\nRR CCR : %d\t", u32_input_CCR); // for debugging
+      |                            ~^     ~~~~~~~~~~~~~
+      |                             |     |
+      |                             int   uint32_t {aka long unsigned int}
+      |                            %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  35140	    484	   2692	  38316	   95ac	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+14:04:47 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:281:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:281:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:281:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:282:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  282 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  35964	    484	   2692	  39140	   98e4	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+14:05:08 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-size   Bootley_CPP.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35964	    484	   2692	  39140	   98e4	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+14:08:15 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:281:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:281:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:281:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:282:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  282 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  35964	    484	   2692	  39140	   98e4	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+14:09:22 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:281:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:281:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:281:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:282:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  282 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  35964	    484	   2692	  39140	   98e4	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+14:10:07 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.cpp: In member function 'void Bootley::GetPulseWidth()':
+../Core/Src/Bootley.cpp:281:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |          ~^          ~~~~~~~~~~~~~~~~~~
+      |           |          |
+      |           int        uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:281:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |             ~^                           ~~~~~~~~~~~~~~~
+      |              |                           |
+      |              int                         uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:281:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  281 |  printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
+      |                ~^                                         ~~~~~~~~~~~~~~~~~~~
+      |                 |                                         |
+      |                 int                                       uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:282:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  282 |  printf("%d \r\n", u32_drive_mode_pw_us);
+      |          ~^        ~~~~~~~~~~~~~~~~~~~~
+      |           |        |
+      |           int      uint32_t {aka long unsigned int}
+      |          %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  35884	    484	   2692	  39060	   9894	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+14:14:25 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.cpp: In member function 'void Bootley::SetCarState()':
+../Core/Src/Bootley.cpp:109:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |          ~^                 ~~~~~~~~~~~~~~~~~~
+      |           |                 |
+      |           int               uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:109:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |             ~^                                  ~~~~~~~~~~~~~~~
+      |              |                                  |
+      |              int                                uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:109:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |                ~^                                                ~~~~~~~~~~~~~~~~~~~
+      |                 |                                                |
+      |                 int                                              uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:109:20: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |                   ~^                                                                  ~~~~~~~~~~~~~~~~~~~~
+      |                    |                                                                  |
+      |                    int                                                                uint32_t {aka long unsigned int}
+      |                   %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  35788	    484	   2692	  38964	   9834	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+14:16:19 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+../Core/Src/Bootley.cpp: In member function 'void Bootley::SetCarState()':
+../Core/Src/Bootley.cpp:109:11: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |          ~^                 ~~~~~~~~~~~~~~~~~~
+      |           |                 |
+      |           int               uint32_t {aka long unsigned int}
+      |          %ld
+../Core/Src/Bootley.cpp:109:14: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |             ~^                                  ~~~~~~~~~~~~~~~
+      |              |                                  |
+      |              int                                uint32_t {aka long unsigned int}
+      |             %ld
+../Core/Src/Bootley.cpp:109:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |                ~^                                                ~~~~~~~~~~~~~~~~~~~
+      |                 |                                                |
+      |                 int                                              uint32_t {aka long unsigned int}
+      |                %ld
+../Core/Src/Bootley.cpp:109:20: warning: format '%d' expects argument of type 'int', but argument 5 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  109 |  printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+      |                   ~^                                                                  ~~~~~~~~~~~~~~~~~~~~
+      |                    |                                                                  |
+      |                    int                                                                uint32_t {aka long unsigned int}
+      |                   %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  35788	    484	   2692	  38964	   9834	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 

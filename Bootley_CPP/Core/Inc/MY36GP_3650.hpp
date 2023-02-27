@@ -41,31 +41,33 @@
 /* configuration define */
 #define FL_SPEED_PORT       GPIOA
 #define FL_SPEED_PIN        GPIO_PIN_0
-#define FL_DIR_PORT         GPIOB
-#define FL_DIR_PIN          GPIO_PIN_1
-#define FL_BRAKE_PORT       GPIOB
-#define FL_BRAKE_PIN        GPIO_PIN_7
-
 #define FR_SPEED_PORT       GPIOA
 #define FR_SPEED_PIN        GPIO_PIN_1
-#define FR_DIR_PORT         GPIOB
-#define FR_DIR_PIN          GPIO_PIN_15
-#define FR_BRAKE_PORT       GPIOC
-#define FR_BRAKE_PIN        GPIO_PIN_13
-
 #define RL_SPEED_PORT       GPIOB
 #define RL_SPEED_PIN        GPIO_PIN_10
-#define RL_DIR_PORT         GPIOB
-#define RL_DIR_PIN          GPIO_PIN_14
-#define RL_BRAKE_PORT       GPIOC
-#define RL_BRAKE_PIN        GPIO_PIN_14
-
 #define RR_SPEED_PORT       GPIOB
 #define RR_SPEED_PIN        GPIO_PIN_2
+
+
+#define FL_DIR_PORT         GPIOB
+#define FL_DIR_PIN          GPIO_PIN_1
+#define FR_DIR_PORT         GPIOB
+#define FR_DIR_PIN          GPIO_PIN_15
+#define RL_DIR_PORT         GPIOB
+#define RL_DIR_PIN          GPIO_PIN_14
 #define RR_DIR_PORT         GPIOB
 #define RR_DIR_PIN          GPIO_PIN_13
+
+
+#define FL_BRAKE_PORT       GPIOA
+#define FL_BRAKE_PIN        GPIO_PIN_4
+#define FR_BRAKE_PORT       GPIOB
+#define FR_BRAKE_PIN        GPIO_PIN_0
+#define RL_BRAKE_PORT       GPIOC
+#define RL_BRAKE_PIN        GPIO_PIN_1
 #define RR_BRAKE_PORT       GPIOC
-#define RR_BRAKE_PIN        GPIO_PIN_15
+#define RR_BRAKE_PIN        GPIO_PIN_0
+
 
 ///////////////////////////////////////////////////
 

@@ -69,6 +69,8 @@ private:
 public:
     Bootley();
 
+    void SetCarState();
+
     void InitModule();
     void GetPulseWidth();
     void GetSteeringVal();

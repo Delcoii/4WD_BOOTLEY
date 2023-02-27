@@ -96,6 +96,26 @@ Bootley::Bootley()
 	printf("Bootley Initiated \r\n\n");
 }
 
+
+void Bootley::SetCarState()
+{
+	GetPulseWidth();
+	GetSteeringVal();
+	GetAccelVal();
+	SetAutoMode();
+	SetDriveMode();
+	
+	// for debugging
+	printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+
+	printf("steer : %f\t", f_steering_val);		// for debugging
+	printf("accel : %f\t", f_accel_val);			// for debugging
+	printf("automode : %d\t", b_auto_mode);			// for debugging
+	printf("drivemode : %d\r\n\n", u8_drive_mode);	// for debugging
+
+}
+
+
 /*
  * HAL Library 이용 각종 init 함수
  * cubeMX로 생성되는 init 함수 이외의 것들을 별도로 작성
@@ -264,11 +284,6 @@ void Bootley::GetPulseWidth()
 	/* 수신기 ch4 계산 부분 끝 */
 
 
-
-	// for debugging
-	printf("%d %d %d ", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us);
-	printf("%d \r\n", u32_drive_mode_pw_us);
-
 }
 
 
@@ -277,10 +292,9 @@ void Bootley::GetSteeringVal()
 {
 	float pulse_width_us = (float)u32_steering_pw_us - STEERING_PW_ERROR_US;
 
-	if(pulse_width_us < RECEIVER_MIN_PW) 		pulse_width_us = RECEIVER_MIN_PW;
-	else if(pulse_width_us > RECEIVER_MAX_PW)	pulse_width_us = RECEIVER_MAX_PW;
+	if(pulse_width_us < (float)RECEIVER_MIN_PW) 		pulse_width_us = (float)RECEIVER_MIN_PW;
+	else if(pulse_width_us > (float)RECEIVER_MAX_PW)	pulse_width_us = (float)RECEIVER_MAX_PW;
 
-	else	printf("receiver ch1 detect error");
 	
 	f_steering_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, RIGHT_MAX_STEERING_VAL, LEFT_MAX_STEERING_VAL);
 	
@@ -290,12 +304,13 @@ void Bootley::GetAccelVal()
 {
 	float pulse_width_us = (float)u32_accel_pw_us - ACCEL_PW_ERROR_US;
 
-	if(pulse_width_us < RECEIVER_MIN_PW) 		pulse_width_us = RECEIVER_MIN_PW;
-	else if(pulse_width_us > RECEIVER_MAX_PW)	pulse_width_us = RECEIVER_MAX_PW;
+	if(pulse_width_us < (float)RECEIVER_MIN_PW) 		pulse_width_us = (float)RECEIVER_MIN_PW;
+	else if(pulse_width_us > (float)RECEIVER_MAX_PW)	pulse_width_us = (float)RECEIVER_MAX_PW;
 
-	else	printf("receiver ch2 detect error");
 
 	f_accel_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, FORWARD_MAX_ACCEL_VAL, BACKWARD_MAX_ACCEL_VAL);
+
+
 
 }
 
@@ -305,15 +320,17 @@ void Bootley::SetAutoMode()
 	if ((u32_auto_mode_pw_us > 900) && (u32_auto_mode_pw_us < 1500))		b_auto_mode = MANUAL_MODE;
 	else if ((u32_auto_mode_pw_us > 1500) && u32_auto_mode_pw_us < 2200)	b_auto_mode = AUTO_MODE;
 
-	else	printf("receiver ch3 detect error");
+
+
+
 }
 
 
 void Bootley::SetDriveMode()
 {
-	if ((u32_auto_mode_pw_us > 900) && (u32_auto_mode_pw_us < 1300))		u8_drive_mode = SPINNING_MODE;
-	else if ((u32_auto_mode_pw_us > 1301) && u32_auto_mode_pw_us < 1700)	u8_drive_mode = NORMAL_MODE;
-	else if ((u32_auto_mode_pw_us > 1701) && u32_auto_mode_pw_us < 2200)	u8_drive_mode = LOCK_MODE;
+	if ((u32_drive_mode_pw_us > 900) && (u32_drive_mode_pw_us < 1300))		u8_drive_mode = SPINNING_MODE;
+	else if ((u32_drive_mode_pw_us > 1301) && u32_drive_mode_pw_us < 1700)	u8_drive_mode = NORMAL_MODE;
+	else if ((u32_drive_mode_pw_us > 1701) && u32_drive_mode_pw_us < 2200)	u8_drive_mode = LOCK_MODE;
 
-	else	printf("receiver ch4 detect error");
+
 }
