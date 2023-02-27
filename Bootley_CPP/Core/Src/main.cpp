@@ -109,6 +109,8 @@ int main(void)
 
 //	  check_IC();
 	  bootley.SetCarState();
+    bootley.Drive();
+
 
 
   }

@@ -71,8 +71,8 @@
 
 ///////////////////////////////////////////////////
 
-#define CW                  0
-#define CCW                 1
+#define CW                  GPIO_PIN_RESET
+#define CCW                 GPIO_PIN_SET
 
 
 
@@ -104,13 +104,24 @@
 #define MOTOR_PPR			6
 
 
+void FL_BrakeEnable(void);
+void FL_BrakeDisable(void);
+void FL_SetDir(GPIO_PinState dir);
+void FR_BrakeEnable(void);
+void FR_BrakeDisable(void);
+void FR_SetDir(GPIO_PinState dir);
+void RL_BrakeEnable(void);
+void RL_BrakeDisable(void);
+void RL_SetDir(GPIO_PinState dir);
+void RR_BrakeEnable(void);
+void RR_BrakeDisable(void);
+void RR_SetDir(GPIO_PinState dir);
 
 
-
-void FL_RunMotor(float rpm, uint8_t dir);
-void FR_RunMotor(float rpm, uint8_t dir);
-void RL_RunMotor(float rpm, uint8_t dir);
-void RR_RunMotor(float rpm, uint8_t dir);
+void FL_RunMotor(float rpm, GPIO_PinState dir);
+void FR_RunMotor(float rpm, GPIO_PinState dir);
+void RL_RunMotor(float rpm, GPIO_PinState dir);
+void RR_RunMotor(float rpm, GPIO_PinState dir);
 
 float Period2RPM(uint32_t u32_period_us);
 

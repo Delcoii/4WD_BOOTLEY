@@ -66,7 +66,7 @@ void FL_RunMotor(float rpm, GPIO_PinState dir)
     FL_SetDir(dir);
     TIM2->CCR1 = u32_input_CCR;
 
-    printf("\r\n\nFL CCR : %d\t", u32_input_CCR);	// for debugging
+    printf("\r\nFL CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -90,7 +90,7 @@ void FR_RunMotor(float rpm, GPIO_PinState dir)
     FR_SetDir(dir);
     TIM2->CCR2 = u32_input_CCR;
 
-    printf("\r\n\nFR CCR : %d\t", u32_input_CCR);	// for debugging
+    printf("FR CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -114,7 +114,7 @@ void RL_RunMotor(float rpm, GPIO_PinState dir)
     RL_SetDir(dir);
     TIM2->CCR3 = u32_input_CCR;
 
-    printf("\r\n\nRL CCR : %d\t", u32_input_CCR);	// for debugging
+    printf("RL CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -140,7 +140,7 @@ void RR_RunMotor(float rpm, GPIO_PinState dir)
     RR_SetDir(dir);
     TIM2->CCR4 = u32_input_CCR;
 
-    printf("\r\n\nRR CCR : %d\t", u32_input_CCR);	// for debugging
+    printf("RR CCR : %d\r\n", u32_input_CCR);	// for debugging
 
 }
 

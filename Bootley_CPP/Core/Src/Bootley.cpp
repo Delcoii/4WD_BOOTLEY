@@ -85,15 +85,12 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 	}
 }
 
-void check_IC()
-{
-	printf("check in : %d %d \r\n\n", b_g_drive_mode_ch3_done, b_g_drive_mode_ch4_done);
-}
+
 
 
 Bootley::Bootley()
 {
-	printf("Bootley Initiated \r\n\n");
+	// printf("Bootley Initiated \r\n\n");
 }
 
 
@@ -106,15 +103,193 @@ void Bootley::SetCarState()
 	SetDriveMode();
 	
 	// for debugging
-	printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
+	// printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
 
-	printf("steer : %f\t", f_steering_val);		// for debugging
-	printf("accel : %f\t", f_accel_val);			// for debugging
-	printf("automode : %d\t", b_auto_mode);			// for debugging
-	printf("drivemode : %d\r\n\n", u8_drive_mode);	// for debugging
+//	printf("steer : %f\t", f_steering_val);			// for debugging
+//	printf("accel : %f\t", f_accel_val);			// for debugging
+//	printf("automode : %d\t", b_auto_mode);			// for debugging
+//	printf("drivemode : %d\r\n\n", u8_drive_mode);	// for debugging
 
 }
 
+
+void Bootley::Drive()
+{
+	if (b_auto_mode == MANUAL_MODE) {
+		if (u8_drive_mode == NORMAL_MODE)
+			NormalMode(f_accel_val, f_steering_val);
+		
+		else if (u8_drive_mode == SPINNING_MODE)
+			SpinningMode(f_steering_val);
+
+		else	// if drive_mode == LOCK_MODE
+			EStopMode();
+
+	}
+
+	else if (b_auto_mode == AUTO_MODE) {
+		
+		AutoDrive();
+	}
+		
+}
+
+
+
+void Bootley::NormalMode(float accel, float steering)
+{	
+	GPIO_PinState FL_dir, FR_dir, RL_dir, RR_dir;
+	float input_rpm, FL_rpm, FR_rpm, RL_rpm, RR_rpm;
+	float steering_division = 1.;
+
+	input_rpm = float_map(abs(accel), 0., ACCEL_MAX, RPM_MIN, RPM_MAX);
+
+	// 왼쪽으로 선회할 때
+	if ((steering >= IGNORING_STEERING_MAX) && (steering <= STEERING_MAX))
+	{
+		steering_division = float_map(steering, IGNORING_STEERING_MAX, STEERING_MAX, 1. ,5.);
+
+		if (steering_division <= 1.)		steering_division = 1.;
+		else if (steering_division >= 5.) 	steering_division = 5.;
+
+		FL_rpm = input_rpm / steering_division;
+		FR_rpm = input_rpm;
+		RL_rpm = input_rpm / steering_division;
+		RR_rpm = input_rpm;
+
+	}
+	// 직진
+	else if ((steering >= IGNORING_STEERING_MIN) && (steering <= IGNORING_STEERING_MAX))
+	{
+
+		FL_rpm = input_rpm;
+		FR_rpm = input_rpm;
+		RL_rpm = input_rpm;
+		RR_rpm = input_rpm;
+	}
+	// 오른쪽으로 선회
+	else if ((steering >= STEERING_MIN) && steering <= IGNORING_STEERING_MIN)
+	{
+		steering_division = float_map(steering, STEERING_MIN, IGNORING_ACCEL_MIN, 1. ,5.);
+
+		if (steering_division <= 1.)		steering_division = 1.;
+		else if (steering_division >= 5.) 	steering_division = 5.;
+
+		FL_rpm = input_rpm;
+		FR_rpm = input_rpm / steering_division;
+		RL_rpm = input_rpm;
+		RR_rpm = input_rpm / steering_division;
+
+	}
+
+
+	// 신호가 중간값 부근일 땐 아무것도 하지 않음
+	if ((accel >= IGNORING_ACCEL_MIN) && (accel <= IGNORING_ACCEL_MAX))
+	{
+		FL_RunMotor(0., CW);
+		FR_RunMotor(0., CW);
+		RL_RunMotor(0., CW);
+		RR_RunMotor(0., CW);
+	}
+	// 신호가 범위 이내일 때 작동
+	else if ((accel >= ACCEL_MIN) && (accel <= ACCEL_MAX))
+	{
+		if (accel >= 0.)		// 직진일 때
+		{
+			FL_dir = CCW;
+			FR_dir = CW;
+			RL_dir = CCW;
+			RR_dir = CW;
+
+			FL_RunMotor(FL_rpm, FL_dir);
+			FR_RunMotor(FR_rpm, FR_dir);
+			RL_RunMotor(RL_rpm, RL_dir);
+			RR_RunMotor(RR_rpm, RR_dir);
+
+		} else if (accel < 0.)
+		{
+			FL_dir = CW;
+			FR_dir = CCW;
+			RL_dir = CW;
+			RR_dir = CCW;
+
+			FL_RunMotor(FL_rpm, FL_dir);
+			FR_RunMotor(FR_rpm, FR_dir);
+			RL_RunMotor(RL_rpm, RL_dir);
+			RR_RunMotor(RR_rpm, RR_dir);
+
+		}
+	}
+	
+}
+
+void Bootley::SpinningMode(float steering)
+{
+	GPIO_PinState FL_dir = CW;
+	GPIO_PinState FR_dir = CW;
+	GPIO_PinState RL_dir = CW;
+	GPIO_PinState RR_dir = CW;
+
+	float rpm;
+
+	// 왼쪽으로 빙빙돌아
+	if ((steering >= IGNORING_SPINNING_MAX) && (steering <= STEERING_MAX))
+	{
+		FL_dir = CW;
+		FR_dir = CW;
+		RL_dir = CW;
+		RR_dir = CW;
+
+		rpm = float_map(steering, IGNORING_SPINNING_MAX, STEERING_MAX, SPINNING_RPM_MIN, SPINNING_RPM_MAX);
+		FL_RunMotor(rpm, FL_dir);
+		FR_RunMotor(rpm, FR_dir);
+		RL_RunMotor(rpm, RL_dir);
+		RR_RunMotor(rpm, RR_dir);
+	}
+	// 아무것도 안함
+	else if ((steering >= IGNORING_SPINNING_MIN) && (steering <= IGNORING_SPINNING_MAX))
+	{
+
+		FL_RunMotor(0., FL_dir);
+		FR_RunMotor(0., FR_dir);
+		RL_RunMotor(0., RL_dir);
+		RR_RunMotor(0., RR_dir);
+
+	}
+
+	// 오른쪽으로 빙빙돌아
+	else if ((steering >= STEERING_MIN) && (steering <= IGNORING_SPINNING_MIN))
+	{
+		FL_dir = CCW;
+		FR_dir = CCW;
+		RL_dir = CCW;
+		RR_dir = CCW;
+
+		rpm = float_map(abs(steering), abs(STEERING_MIN), abs(IGNORING_SPINNING_MIN), SPINNING_RPM_MIN, SPINNING_RPM_MAX);
+		FL_RunMotor(rpm, FL_dir);
+		FR_RunMotor(rpm, FR_dir);
+		RL_RunMotor(rpm, RL_dir);
+		RR_RunMotor(rpm, RR_dir);
+	}
+
+}
+
+void Bootley::EStopMode()
+{
+	FL_BrakeEnable();
+	FR_BrakeEnable();
+	RL_BrakeEnable();
+	RR_BrakeEnable();
+}
+
+void Bootley::AutoDrive()
+{
+	/* 추후 ROS subscriber 이용 구동 */
+	FL_BrakeEnable();
+	FR_BrakeEnable();
+	RL_BrakeEnable();
+	RR_BrakeEnable();
+}
 
 /*
  * HAL Library 이용 각종 init 함수
@@ -308,9 +483,7 @@ void Bootley::GetAccelVal()
 	else if(pulse_width_us > (float)RECEIVER_MAX_PW)	pulse_width_us = (float)RECEIVER_MAX_PW;
 
 
-	f_accel_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, FORWARD_MAX_ACCEL_VAL, BACKWARD_MAX_ACCEL_VAL);
-
-
+	f_accel_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, BACKWARD_MAX_ACCEL_VAL, FORWARD_MAX_ACCEL_VAL);
 
 }
 
@@ -319,9 +492,6 @@ void Bootley::SetAutoMode()
 {
 	if ((u32_auto_mode_pw_us > 900) && (u32_auto_mode_pw_us < 1500))		b_auto_mode = MANUAL_MODE;
 	else if ((u32_auto_mode_pw_us > 1500) && u32_auto_mode_pw_us < 2200)	b_auto_mode = AUTO_MODE;
-
-
-
 
 }
 
@@ -332,5 +502,17 @@ void Bootley::SetDriveMode()
 	else if ((u32_drive_mode_pw_us > 1301) && u32_drive_mode_pw_us < 1700)	u8_drive_mode = NORMAL_MODE;
 	else if ((u32_drive_mode_pw_us > 1701) && u32_drive_mode_pw_us < 2200)	u8_drive_mode = LOCK_MODE;
 
+}
 
+
+
+
+
+
+
+/*******************************************************************************/
+// for debugging
+void check_IC()
+{
+	printf("check in : %d %d \r\n\n", b_g_drive_mode_ch3_done, b_g_drive_mode_ch4_done);
 }

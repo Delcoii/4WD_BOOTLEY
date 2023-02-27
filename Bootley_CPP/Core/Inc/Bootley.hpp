@@ -10,6 +10,7 @@
 #include "gpio.h"
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 #include "MY36GP_3650.hpp"
 
@@ -33,8 +34,32 @@
 #define LOCK_MODE               2
 
 
+#define IGNORING_ACCEL_MAX      20.
+#define IGNORING_ACCEL_MIN      -20.
+#define IGNORING_STEERING_MAX   20.
+#define IGNORING_STEERING_MIN   -20.
+
+#define ACCEL_MAX               500.
+#define ACCEL_MIN               -500.
+#define RPM_MAX                 450.
+#define RPM_MIN                 0.
+
+#define STEERING_MAX            500.
+#define STEERING_MIN            -500.
+
+// 선회할 때 내륜 2개의 모터 입력 rpm을 해당 수 만큼 나눠줌
+#define STEERING_DIVISION_MIN   1.
+#define STEERING_DIVISION_MAX   5.
+
+
+#define IGNORING_SPINNING_MIN   -100.
+#define IGNORING_SPINNING_MAX   100.
+#define SPINNING_RPM_MIN        50
+#define SPINNING_RPM_MAX        100
+
+
+
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim);
-void check_IC();
 
 
 class Bootley {
@@ -66,22 +91,31 @@ private:
     bool b_auto_mode;
     uint8_t u8_drive_mode;
 
-public:
-    Bootley();
-
-    void SetCarState();
-
-    void InitModule();
     void GetPulseWidth();
     void GetSteeringVal();
     void GetAccelVal();
     void SetAutoMode();
     void SetDriveMode();
 
+
+    void NormalMode(float accel, float steering);
+    void SpinningMode(float steering);
+    void EStopMode();
+    void AutoDrive();
+
+public:
+    Bootley();
+    void InitModule();
+
+    void SetCarState();
+    void Drive();
+
+
 };
 
 
-
+// for debugging
+void check_IC();
 
 
 
