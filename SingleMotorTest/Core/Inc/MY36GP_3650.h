@@ -51,13 +51,21 @@
 ///////////////////////////////////////////////////
 
 #define ADC_MAX_VALUE       4095
-#define PWM_MAX_VALUE       999
+#define PWM_MAX_VALUE       800
 
 
 #define CW          0
 #define CCW         1
 
-#define MAX_RPM     571
+#define MAX_RPM     	571
+#define RATED_RPM		450
+#define MIN_SPEED_CCR	750
+#define MOTOR_STOP_CCR	730
+#define RATED_SPEED_CCR	140
+
+#define WINDOW_SIZE		10
+#define GEAR_RATIO			14
+#define MOTOR_PPR			6
 
 float float_map(float x, float in_min, float in_max, float out_min, float out_max);
 uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max);
@@ -65,10 +73,10 @@ uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_m
 void FL_BrakeEnable(void);
 void FL_BrakeDisable(void);
 void FL_SetDir(uint8_t dir);
-void FL_RunMotor(uint16_t rpm, uint8_t dir);
+void FL_RunMotor(float rpm, uint8_t dir);
 void motorVelocityCheck(uint16_t adc_value, uint8_t dir);
 
-
-
+float Period2RPM(uint32_t u32_period_us);
+float f_MovingAverage(float f_input);
 
 #endif  // __MY36GP_3650_H__

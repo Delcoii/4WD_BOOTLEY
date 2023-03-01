@@ -27,6 +27,7 @@
 /* USER CODE BEGIN Includes */
 
 #include "MY36GP_3650.h"
+#include <stdbool.h>
 
 /* USER CODE END Includes */
 
@@ -37,6 +38,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define FIRST_INDEX		0
+#define SECOND_INDEX	1
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -77,24 +81,61 @@ void SystemClock_Config(void);
 //
 //}
 
-uint32_t u32_FL_period_ms;
+uint32_t u32_FL_period_us;
 
+//void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+//{
+//	static uint32_t u32_FL_tick_us[2];
+//
+//	if(GPIO_Pin == GPIO_PIN_4)
+//	{
+//		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+//
+//		u32_FL_tick_us[0] = u32_FL_tick_us[1];
+//		u32_FL_tick_us[1] = TIM10->CNT;
+//
+//		u32_FL_period_us = u32_FL_tick_us[1] - u32_FL_tick_us[0];
+//	}
+//}
+
+uint32_t capture[2];
+bool saved_index = FIRST_INDEX;
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	static uint32_t u32_FL_tick_ms[2];
 
 	if(GPIO_Pin == GPIO_PIN_4)
 	{
+
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
 
-		u32_FL_tick_ms[0] = u32_FL_tick_ms[1];
-		u32_FL_tick_ms[1] = HAL_GetTick();
-
-		u32_FL_period_ms = u32_FL_tick_ms[1] - u32_FL_tick_ms[0];
+		if (saved_index)
+		{
+			capture[0] = TIM10->CNT;
+			saved_index = FIRST_INDEX;
+		}
+		else
+		{
+			capture[1] = TIM10->CNT;
+			saved_index = SECOND_INDEX;
+		}
 	}
 }
 
+float GetRPM()
+{
+	uint32_t period_us;
+	if(saved_index)
+	{
+		period_us = (capture[1] - capture[0]) * 2;
+	}
+	else
+	{
+		period_us = (capture[0] - capture[1]) * 2;
 
+	}
+
+	return (60*1000000) / (float)(period_us * MOTOR_PPR * GEAR_RATIO);
+}
 
 /* USER CODE END 0 */
 
@@ -109,8 +150,10 @@ int main(void)
 	uint32_t u32_adc_value;
     uint32_t u32_ccr_value;
     float f_voltage;
-    float f_FL_period_ms;
+    float f_FL_period_us;
 
+    float f_rpm, f_filt_rpm;
+    float f_input_rpm;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -134,11 +177,12 @@ int main(void)
   MX_USART2_UART_Init();
   MX_ADC1_Init();
   MX_TIM1_Init();
-  MX_TIM3_Init();
+  MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
 
   	  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  	  HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
+  	  HAL_TIM_Base_Start_IT(&htim10);
+//  	  HAL_TIM_IC_Start_IT(&htim3, TIM_CHANNEL_1);
 
   /* USER CODE END 2 */
 
@@ -156,15 +200,21 @@ int main(void)
       HAL_ADC_Stop(&hadc1);
 
       f_voltage = float_map((float)u32_adc_value, 0.0, 4095.0, 0.0, 3.3);
-      u32_ccr_value = uint32_map(u32_adc_value, 0, ADC_MAX_VALUE, 0, PWM_MAX_VALUE);
 
-      motorVelocityCheck(u32_adc_value, CCW);
+      f_input_rpm = float_map(((float)u32_adc_value < 200)?200:u32_adc_value, 200, 4095.0, 0.0, 450);
 
-      f_FL_period_ms = (float)u32_FL_period_ms;
+//      motorVelocityCheck(u32_adc_value, CCW);
+      FL_RunMotor(f_input_rpm, CW);
 
-      printf("adc value : %d\tvoltage : %f\tccr : %d\t", u32_adc_value, f_voltage, u32_ccr_value);
-      printf("motor pulse : %f ms\r\n", f_FL_period_ms);
+//      f_FL_period_us = (float)u32_FL_period_us;
+//      f_rpm =  Period2RPM(f_FL_period_us * 2);
+      f_rpm = GetRPM();
+      if (f_rpm < 600);
+      	  f_filt_rpm = f_MovingAverage(f_rpm);
 
+      printf("adc value : %d\tvoltage : %f\tin_rpm : %f\t", u32_adc_value, f_voltage, f_input_rpm);
+//      printf("motor pulse : %f us\r\n", f_FL_period_us);
+      printf("rpm : %f\r\n", f_filt_rpm);
   }
   /* USER CODE END 3 */
 }

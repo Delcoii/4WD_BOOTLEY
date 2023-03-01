@@ -57,14 +57,36 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define B1_Pin GPIO_PIN_13
-#define B1_GPIO_Port GPIOC
+#define RR_BRAKE_Pin GPIO_PIN_0
+#define RR_BRAKE_GPIO_Port GPIOC
+#define RL_BRAKE_Pin GPIO_PIN_1
+#define RL_BRAKE_GPIO_Port GPIOC
+#define FL_SPEED_Pin GPIO_PIN_0
+#define FL_SPEED_GPIO_Port GPIOA
+#define FR_SPEED_Pin GPIO_PIN_1
+#define FR_SPEED_GPIO_Port GPIOA
 #define USART_TX_Pin GPIO_PIN_2
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
+#define FL_BRAKE_Pin GPIO_PIN_4
+#define FL_BRAKE_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define FR_BRAKE_Pin GPIO_PIN_0
+#define FR_BRAKE_GPIO_Port GPIOB
+#define FL_DIR_Pin GPIO_PIN_1
+#define FL_DIR_GPIO_Port GPIOB
+#define RR_SPEED_Pin GPIO_PIN_2
+#define RR_SPEED_GPIO_Port GPIOB
+#define RL_SPEED_Pin GPIO_PIN_10
+#define RL_SPEED_GPIO_Port GPIOB
+#define RR_DIR_Pin GPIO_PIN_13
+#define RR_DIR_GPIO_Port GPIOB
+#define RL_DIR_Pin GPIO_PIN_14
+#define RL_DIR_GPIO_Port GPIOB
+#define FR_DIR_Pin GPIO_PIN_15
+#define FR_DIR_GPIO_Port GPIOB
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14

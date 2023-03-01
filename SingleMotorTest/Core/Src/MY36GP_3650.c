@@ -46,6 +46,14 @@ void FL_SetDir(uint8_t dir)
 	HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
 }
 
+
+float Period2RPM(uint32_t u32_period_us)
+{
+	float f_RPM = (60 * 1000000) / (((float)u32_period_us * MOTOR_PPR) * GEAR_RATIO);
+	return f_RPM;
+}
+
+
 /*
  * 모터 스펙
  *
@@ -55,16 +63,64 @@ void FL_SetDir(uint8_t dir)
  *
  * dir  : CW or CCW
 */
-void FL_RunMotor(uint16_t rpm, uint8_t dir)
+void FL_RunMotor(float rpm, uint8_t dir)
 {
-    FL_BrakeDisable();
+    float f_RPMtoCCR;
+    uint32_t u32_input_CCR;
 
+//    f_RPMtoCCR = MIN_SPEED_CCR - (rpm * ((float)MIN_SPEED_CCR/(float)MAX_RPM));
+    f_RPMtoCCR = float_map(rpm, 0.0, RATED_RPM, MIN_SPEED_CCR, RATED_SPEED_CCR);
+
+    if (f_RPMtoCCR > MIN_SPEED_CCR)
+    	f_RPMtoCCR = MIN_SPEED_CCR;
+    else if(f_RPMtoCCR < RATED_SPEED_CCR)
+    	f_RPMtoCCR = RATED_SPEED_CCR;
+
+    if (f_RPMtoCCR < MOTOR_STOP_CCR)
+    	u32_input_CCR = (uint32_t)f_RPMtoCCR;
+    else
+    	u32_input_CCR = 9999;
+
+
+	FL_BrakeDisable();
     HAL_GPIO_WritePin(FL_DIR_PORT, FL_DIR_PIN, dir);
-    TIM1->CCR1 = uint32_map(rpm, 0, MAX_RPM, 0, 999);           // 0 ~ 3.3V의 전압을 0~571RPM으로 매핑
+    TIM1->CCR1 = u32_input_CCR;
 
+
+    printf("\r\n\nCCR1 : %d\t", u32_input_CCR);	// for debugging
+//    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
 }
 
 
+float f_MovingAverage(float f_input)
+{
+
+  	static uint8_t filter_index = 0;
+  	static float f_sum = 0;
+  	static float f_data[WINDOW_SIZE] = {0., 0., 0., 0., 0., 0., 0., 0., 0., 0.};
+
+	float f_result;
+
+	f_sum = 0.;
+//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
+
+	f_data[filter_index] = f_input;
+//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
+
+	for(int i = 0; i < WINDOW_SIZE; i++)
+	{
+		f_sum += f_data[i];
+	}
+//	  printf("f_sum : %f \r\n", f_sum);
+
+	filter_index = (filter_index+1) % WINDOW_SIZE;
+//	  printf("index : %d \r\n", index);
+
+	f_result = f_sum / (float)WINDOW_SIZE;
+//	  printf("result : %d \r\n\n", u32_result);
+
+	return f_result;
+}
 
 /////////////////////////////////////////////////////////
 /* 테스트용 함수 */
