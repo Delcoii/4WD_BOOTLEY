@@ -49,7 +49,7 @@
 
 // 선회할 때 내륜 2개의 모터 입력 rpm을 해당 수 만큼 나눠줌
 #define STEERING_DIVISION_MIN   1.
-#define STEERING_DIVISION_MAX   5.
+#define STEERING_DIVISION_MAX   2.
 
 
 #define IGNORING_SPINNING_MIN   -100.

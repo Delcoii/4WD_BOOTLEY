@@ -147,7 +147,7 @@ void Bootley::NormalMode(float accel, float steering)
 	// 왼쪽으로 선회할 때
 	if ((steering >= IGNORING_STEERING_MAX) && (steering <= STEERING_MAX))
 	{
-		steering_division = float_map(steering, IGNORING_STEERING_MAX, STEERING_MAX, 1. ,5.);
+		steering_division = float_map(steering, IGNORING_STEERING_MAX, STEERING_MAX, STEERING_DIVISION_MIN, STEERING_DIVISION_MAX);
 
 		if (steering_division <= 1.)		steering_division = 1.;
 		else if (steering_division >= 5.) 	steering_division = 5.;
@@ -170,7 +170,7 @@ void Bootley::NormalMode(float accel, float steering)
 	// 오른쪽으로 선회
 	else if ((steering >= STEERING_MIN) && steering <= IGNORING_STEERING_MIN)
 	{
-		steering_division = float_map(steering, STEERING_MIN, IGNORING_ACCEL_MIN, 1. ,5.);
+		steering_division = float_map(steering, STEERING_MIN, IGNORING_ACCEL_MIN, STEERING_DIVISION_MAX, STEERING_DIVISION_MIN);
 
 		if (steering_division <= 1.)		steering_division = 1.;
 		else if (steering_division >= 5.) 	steering_division = 5.;
@@ -311,10 +311,10 @@ void Bootley::InitModule()
 	HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_3, (uint32_t *)u16_drive_mode_capture1, 2);
 	HAL_TIM_IC_Start_DMA(&htim3, TIM_CHANNEL_4, (uint32_t *)u16_drive_mode_capture2, 2);
 
-	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
-	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_2);
-	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_3);
-	HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_4);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
 
 
 }

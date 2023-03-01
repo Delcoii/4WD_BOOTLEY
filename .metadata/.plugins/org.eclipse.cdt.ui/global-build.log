@@ -3845,3 +3845,145 @@ Finished building: default.size.stdout
  
 Finished building: Bootley_CPP.list
  
+22:35:28 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  37984	    484	   2692	  41160	   a0c8	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+22:37:50 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  39896	    484	   2692	  43072	   a840	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+22:45:42 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:70:27: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   70 |     printf("\r\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |                          ~^     ~~~~~~~~~~~~~
+      |                           |     |
+      |                           int   uint32_t {aka long unsigned int}
+      |                          %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:94:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   94 |     printf("FR CCR : %d\t", u32_input_CCR); // for debugging
+      |                      ~^     ~~~~~~~~~~~~~
+      |                       |     |
+      |                       int   uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:118:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  118 |     printf("RL CCR : %d\t", u32_input_CCR); // for debugging
+      |                      ~^     ~~~~~~~~~~~~~
+      |                       |     |
+      |                       int   uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:144:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  144 |     printf("RR CCR : %d\r\n", u32_input_CCR); // for debugging
+      |                      ~^       ~~~~~~~~~~~~~
+      |                       |       |
+      |                       int     uint32_t {aka long unsigned int}
+      |                      %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  39872	    484	   2692	  43048	   a828	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+22:46:03 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/MY36GP_3650.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/MY36GP_3650.d" -MT"Core/Src/MY36GP_3650.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MY36GP_3650.o"
+../Core/Src/MY36GP_3650.cpp: In function 'void FL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:69:27: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   69 |     printf("\r\nFL CCR : %d\t", u32_input_CCR); // for debugging
+      |                          ~^     ~~~~~~~~~~~~~
+      |                           |     |
+      |                           int   uint32_t {aka long unsigned int}
+      |                          %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void FR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:93:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   93 |     printf("FR CCR : %d\t", u32_input_CCR); // for debugging
+      |                      ~^     ~~~~~~~~~~~~~
+      |                       |     |
+      |                       int   uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RL_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:117:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  117 |     printf("RL CCR : %d\t", u32_input_CCR); // for debugging
+      |                      ~^     ~~~~~~~~~~~~~
+      |                       |     |
+      |                       int   uint32_t {aka long unsigned int}
+      |                      %ld
+../Core/Src/MY36GP_3650.cpp: In function 'void RR_RunMotor(float, GPIO_PinState)':
+../Core/Src/MY36GP_3650.cpp:143:23: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  143 |     printf("RR CCR : %d\r\n", u32_input_CCR); // for debugging
+      |                      ~^       ~~~~~~~~~~~~~
+      |                       |       |
+      |                       int     uint32_t {aka long unsigned int}
+      |                      %ld
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  39896	    484	   2692	  43072	   a840	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+22:54:38 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  39896	    484	   2692	  43072	   a840	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
+23:02:41 **** Incremental Build of configuration Debug for project Bootley_CPP ****
+make -j16 all 
+arm-none-eabi-g++ "../Core/Src/Bootley.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/Bootley.d" -MT"Core/Src/Bootley.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Bootley.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Bootley_CPP.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/delcoii/Bootley/Bootley_CPP/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Bootley_CPP.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Bootley_CPP.elf
+ 
+arm-none-eabi-size   Bootley_CPP.elf 
+arm-none-eabi-objdump -h -S  Bootley_CPP.elf  > "Bootley_CPP.list"
+   text	   data	    bss	    dec	    hex	filename
+  39896	    484	   2692	  43072	   a840	Bootley_CPP.elf
+Finished building: default.size.stdout
+ 
+Finished building: Bootley_CPP.list
+ 
