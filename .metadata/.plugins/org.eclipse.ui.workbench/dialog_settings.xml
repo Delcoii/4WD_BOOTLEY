@@ -10,4 +10,6 @@
 			<item value="org.eclipse.team.ui.importWizards"/>
 		</list>
 	</section>
+	<section name="NewWizardAction">
+	</section>
 </section>
