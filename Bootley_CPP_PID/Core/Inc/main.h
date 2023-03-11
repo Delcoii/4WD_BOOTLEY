@@ -61,6 +61,12 @@ void Error_Handler(void);
 #define RR_BRAKE_GPIO_Port GPIOC
 #define RL_BRAKE_Pin GPIO_PIN_1
 #define RL_BRAKE_GPIO_Port GPIOC
+#define FL_FG_Pin GPIO_PIN_2
+#define FL_FG_GPIO_Port GPIOC
+#define FL_FG_EXTI_IRQn EXTI2_IRQn
+#define FR_FG_Pin GPIO_PIN_3
+#define FR_FG_GPIO_Port GPIOC
+#define FR_FG_EXTI_IRQn EXTI3_IRQn
 #define FL_SPEED_Pin GPIO_PIN_0
 #define FL_SPEED_GPIO_Port GPIOA
 #define FR_SPEED_Pin GPIO_PIN_1
@@ -73,6 +79,12 @@ void Error_Handler(void);
 #define FL_BRAKE_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define RR_FG_Pin GPIO_PIN_4
+#define RR_FG_GPIO_Port GPIOC
+#define RR_FG_EXTI_IRQn EXTI4_IRQn
+#define RL_FG_Pin GPIO_PIN_5
+#define RL_FG_GPIO_Port GPIOC
+#define RL_FG_EXTI_IRQn EXTI9_5_IRQn
 #define FR_BRAKE_Pin GPIO_PIN_0
 #define FR_BRAKE_GPIO_Port GPIOB
 #define FL_DIR_Pin GPIO_PIN_1

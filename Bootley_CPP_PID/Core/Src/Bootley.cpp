@@ -117,18 +117,34 @@ void Bootley::Drive()
 {
 	if (b_auto_mode == MANUAL_MODE) {
 		if (u8_drive_mode == NORMAL_MODE)
+		{
 			NormalMode(f_accel_val, f_steering_val);
-		
+			f_FL_rpm = FL_GetRPM();
+			f_FR_rpm = FR_GetRPM();
+			f_RL_rpm = RL_GetRPM();
+			f_RR_rpm = RR_GetRPM();
+		}
+
 		else if (u8_drive_mode == SPINNING_MODE)
+		{
 			SpinningMode(f_steering_val);
-
+			f_FL_rpm = FL_GetRPM();
+			f_FR_rpm = FR_GetRPM();
+			f_RL_rpm = RL_GetRPM();
+			f_RR_rpm = RR_GetRPM();
+		}	
+		
 		else	// if drive_mode == LOCK_MODE
+		{
 			EStopMode();
-
+		}
 	}
 
 	else if (b_auto_mode == AUTO_MODE) {
-		
+		f_FL_rpm = FL_GetRPM();
+		f_FR_rpm = FR_GetRPM();
+		f_RL_rpm = RL_GetRPM();
+		f_RR_rpm = RR_GetRPM();
 		AutoDrive();
 	}
 		
@@ -265,7 +281,7 @@ void Bootley::SpinningMode(float steering)
 		RL_dir = CCW;
 		RR_dir = CCW;
 
-		rpm = float_map(abs(steering), abs(STEERING_MIN), abs(IGNORING_SPINNING_MIN), SPINNING_RPM_MIN, SPINNING_RPM_MAX);
+		rpm = float_map(abs(steering), abs(IGNORING_SPINNING_MIN), abs(STEERING_MIN), SPINNING_RPM_MIN, SPINNING_RPM_MAX);
 		FL_RunMotor(rpm, FL_dir);
 		FR_RunMotor(rpm, FR_dir);
 		RL_RunMotor(rpm, RL_dir);
@@ -316,6 +332,7 @@ void Bootley::InitModule()
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
 
+	HAL_TIM_Base_Start_IT(&htim10);
 
 }
 
@@ -471,7 +488,7 @@ void Bootley::GetSteeringVal()
 	else if(pulse_width_us > (float)RECEIVER_MAX_PW)	pulse_width_us = (float)RECEIVER_MAX_PW;
 
 	
-	f_steering_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, RIGHT_MAX_STEERING_VAL, LEFT_MAX_STEERING_VAL);
+	f_steering_val = float_map(pulse_width_us, RECEIVER_MIN_PW, RECEIVER_MAX_PW, LEFT_MAX_STEERING_VAL, RIGHT_MAX_STEERING_VAL);
 	
 }
 

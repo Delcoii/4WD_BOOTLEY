@@ -9,10 +9,92 @@
  *
 */
 #include <stdio.h>
-
-#include "tim.h"            // TIM1 이 모터 속도값 출력에 쓰임
+#include <stdbool.h>
+#include "tim.h"            // TIM10 이 모터 속도값 출력에 쓰임
+#include "gpio.h"			// 외부인터럽트 선언 필요
 
 #include "MY36GP_3650.hpp"
+
+
+uint32_t FL_capture[2];
+bool FL_saved_index = FIRST_INDEX;
+
+uint32_t FR_capture[2];
+bool FR_saved_index = FIRST_INDEX;
+
+uint32_t RL_capture[2];
+bool RL_saved_index = FIRST_INDEX;
+
+uint32_t RR_capture[2];
+bool RR_saved_index = FIRST_INDEX;
+
+
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+
+	// FL FG signal edge detected
+	if(GPIO_Pin == GPIO_PIN_2)
+	{
+
+		// HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+
+		if (FL_saved_index) {
+			FL_capture[0] = TIM10->CNT;
+			FL_saved_index = FIRST_INDEX;
+		}
+		else {
+			FL_capture[1] = TIM10->CNT;
+			FL_saved_index = SECOND_INDEX;
+		}
+	}
+	// FR FG signal edge detected
+	else if(GPIO_Pin == GPIO_PIN_5)
+	{
+
+		// HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+
+		if (FR_saved_index) {
+			FR_capture[0] = TIM10->CNT;
+			FR_saved_index = FIRST_INDEX;
+		}
+		else {
+			FR_capture[1] = TIM10->CNT;
+			FR_saved_index = SECOND_INDEX;
+		}
+	}
+	// RL FG signal edge detected
+	else if(GPIO_Pin == GPIO_PIN_3)
+	{
+
+		// HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+
+		if (RL_saved_index) {
+			RL_capture[0] = TIM10->CNT;
+			RL_saved_index = FIRST_INDEX;
+		}
+		else {
+			RL_capture[1] = TIM10->CNT;
+			RL_saved_index = SECOND_INDEX;
+		}
+	}
+	// RR FG signal edge detected
+	else if(GPIO_Pin == GPIO_PIN_4)
+	{
+
+		// HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+
+		if (RR_saved_index) {
+			RR_capture[0] = TIM10->CNT;
+			RR_saved_index = FIRST_INDEX;
+		}
+		else {
+			RR_capture[1] = TIM10->CNT;
+			RR_saved_index = SECOND_INDEX;
+		}
+	}
+}
+
 
 
 
@@ -66,7 +148,7 @@ void FL_RunMotor(float rpm, GPIO_PinState dir)
     FL_SetDir(dir);
     TIM2->CCR1 = u32_input_CCR;
 
-    printf("\r\nFL CCR : %d\t", u32_input_CCR);	// for debugging
+//    printf("\r\nFL CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -90,7 +172,7 @@ void FR_RunMotor(float rpm, GPIO_PinState dir)
     FR_SetDir(dir);
     TIM2->CCR2 = u32_input_CCR;
 
-    printf("FR CCR : %d\t", u32_input_CCR);	// for debugging
+//    printf("FR CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -114,7 +196,7 @@ void RL_RunMotor(float rpm, GPIO_PinState dir)
     RL_SetDir(dir);
     TIM2->CCR3 = u32_input_CCR;
 
-    printf("RL CCR : %d\t", u32_input_CCR);	// for debugging
+//    printf("RL CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -140,22 +222,72 @@ void RR_RunMotor(float rpm, GPIO_PinState dir)
     RR_SetDir(dir);
     TIM2->CCR4 = u32_input_CCR;
 
-    printf("RR CCR : %d\r\n", u32_input_CCR);	// for debugging
+//    printf("RR CCR : %d\r\n", u32_input_CCR);	// for debugging
 
 }
 
 
-
-/*
- * 모터 ppr 6
- * 기어비 14
- */
-float Period2RPM(uint32_t u32_period_us)
+float FL_GetRPM()
 {
-	float f_RPM = (60 * 1000000) / (((float)u32_period_us * MOTOR_PPR) * GEAR_RATIO);
-	return f_RPM;
+	uint32_t FL_period_us;
+	if(FL_saved_index) {
+		// both edge detection이므로 * 2
+		FL_period_us = (FL_capture[1] - FL_capture[0]) * 2;
+	}
+	else {
+		FL_period_us = (FL_capture[0] - FL_capture[1]) * 2;
+
+	}
+
+	return (60*1000000) / (float)(FL_period_us * MOTOR_PPR * GEAR_RATIO);
 }
 
+
+float FR_GetRPM()
+{
+	uint32_t FR_period_us;
+	if(FR_saved_index) {
+		// both edge detection이므로 * 2
+		FR_period_us = (FR_capture[1] - FR_capture[0]) * 2;
+	}
+	else {
+		FR_period_us = (FR_capture[0] - FR_capture[1]) * 2;
+
+	}
+
+	return (60*1000000) / (float)(FR_period_us * MOTOR_PPR * GEAR_RATIO);
+}
+
+
+float RL_GetRPM()
+{
+	uint32_t RL_period_us;
+	if(RL_saved_index) {
+		// both edge detection이므로 * 2
+		RL_period_us = (RL_capture[1] - RL_capture[0]) * 2;
+	}
+	else {
+		RL_period_us = (RL_capture[0] - RL_capture[1]) * 2;
+
+	}
+
+	return (60*1000000) / (float)(RL_period_us * MOTOR_PPR * GEAR_RATIO);
+}
+
+float RR_GetRPM()
+{
+	uint32_t RR_period_us;
+	if(RR_saved_index) {
+		// both edge detection이므로 * 2
+		RR_period_us = (RR_capture[1] - RR_capture[0]) * 2;
+	}
+	else {
+		RR_period_us = (RR_capture[0] - RR_capture[1]) * 2;
+
+	}
+
+	return (60*1000000) / (float)(RR_period_us * MOTOR_PPR * GEAR_RATIO);
+}
 
 
 
@@ -168,25 +300,18 @@ float FL_MovingAverage(float f_input)
 	float f_result;
 
 	f_sum = 0.;
-//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
-
 	f_data[filter_index] = f_input;
-//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
 
-	for(int i = 0; i < WINDOW_SIZE; i++)
-	{
+	for(int i = 0; i < WINDOW_SIZE; i++) {
 		f_sum += f_data[i];
 	}
-//	  printf("f_sum : %f \r\n", f_sum);
 
 	filter_index = (filter_index+1) % WINDOW_SIZE;
-//	  printf("index : %d \r\n", index);
-
 	f_result = f_sum / (float)WINDOW_SIZE;
-//	  printf("result : %d \r\n\n", u32_result);
 
 	return f_result;
 }
+
 
 float FR_MovingAverage(float f_input)
 {
@@ -197,22 +322,14 @@ float FR_MovingAverage(float f_input)
 	float f_result;
 
 	f_sum = 0.;
-//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
-
 	f_data[filter_index] = f_input;
-//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
 
-	for(int i = 0; i < WINDOW_SIZE; i++)
-	{
+	for(int i = 0; i < WINDOW_SIZE; i++) {
 		f_sum += f_data[i];
 	}
-//	  printf("f_sum : %f \r\n", f_sum);
 
 	filter_index = (filter_index+1) % WINDOW_SIZE;
-//	  printf("index : %d \r\n", index);
-
 	f_result = f_sum / (float)WINDOW_SIZE;
-//	  printf("result : %d \r\n\n", u32_result);
 
 	return f_result;
 }
@@ -226,22 +343,14 @@ float RL_MovingAverage(float f_input)
 	float f_result;
 
 	f_sum = 0.;
-//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
-
 	f_data[filter_index] = f_input;
-//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
 
-	for(int i = 0; i < WINDOW_SIZE; i++)
-	{
+	for(int i = 0; i < WINDOW_SIZE; i++) {
 		f_sum += f_data[i];
 	}
-//	  printf("f_sum : %f \r\n", f_sum);
 
 	filter_index = (filter_index+1) % WINDOW_SIZE;
-//	  printf("index : %d \r\n", index);
-
 	f_result = f_sum / (float)WINDOW_SIZE;
-//	  printf("result : %d \r\n\n", u32_result);
 
 	return f_result;
 }
@@ -255,22 +364,14 @@ float RR_MovingAverage(float f_input)
 	float f_result;
 
 	f_sum = 0.;
-//	  printf("sum : %d \r\nindex : %d", u32_sum, index);
-
 	f_data[filter_index] = f_input;
-//	  printf("index : %d\tdata[index] : %d \r\n", index, u32_data[index]);
 
-	for(int i = 0; i < WINDOW_SIZE; i++)
-	{
+	for(int i = 0; i < WINDOW_SIZE; i++) {
 		f_sum += f_data[i];
 	}
-//	  printf("f_sum : %f \r\n", f_sum);
 
 	filter_index = (filter_index+1) % WINDOW_SIZE;
-//	  printf("index : %d \r\n", index);
-
 	f_result = f_sum / (float)WINDOW_SIZE;
-//	  printf("result : %d \r\n\n", u32_result);
 
 	return f_result;
 }
@@ -287,6 +388,9 @@ uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_m
 {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+
+
+
 
 
 /////////////////////////////////////////////////////////

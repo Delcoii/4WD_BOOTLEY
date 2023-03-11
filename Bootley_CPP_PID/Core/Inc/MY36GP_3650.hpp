@@ -104,6 +104,12 @@
 #define MOTOR_PPR			6
 
 
+// for calculating velocity
+#define FIRST_INDEX		0
+#define SECOND_INDEX	1
+
+
+
 void FL_BrakeEnable(void);
 void FL_BrakeDisable(void);
 void FL_SetDir(GPIO_PinState dir);
@@ -123,7 +129,10 @@ void FR_RunMotor(float rpm, GPIO_PinState dir);
 void RL_RunMotor(float rpm, GPIO_PinState dir);
 void RR_RunMotor(float rpm, GPIO_PinState dir);
 
-float Period2RPM(uint32_t u32_period_us);
+float FL_GetRPM();
+float FR_GetRPM();
+float RL_GetRPM();
+float RR_GetRPM();
 
 float FL_MovingAverage(float f_input);
 float FR_MovingAverage(float f_input);

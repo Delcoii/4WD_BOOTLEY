@@ -104,22 +104,23 @@ private:
     void AutoDrive();
 
 public:
+
+    float f_FL_rpm;
+    float f_FR_rpm;
+    float f_RL_rpm;
+    float f_RR_rpm;
+
     Bootley();
     void InitModule();
 
     void SetCarState();
     void Drive();
 
-
 };
 
 
 // for debugging
 void check_IC();
-
-
-
-
 
 
 
