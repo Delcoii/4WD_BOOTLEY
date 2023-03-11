@@ -99,9 +99,22 @@
 #define RR_RATED_SPEED_CCR	140
 
 
+#define FL_P_GAIN			0.5
+#define FR_P_GAIN			0.5
+#define RL_P_GAIN			0.5
+#define RR_P_GAIN			0.5
+
+#define FIRST_INDEX		0
+#define SECOND_INDEX	1
+
+
+
 #define WINDOW_SIZE		    10
 #define GEAR_RATIO			14
 #define MOTOR_PPR			6
+
+
+
 
 
 void FL_BrakeEnable(void);
@@ -129,6 +142,9 @@ float FL_MovingAverage(float f_input);
 float FR_MovingAverage(float f_input);
 float RL_MovingAverage(float f_input);
 float RR_MovingAverage(float f_input);
+
+
+float RR_GetRPM();
 
 
 float float_map(float x, float in_min, float in_max, float out_min, float out_max);

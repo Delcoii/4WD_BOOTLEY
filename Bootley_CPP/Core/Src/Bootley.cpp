@@ -204,7 +204,9 @@ void Bootley::NormalMode(float accel, float steering)
 			FL_RunMotor(FL_rpm, FL_dir);
 			FR_RunMotor(FR_rpm, FR_dir);
 			RL_RunMotor(RL_rpm, RL_dir);
+//			RR_RunMotor(RR_rpm, RR_dir);
 			RR_RunMotor(RR_rpm, RR_dir);
+			printf("rr input %f, output : %f\r\n", RR_rpm, RR_GetRPM());		// for debugging
 
 		} else if (accel < 0.)
 		{
@@ -216,8 +218,9 @@ void Bootley::NormalMode(float accel, float steering)
 			FL_RunMotor(FL_rpm, FL_dir);
 			FR_RunMotor(FR_rpm, FR_dir);
 			RL_RunMotor(RL_rpm, RL_dir);
+//			RR_RunMotor(RR_rpm, RR_dir);
 			RR_RunMotor(RR_rpm, RR_dir);
-
+			printf("rr input %f, output : %f\r\n", RR_rpm, RR_GetRPM());		// for debugging
 		}
 	}
 	
@@ -316,6 +319,7 @@ void Bootley::InitModule()
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
 
+	HAL_TIM_Base_Start_IT(&htim10);
 
 }
 

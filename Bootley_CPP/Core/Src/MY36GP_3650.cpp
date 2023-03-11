@@ -9,11 +9,56 @@
  *
 */
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "tim.h"            // TIM1 이 모터 속도값 출력에 쓰임
+#include "gpio.h"
 
 #include "MY36GP_3650.hpp"
 
+
+
+uint32_t RR_capture[2];
+bool RR_saved_index = FIRST_INDEX;
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+
+	if(GPIO_Pin == GPIO_PIN_4)	// RR
+	{
+
+//		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);		// for test
+
+		if (RR_saved_index)
+		{
+			RR_capture[0] = TIM10->CNT;
+			RR_saved_index = FIRST_INDEX;
+		}
+		else
+		{
+			RR_capture[1] = TIM10->CNT;
+			RR_saved_index = SECOND_INDEX;
+		}
+	}
+}
+
+
+float RR_GetRPM()
+{
+	uint32_t period_us;
+	if(RR_saved_index)
+	{
+//		period_us = (RR_capture[1] - RR_capture[0]) * 2;
+		period_us = (RR_capture[1] - RR_capture[0]);
+	}
+	else
+	{
+//		period_us = (RR_capture[0] - RR_capture[1]) * 2;
+		period_us = (RR_capture[0] - RR_capture[1]) * 2;
+
+	}
+
+	return (60*1000000) / (float)(period_us * MOTOR_PPR * GEAR_RATIO);
+}
 
 
 void FL_BrakeEnable(void) { HAL_GPIO_WritePin(FL_BRAKE_PORT, FL_BRAKE_PIN, GPIO_PIN_RESET); }
@@ -66,7 +111,7 @@ void FL_RunMotor(float rpm, GPIO_PinState dir)
     FL_SetDir(dir);
     TIM2->CCR1 = u32_input_CCR;
 
-    printf("\r\nFL CCR : %d\t", u32_input_CCR);	// for debugging
+//    printf("\r\nFL CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -90,7 +135,7 @@ void FR_RunMotor(float rpm, GPIO_PinState dir)
     FR_SetDir(dir);
     TIM2->CCR2 = u32_input_CCR;
 
-    printf("FR CCR : %d\t", u32_input_CCR);	// for debugging
+//    printf("FR CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
 
@@ -114,11 +159,9 @@ void RL_RunMotor(float rpm, GPIO_PinState dir)
     RL_SetDir(dir);
     TIM2->CCR3 = u32_input_CCR;
 
-    printf("RL CCR : %d\t", u32_input_CCR);	// for debugging
+//    printf("RL CCR : %d\t", u32_input_CCR);	// for debugging
 
 }
-
-
 
 void RR_RunMotor(float rpm, GPIO_PinState dir)
 {
@@ -140,8 +183,54 @@ void RR_RunMotor(float rpm, GPIO_PinState dir)
     RR_SetDir(dir);
     TIM2->CCR4 = u32_input_CCR;
 
-    printf("RR CCR : %d\r\n", u32_input_CCR);	// for debugging
+//    printf("RR CCR : %d\r\n", u32_input_CCR);	// for debugging
 
+}
+
+
+void RR_FeebackMotorControl(float f_input_rpm, float f_meas_rpm, GPIO_PinState dir)
+{
+	uint32_t u32_input_CCR;
+
+	float f_ff_RPMtoCCR = 0.;
+
+    float f_error;
+    float f_p_control_value;
+    float f_p_controled_RPMtoCCR = 0.;
+
+//    printf("\r\n\n");
+
+
+    f_ff_RPMtoCCR = float_map(f_input_rpm, 0.0, RR_RATED_RPM, RR_MIN_SPEED_CCR, RR_RATED_SPEED_CCR);	//개루프제어
+//    printf("ff CCR : %f\r\n", f_ff_RPMtoCCR);
+
+    f_error = f_input_rpm - f_meas_rpm;
+    f_p_control_value = (-1.) * f_error * RR_P_GAIN;
+//    printf("p val : %f \r\n", f_p_control_value);
+
+
+//    u32_input_CCR = (uint32_t)f_RPMtoCCR;		// 개루프만 할 때
+    u32_input_CCR = (uint32_t)(f_ff_RPMtoCCR + f_p_control_value);
+
+
+	// constrain
+    if (u32_input_CCR > RR_MIN_SPEED_CCR)    		u32_input_CCR = RR_MIN_SPEED_CCR;
+    else if(u32_input_CCR < RR_RATED_SPEED_CCR) 	u32_input_CCR = RR_RATED_SPEED_CCR;
+
+	// 모터가 전원만 받고 안돌아가면 꺼지더라구요 -> 최소 출력 설정
+    if (u32_input_CCR < RR_MOTOR_STOP_CCR) 	u32_input_CCR = (uint32_t)u32_input_CCR;
+    else 									u32_input_CCR = OUTPUT_HIGH;
+
+//    printf("CCR : %d\r\n\n", u32_input_CCR);
+
+
+	RR_BrakeDisable();
+    RR_SetDir(dir);
+    TIM2->CCR4 = u32_input_CCR;
+
+
+//    printf("\r\n\nCCR1 : %d\t", u32_input_CCR);	// for debugging
+//    printf("result CCR : %f \r\n\n", f_RPMtoCCR);
 }
 
 
