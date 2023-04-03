@@ -18,13 +18,19 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "dma.h"
-#include "tim.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "dma.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+
+#include "MPU9250.h"
+#include <stdio.h>
+
+#include "ros.h"
+#include "sensor_msgs/Imu.h"
+
 
 /* USER CODE END Includes */
 
@@ -46,6 +52,13 @@
 
 /* USER CODE BEGIN PV */
 
+ros::NodeHandle nh;
+
+sensor_msgs::Imu imu_msg;
+ros::Publisher imu_pub("imuData", &imu_msg);
+
+
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -57,6 +70,20 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
+  nh.getHardware()->flush();
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+  nh.getHardware()->reset_rbuf();
+}
+
+void setupRos(void)
+{
+	nh.initNode();
+	nh.advertise(imu_pub);
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -66,6 +93,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
+	int16_t AccData[3], GyroData[3], MagData[3];
 
   /* USER CODE END 1 */
 
@@ -89,11 +118,11 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_USART2_UART_Init();
-  MX_TIM1_Init();
-  MX_TIM3_Init();
-  MX_TIM2_Init();
-  MX_TIM10_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
+
+  	  MPU9250_Init();
+  	  setupRos();
 
   /* USER CODE END 2 */
 
@@ -104,6 +133,24 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+	  MPU9250_GetData(AccData, GyroData, MagData);
+	  imu_msg.linear_acceleration.x = (double)AccData[0]*0.001;
+	  imu_msg.linear_acceleration.y = (double)AccData[1]*0.001;
+	  imu_msg.linear_acceleration.z = (double)AccData[2]*0.001;
+
+	  imu_msg.angular_velocity.x = (double)GyroData[0]*0.001;
+	  imu_msg.angular_velocity.y = (double)GyroData[1]*0.001;
+	  imu_msg.angular_velocity.z = (double)GyroData[2]*0.001;
+
+	  imu_msg.orientation_covariance[0] = -1;
+	  imu_msg.angular_velocity_covariance[0] = -1;
+	  imu_msg.linear_acceleration_covariance[0] = -1;
+
+	  imu_pub.publish(&imu_msg);
+	  nh.spinOnce();
+	  printf("%d\r\n", AccData[0]);
+	  HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }

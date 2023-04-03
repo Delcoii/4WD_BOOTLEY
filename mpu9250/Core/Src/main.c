@@ -118,9 +118,9 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  MPU9250_GetData(AccData, GyroData, MagData);
-	  printf("acc : %08d\t%08d\t%08d\r\n", (int16_t)AccData[0], (int16_t)AccData[1], (int16_t)AccData[2]);
-	  printf("gyro : %08d\t%08d\t%08d\r\n", (int16_t)GyroData[0], (int16_t)GyroData[1], (int16_t)GyroData[2]);
-	  printf("mag : %08d\t%08d\t%08d\r\n\n\n", (int16_t)MagData[0], (int16_t)MagData[1], (int16_t)MagData[2]);
+	  printf("acc : %08d\t%d\t%d\r\n", (int16_t)AccData[0], (int16_t)AccData[1], (int16_t)AccData[2]);
+	  printf("gyro : %d\t%d\t%d\r\n", (int16_t)GyroData[0], (int16_t)GyroData[1], (int16_t)GyroData[2]);
+	  printf("mag : %d\t%d\t%d\r\n\n\n", (int16_t)MagData[0], (int16_t)MagData[1], (int16_t)MagData[2]);
 
 
   }

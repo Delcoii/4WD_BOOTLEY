@@ -115,14 +115,46 @@ void Bootley::SetCarState()
 
 void Bootley::Drive()
 {
+	float f_temp_FL_rpm, f_temp_FR_rpm, f_temp_RL_rpm, f_temp_RR_rpm;
+
 	if (b_auto_mode == MANUAL_MODE) {
 		if (u8_drive_mode == NORMAL_MODE)
 		{
 			NormalMode(f_accel_val, f_steering_val);
+
 			f_FL_rpm = FL_GetRPM();
 			f_FR_rpm = FR_GetRPM();
 			f_RL_rpm = RL_GetRPM();
 			f_RR_rpm = RR_GetRPM();
+
+			/*
+			f_temp_FL_rpm = FL_GetRPM();
+			f_temp_FR_rpm = FR_GetRPM();
+			f_temp_RL_rpm = RL_GetRPM();
+			f_temp_RR_rpm = RR_GetRPM();
+
+			if((f_temp_FL_rpm >= 0.) && (f_temp_FL_rpm <= 600.))
+			{
+				f_FL_rpm = FL_MovingAverage(f_temp_FL_rpm);
+			}
+
+			if((f_temp_FR_rpm >= 0.) && (f_temp_FR_rpm <= 600.))
+			{
+				f_FR_rpm = FR_MovingAverage(f_temp_FR_rpm);
+			}
+
+			if((f_temp_RL_rpm >= 0.) && (f_temp_RL_rpm <= 600.))
+			{
+				f_RL_rpm = RL_MovingAverage(f_temp_RL_rpm);
+			}
+
+			if((f_temp_RR_rpm >= 0.) && (f_temp_RR_rpm <= 600.))
+			{
+				f_RR_rpm = RR_MovingAverage(f_temp_RR_rpm);
+			}
+			*/
+
+			printf("rpm : %3.2f\t%3.2f\t%3.2f\t%3.2f\r\n", f_FL_rpm, f_FR_rpm, f_RL_rpm, f_RR_rpm);
 		}
 
 		else if (u8_drive_mode == SPINNING_MODE)

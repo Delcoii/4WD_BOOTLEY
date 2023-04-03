@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   000123d7  00000000  00000000  0005936a  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000ded21  00000000  00000000  0006b741  2**0
+ 18 .debug_str    000decf0  00000000  00000000  0006b741  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  0014a462  2**0
+ 19 .comment      00000050  00000000  00000000  0014a431  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00004c7c  00000000  00000000  0014a4b4  2**2
+ 20 .debug_frame  00004c7c  00000000  00000000  0014a484  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -2530,50 +2530,81 @@ void EXTI4_IRQHandler(void)
  80016c8:	bd80      	pop	{r7, pc}
 
 080016ca <_getpid>:
+void initialise_monitor_handles()
+{
+}
+
+int _getpid(void)
+{
  80016ca:	b480      	push	{r7}
  80016cc:	af00      	add	r7, sp, #0
+  return 1;
  80016ce:	2301      	movs	r3, #1
+}
  80016d0:	4618      	mov	r0, r3
  80016d2:	46bd      	mov	sp, r7
  80016d4:	f85d 7b04 	ldr.w	r7, [sp], #4
  80016d8:	4770      	bx	lr
 
 080016da <_kill>:
+
+int _kill(int pid, int sig)
+{
  80016da:	b580      	push	{r7, lr}
  80016dc:	b082      	sub	sp, #8
  80016de:	af00      	add	r7, sp, #0
  80016e0:	6078      	str	r0, [r7, #4]
  80016e2:	6039      	str	r1, [r7, #0]
+  (void)pid;
+  (void)sig;
+  errno = EINVAL;
  80016e4:	f003 fb16 	bl	8004d14 <__errno>
  80016e8:	4603      	mov	r3, r0
  80016ea:	2216      	movs	r2, #22
  80016ec:	601a      	str	r2, [r3, #0]
+  return -1;
  80016ee:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+}
  80016f2:	4618      	mov	r0, r3
  80016f4:	3708      	adds	r7, #8
  80016f6:	46bd      	mov	sp, r7
  80016f8:	bd80      	pop	{r7, pc}
 
 080016fa <_exit>:
+
+void _exit (int status)
+{
  80016fa:	b580      	push	{r7, lr}
  80016fc:	b082      	sub	sp, #8
  80016fe:	af00      	add	r7, sp, #0
  8001700:	6078      	str	r0, [r7, #4]
+  _kill(status, -1);
  8001702:	f04f 31ff 	mov.w	r1, #4294967295	; 0xffffffff
  8001706:	6878      	ldr	r0, [r7, #4]
  8001708:	f7ff ffe7 	bl	80016da <_kill>
+  while (1) {}    /* Make sure we hang here */
  800170c:	e7fe      	b.n	800170c <_exit+0x12>
 
 0800170e <_read>:
+}
+
+__attribute__((weak)) int _read(int file, char *ptr, int len)
+{
  800170e:	b580      	push	{r7, lr}
  8001710:	b086      	sub	sp, #24
  8001712:	af00      	add	r7, sp, #0
  8001714:	60f8      	str	r0, [r7, #12]
  8001716:	60b9      	str	r1, [r7, #8]
  8001718:	607a      	str	r2, [r7, #4]
+  (void)file;
+  int DataIdx;
+
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
  800171a:	2300      	movs	r3, #0
  800171c:	617b      	str	r3, [r7, #20]
  800171e:	e00a      	b.n	8001736 <_read+0x28>
+  {
+    *ptr++ = __io_getchar();
  8001720:	f3af 8000 	nop.w
  8001724:	4601      	mov	r1, r0
  8001726:	68bb      	ldr	r3, [r7, #8]
@@ -2581,6 +2612,7 @@ void EXTI4_IRQHandler(void)
  800172a:	60ba      	str	r2, [r7, #8]
  800172c:	b2ca      	uxtb	r2, r1
  800172e:	701a      	strb	r2, [r3, #0]
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
  8001730:	697b      	ldr	r3, [r7, #20]
  8001732:	3301      	adds	r3, #1
  8001734:	617b      	str	r3, [r7, #20]
@@ -2588,28 +2620,42 @@ void EXTI4_IRQHandler(void)
  8001738:	687b      	ldr	r3, [r7, #4]
  800173a:	429a      	cmp	r2, r3
  800173c:	dbf0      	blt.n	8001720 <_read+0x12>
+  }
+
+  return len;
  800173e:	687b      	ldr	r3, [r7, #4]
+}
  8001740:	4618      	mov	r0, r3
  8001742:	3718      	adds	r7, #24
  8001744:	46bd      	mov	sp, r7
  8001746:	bd80      	pop	{r7, pc}
 
 08001748 <_write>:
+
+__attribute__((weak)) int _write(int file, char *ptr, int len)
+{
  8001748:	b580      	push	{r7, lr}
  800174a:	b086      	sub	sp, #24
  800174c:	af00      	add	r7, sp, #0
  800174e:	60f8      	str	r0, [r7, #12]
  8001750:	60b9      	str	r1, [r7, #8]
  8001752:	607a      	str	r2, [r7, #4]
+  (void)file;
+  int DataIdx;
+
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
  8001754:	2300      	movs	r3, #0
  8001756:	617b      	str	r3, [r7, #20]
  8001758:	e009      	b.n	800176e <_write+0x26>
+  {
+    __io_putchar(*ptr++);
  800175a:	68bb      	ldr	r3, [r7, #8]
  800175c:	1c5a      	adds	r2, r3, #1
  800175e:	60ba      	str	r2, [r7, #8]
  8001760:	781b      	ldrb	r3, [r3, #0]
  8001762:	4618      	mov	r0, r3
  8001764:	f000 fa32 	bl	8001bcc <__io_putchar>
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
  8001768:	697b      	ldr	r3, [r7, #20]
  800176a:	3301      	adds	r3, #1
  800176c:	617b      	str	r3, [r7, #20]
@@ -2617,18 +2663,27 @@ void EXTI4_IRQHandler(void)
  8001770:	687b      	ldr	r3, [r7, #4]
  8001772:	429a      	cmp	r2, r3
  8001774:	dbf1      	blt.n	800175a <_write+0x12>
+  }
+  return len;
  8001776:	687b      	ldr	r3, [r7, #4]
+}
  8001778:	4618      	mov	r0, r3
  800177a:	3718      	adds	r7, #24
  800177c:	46bd      	mov	sp, r7
  800177e:	bd80      	pop	{r7, pc}
 
 08001780 <_close>:
+
+int _close(int file)
+{
  8001780:	b480      	push	{r7}
  8001782:	b083      	sub	sp, #12
  8001784:	af00      	add	r7, sp, #0
  8001786:	6078      	str	r0, [r7, #4]
+  (void)file;
+  return -1;
  8001788:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
+}
  800178c:	4618      	mov	r0, r3
  800178e:	370c      	adds	r7, #12
  8001790:	46bd      	mov	sp, r7
@@ -2636,15 +2691,23 @@ void EXTI4_IRQHandler(void)
  8001796:	4770      	bx	lr
 
 08001798 <_fstat>:
+
+
+int _fstat(int file, struct stat *st)
+{
  8001798:	b480      	push	{r7}
  800179a:	b083      	sub	sp, #12
  800179c:	af00      	add	r7, sp, #0
  800179e:	6078      	str	r0, [r7, #4]
  80017a0:	6039      	str	r1, [r7, #0]
+  (void)file;
+  st->st_mode = S_IFCHR;
  80017a2:	683b      	ldr	r3, [r7, #0]
  80017a4:	f44f 5200 	mov.w	r2, #8192	; 0x2000
  80017a8:	605a      	str	r2, [r3, #4]
+  return 0;
  80017aa:	2300      	movs	r3, #0
+}
  80017ac:	4618      	mov	r0, r3
  80017ae:	370c      	adds	r7, #12
  80017b0:	46bd      	mov	sp, r7
@@ -2652,11 +2715,17 @@ void EXTI4_IRQHandler(void)
  80017b6:	4770      	bx	lr
 
 080017b8 <_isatty>:
+
+int _isatty(int file)
+{
  80017b8:	b480      	push	{r7}
  80017ba:	b083      	sub	sp, #12
  80017bc:	af00      	add	r7, sp, #0
  80017be:	6078      	str	r0, [r7, #4]
+  (void)file;
+  return 1;
  80017c0:	2301      	movs	r3, #1
+}
  80017c2:	4618      	mov	r0, r3
  80017c4:	370c      	adds	r7, #12
  80017c6:	46bd      	mov	sp, r7
@@ -2664,13 +2733,21 @@ void EXTI4_IRQHandler(void)
  80017cc:	4770      	bx	lr
 
 080017ce <_lseek>:
+
+int _lseek(int file, int ptr, int dir)
+{
  80017ce:	b480      	push	{r7}
  80017d0:	b085      	sub	sp, #20
  80017d2:	af00      	add	r7, sp, #0
  80017d4:	60f8      	str	r0, [r7, #12]
  80017d6:	60b9      	str	r1, [r7, #8]
  80017d8:	607a      	str	r2, [r7, #4]
+  (void)file;
+  (void)ptr;
+  (void)dir;
+  return 0;
  80017da:	2300      	movs	r3, #0
+}
  80017dc:	4618      	mov	r0, r3
  80017de:	3714      	adds	r7, #20
  80017e0:	46bd      	mov	sp, r7
@@ -2678,23 +2755,44 @@ void EXTI4_IRQHandler(void)
  80017e6:	4770      	bx	lr
 
 080017e8 <_sbrk>:
+ *
+ * @param incr Memory size
+ * @return Pointer to allocated memory
+ */
+void *_sbrk(ptrdiff_t incr)
+{
  80017e8:	b580      	push	{r7, lr}
  80017ea:	b086      	sub	sp, #24
  80017ec:	af00      	add	r7, sp, #0
  80017ee:	6078      	str	r0, [r7, #4]
+  extern uint8_t _end; /* Symbol defined in the linker script */
+  extern uint8_t _estack; /* Symbol defined in the linker script */
+  extern uint32_t _Min_Stack_Size; /* Symbol defined in the linker script */
+  const uint32_t stack_limit = (uint32_t)&_estack - (uint32_t)&_Min_Stack_Size;
  80017f0:	4a14      	ldr	r2, [pc, #80]	; (8001844 <_sbrk+0x5c>)
  80017f2:	4b15      	ldr	r3, [pc, #84]	; (8001848 <_sbrk+0x60>)
  80017f4:	1ad3      	subs	r3, r2, r3
  80017f6:	617b      	str	r3, [r7, #20]
+  const uint8_t *max_heap = (uint8_t *)stack_limit;
  80017f8:	697b      	ldr	r3, [r7, #20]
  80017fa:	613b      	str	r3, [r7, #16]
+  uint8_t *prev_heap_end;
+
+  /* Initialize heap end at first call */
+  if (NULL == __sbrk_heap_end)
  80017fc:	4b13      	ldr	r3, [pc, #76]	; (800184c <_sbrk+0x64>)
  80017fe:	681b      	ldr	r3, [r3, #0]
  8001800:	2b00      	cmp	r3, #0
  8001802:	d102      	bne.n	800180a <_sbrk+0x22>
+  {
+    __sbrk_heap_end = &_end;
  8001804:	4b11      	ldr	r3, [pc, #68]	; (800184c <_sbrk+0x64>)
  8001806:	4a12      	ldr	r2, [pc, #72]	; (8001850 <_sbrk+0x68>)
  8001808:	601a      	str	r2, [r3, #0]
+  }
+
+  /* Protect heap from growing into the reserved MSP stack */
+  if (__sbrk_heap_end + incr > max_heap)
  800180a:	4b10      	ldr	r3, [pc, #64]	; (800184c <_sbrk+0x64>)
  800180c:	681a      	ldr	r2, [r3, #0]
  800180e:	687b      	ldr	r3, [r7, #4]
@@ -2702,22 +2800,32 @@ void EXTI4_IRQHandler(void)
  8001812:	693a      	ldr	r2, [r7, #16]
  8001814:	429a      	cmp	r2, r3
  8001816:	d207      	bcs.n	8001828 <_sbrk+0x40>
+  {
+    errno = ENOMEM;
  8001818:	f003 fa7c 	bl	8004d14 <__errno>
  800181c:	4603      	mov	r3, r0
  800181e:	220c      	movs	r2, #12
  8001820:	601a      	str	r2, [r3, #0]
+    return (void *)-1;
  8001822:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
  8001826:	e009      	b.n	800183c <_sbrk+0x54>
+  }
+
+  prev_heap_end = __sbrk_heap_end;
  8001828:	4b08      	ldr	r3, [pc, #32]	; (800184c <_sbrk+0x64>)
  800182a:	681b      	ldr	r3, [r3, #0]
  800182c:	60fb      	str	r3, [r7, #12]
+  __sbrk_heap_end += incr;
  800182e:	4b07      	ldr	r3, [pc, #28]	; (800184c <_sbrk+0x64>)
  8001830:	681a      	ldr	r2, [r3, #0]
  8001832:	687b      	ldr	r3, [r7, #4]
  8001834:	4413      	add	r3, r2
  8001836:	4a05      	ldr	r2, [pc, #20]	; (800184c <_sbrk+0x64>)
  8001838:	6013      	str	r3, [r2, #0]
+
+  return (void *)prev_heap_end;
  800183a:	68fb      	ldr	r3, [r7, #12]
+}
  800183c:	4618      	mov	r0, r3
  800183e:	3718      	adds	r7, #24
  8001840:	46bd      	mov	sp, r7
@@ -3359,46 +3467,103 @@ PUTCHAR_PROTOTYPE
  8001bec:	20000310 	.word	0x20000310
 
 08001bf0 <Reset_Handler>:
+
+    .section  .text.Reset_Handler
+  .weak  Reset_Handler
+  .type  Reset_Handler, %function
+Reset_Handler:  
+  ldr   sp, =_estack      /* set stack pointer */
  8001bf0:	f8df d034 	ldr.w	sp, [pc, #52]	; 8001c28 <LoopFillZerobss+0x12>
+
+/* Copy the data segment initializers from flash to SRAM */  
+  ldr r0, =_sdata
  8001bf4:	480d      	ldr	r0, [pc, #52]	; (8001c2c <LoopFillZerobss+0x16>)
+  ldr r1, =_edata
  8001bf6:	490e      	ldr	r1, [pc, #56]	; (8001c30 <LoopFillZerobss+0x1a>)
+  ldr r2, =_sidata
  8001bf8:	4a0e      	ldr	r2, [pc, #56]	; (8001c34 <LoopFillZerobss+0x1e>)
+  movs r3, #0
  8001bfa:	2300      	movs	r3, #0
+  b LoopCopyDataInit
  8001bfc:	e002      	b.n	8001c04 <LoopCopyDataInit>
 
 08001bfe <CopyDataInit>:
+
+CopyDataInit:
+  ldr r4, [r2, r3]
  8001bfe:	58d4      	ldr	r4, [r2, r3]
+  str r4, [r0, r3]
  8001c00:	50c4      	str	r4, [r0, r3]
+  adds r3, r3, #4
  8001c02:	3304      	adds	r3, #4
 
 08001c04 <LoopCopyDataInit>:
+
+LoopCopyDataInit:
+  adds r4, r0, r3
  8001c04:	18c4      	adds	r4, r0, r3
+  cmp r4, r1
  8001c06:	428c      	cmp	r4, r1
+  bcc CopyDataInit
  8001c08:	d3f9      	bcc.n	8001bfe <CopyDataInit>
+  
+/* Zero fill the bss segment. */
+  ldr r2, =_sbss
  8001c0a:	4a0b      	ldr	r2, [pc, #44]	; (8001c38 <LoopFillZerobss+0x22>)
+  ldr r4, =_ebss
  8001c0c:	4c0b      	ldr	r4, [pc, #44]	; (8001c3c <LoopFillZerobss+0x26>)
+  movs r3, #0
  8001c0e:	2300      	movs	r3, #0
+  b LoopFillZerobss
  8001c10:	e001      	b.n	8001c16 <LoopFillZerobss>
 
 08001c12 <FillZerobss>:
+
+FillZerobss:
+  str  r3, [r2]
  8001c12:	6013      	str	r3, [r2, #0]
+  adds r2, r2, #4
  8001c14:	3204      	adds	r2, #4
 
 08001c16 <LoopFillZerobss>:
+
+LoopFillZerobss:
+  cmp r2, r4
  8001c16:	42a2      	cmp	r2, r4
+  bcc FillZerobss
  8001c18:	d3fb      	bcc.n	8001c12 <FillZerobss>
+
+/* Call the clock system initialization function.*/
+  bl  SystemInit   
  8001c1a:	f7ff fe1b 	bl	8001854 <SystemInit>
+/* Call static constructors */
+    bl __libc_init_array
  8001c1e:	f003 f87f 	bl	8004d20 <__libc_init_array>
+/* Call the application's entry point.*/
+  bl  main
  8001c22:	f7ff fbeb 	bl	80013fc <main>
+  bx  lr    
  8001c26:	4770      	bx	lr
+  ldr   sp, =_estack      /* set stack pointer */
  8001c28:	20020000 	.word	0x20020000
+  ldr r0, =_sdata
  8001c2c:	20000000 	.word	0x20000000
+  ldr r1, =_edata
  8001c30:	200001dc 	.word	0x200001dc
+  ldr r2, =_sidata
  8001c34:	08007c3c 	.word	0x08007c3c
+  ldr r2, =_sbss
  8001c38:	200001dc 	.word	0x200001dc
+  ldr r4, =_ebss
  8001c3c:	20000368 	.word	0x20000368
 
 08001c40 <ADC_IRQHandler>:
+ * @retval None       
+*/
+    .section  .text.Default_Handler,"ax",%progbits
+Default_Handler:
+Infinite_Loop:
+  b  Infinite_Loop
  8001c40:	e7fe      	b.n	8001c40 <ADC_IRQHandler>
 	...
 
