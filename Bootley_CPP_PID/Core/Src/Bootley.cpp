@@ -102,6 +102,23 @@ void Bootley::SetCarState()
 	SetAutoMode();
 	SetDriveMode();
 	
+	if (b_auto_mode == MANUAL_MODE) {
+		HAL_GPIO_WritePin(ASSI_MANUAL_GPIO_Port, ASSI_MANUAL_Pin, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(ASSI_AUTO_GPIO_Port, ASSI_AUTO_Pin, GPIO_PIN_RESET);
+	}
+	else if (b_auto_mode == AUTO_MODE) {
+		HAL_GPIO_WritePin(ASSI_MANUAL_GPIO_Port, ASSI_MANUAL_Pin, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(ASSI_AUTO_GPIO_Port, ASSI_AUTO_Pin, GPIO_PIN_SET);
+	}
+		
+		
+	if (u8_drive_mode == LOCK_MODE)
+		HAL_GPIO_WritePin(ASSI_BRAKE_GPIO_Port, ASSI_BRAKE_Pin, GPIO_PIN_SET);
+	else
+		HAL_GPIO_WritePin(ASSI_BRAKE_GPIO_Port, ASSI_BRAKE_Pin, GPIO_PIN_RESET);
+
+
+
 	// for debugging
 	// printf("%d %d %d %d \r\n", u32_steering_pw_us, u32_accel_pw_us, u32_auto_mode_pw_us, u32_drive_mode_pw_us);
 
@@ -173,11 +190,22 @@ void Bootley::Drive()
 	}
 
 	else if (b_auto_mode == AUTO_MODE) {
-		f_FL_rpm = FL_GetRPM();
-		f_FR_rpm = FR_GetRPM();
-		f_RL_rpm = RL_GetRPM();
-		f_RR_rpm = RR_GetRPM();
-		AutoDrive();
+
+		if (u8_drive_mode == LOCK_MODE) {
+			EStopMode();
+		}
+			
+		else {
+
+			f_FL_rpm = FL_GetRPM();
+			f_FR_rpm = FR_GetRPM();
+			f_RL_rpm = RL_GetRPM();
+			f_RR_rpm = RR_GetRPM();
+		
+			AutoDrive();
+		}
+
+		
 	}
 		
 }
