@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bootley_CPP Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MotorTest_PID Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SingleMotorTest Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SingleMotorTest_usTicker Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ros_test Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mpu9250 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:mpu9250_ros Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bootley_CPP_PID Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bootley_CPP Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bootley_CPP_PID Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bootley\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Bootley\ Debug/activeLaunchTarget=null\:---
