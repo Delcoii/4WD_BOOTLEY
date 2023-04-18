@@ -171,7 +171,7 @@ void Bootley::Drive()
 			}
 			*/
 
-			printf("rpm : %3.2f\t%3.2f\t%3.2f\t%3.2f\r\n", f_FL_rpm, f_FR_rpm, f_RL_rpm, f_RR_rpm);
+			printf("rpm : %3.3f\t%3.3f\t%3.3f\t%3.3f\r\n", f_FL_rpm, f_FR_rpm, f_RL_rpm, f_RR_rpm);
 		}
 
 		else if (u8_drive_mode == SPINNING_MODE)

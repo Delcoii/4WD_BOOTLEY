@@ -207,22 +207,22 @@ void RR_RunMotor(float rpm, GPIO_PinState dir)
 
 
 float FL_GetRPM() {
-	return (FL_edge_per_100ms * 600) / ((MOTOR_PPR * 2) * GEAR_RATIO);
+	return ((float)FL_edge_per_100ms * 1200.) / ((MOTOR_PPR * 2) * GEAR_RATIO);
 
 }
 
 float FR_GetRPM() {
-	return (FR_edge_per_100ms * 600) / ((MOTOR_PPR * 2) * GEAR_RATIO);
+	return ((float)FR_edge_per_100ms * 1200.) / ((MOTOR_PPR * 2) * GEAR_RATIO);
 
 }
 
 float RL_GetRPM() {
-	return (RL_edge_per_100ms * 600) / ((MOTOR_PPR * 2) * GEAR_RATIO);
+	return ((float)RL_edge_per_100ms * 1200.) / ((MOTOR_PPR * 2) * GEAR_RATIO);
 
 }
 
 float RR_GetRPM() {
-	return (RR_edge_per_100ms * 600) / ((MOTOR_PPR * 2) * GEAR_RATIO);
+	return ((float)RR_edge_per_100ms * 1200.) / ((MOTOR_PPR * 2) * GEAR_RATIO);
 
 }
 
@@ -345,5 +345,9 @@ void motorVelocityCheck(uint16_t adc_val, GPIO_PinState dir)
 
 }
 
+void edgeCountCheck()
+{
+	printf("%d\t%d\t%d\t%d\r\n", FL_edge_per_100ms, FR_edge_per_100ms, RL_edge_per_100ms, RR_edge_per_100ms);
+}
 
 

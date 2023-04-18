@@ -44,6 +44,15 @@ bool b_g_drive_mode_ch4_done = false;
 
 
 
+float f_g_FL_rpm = 0.;
+float f_g_FR_rpm = 0.;
+float f_g_RL_rpm = 0.;
+float f_g_RR_rpm = 0.;
+
+
+
+
+
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
@@ -174,12 +183,17 @@ void Bootley::Drive()
 		{
 			NormalMode(f_accel_val, f_steering_val);
 
-			f_FL_rpm = FL_GetRPM();
-			f_FR_rpm = FR_GetRPM();
-			f_RL_rpm = RL_GetRPM();
-			f_RR_rpm = RR_GetRPM();
+//			f_FL_rpm = FL_GetRPM();
+//			f_FR_rpm = FR_GetRPM();
+//			f_RL_rpm = RL_GetRPM();
+//			f_RR_rpm = RR_GetRPM();
 
-			/*
+//			f_g_FL_rpm = FL_GetRPM();
+//			f_g_FR_rpm = FR_GetRPM();
+//			f_g_RL_rpm = RL_GetRPM();
+//			f_g_RR_rpm = RR_GetRPM();
+
+
 			f_temp_FL_rpm = FL_GetRPM();
 			f_temp_FR_rpm = FR_GetRPM();
 			f_temp_RL_rpm = RL_GetRPM();
@@ -204,9 +218,21 @@ void Bootley::Drive()
 			{
 				f_RR_rpm = RR_MovingAverage(f_temp_RR_rpm);
 			}
-			*/
 
-			printf("rpm : %3.2f\t%3.2f\t%3.2f\t%3.2f\r\n", f_FL_rpm, f_FR_rpm, f_RL_rpm, f_RR_rpm);
+
+//			edgeCountCheck();
+//			printf("rpm : %3.3f\t%3.3f\t%3.3f\t%3.3f\r\n", f_FL_rpm, f_FR_rpm, f_RL_rpm, f_RR_rpm);
+
+
+
+			printf("max:");	printf("%f", 700.);		printf(",");
+			printf("min:");		printf("%f", 0.);			printf(",");
+//			printf("FL:");	printf("%f", f_FL_rpm);	printf(",");
+//			printf("FR:");	printf("%f", f_FR_rpm);	printf("\r\n");
+			printf("RL:");	printf("%f", f_RL_rpm);	printf(",");
+			printf("RR:");	printf("%f\r\n", f_RR_rpm);
+
+			//			printf("rpm : %d\t%d\t%d\t%d\r\n", FL_edge_per_100ms, FR_edge_per_100ms, RL_edge_per_100ms, RR_edge_per_100ms);
 		}
 
 		else if (u8_drive_mode == SPINNING_MODE)

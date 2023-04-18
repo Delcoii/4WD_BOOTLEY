@@ -77,33 +77,37 @@
 
 
 #define OUTPUT_HIGH         9999
-// #define FL_MAX_RPM     	571
-#define FL_RATED_RPM		450
-#define FL_MIN_SPEED_CCR	750
-#define FL_MOTOR_STOP_CCR	730
-#define FL_RATED_SPEED_CCR	140
 
-#define FR_RATED_RPM		450
-#define FR_MIN_SPEED_CCR	750
-#define FR_MOTOR_STOP_CCR	730
-#define FR_RATED_SPEED_CCR	140
+#define FL_RATED_RPM		450.
+#define FL_MIN_SPEED_CCR	820.
+// #define FL_MOTOR_STOP_CCR	730
+#define FL_MOTOR_STOP_CCR	621.2
+#define FL_RATED_SPEED_CCR	149.1
 
-#define RL_RATED_RPM		450
-#define RL_MIN_SPEED_CCR	750
-#define RL_MOTOR_STOP_CCR	730
-#define RL_RATED_SPEED_CCR	140
+#define FR_RATED_RPM		450.
+#define FR_MIN_SPEED_CCR	820.
+// #define FR_MOTOR_STOP_CCR	730
+#define FR_MOTOR_STOP_CCR	621.2
+#define FR_RATED_SPEED_CCR	149.1
 
-#define RR_RATED_RPM		450
-#define RR_MIN_SPEED_CCR	750
-#define RR_MOTOR_STOP_CCR	730
-#define RR_RATED_SPEED_CCR	140
+#define RL_RATED_RPM		450.
+#define RL_MIN_SPEED_CCR	820.
+// #define RL_MOTOR_STOP_CCR	730
+#define RL_MOTOR_STOP_CCR	621.2
+#define RL_RATED_SPEED_CCR	149.1
+
+#define RR_RATED_RPM		450.
+#define RR_MIN_SPEED_CCR	820.
+// #define RR_MOTOR_STOP_CCR	730
+#define RR_MOTOR_STOP_CCR	621.2
+#define RR_RATED_SPEED_CCR	149.1
 
 
 #define WINDOW_SIZE		    10
 
 #define EDGE_DETECT_PERIOD  0.1
-#define GEAR_RATIO			14
-#define MOTOR_PPR			6
+#define GEAR_RATIO			14.
+#define MOTOR_PPR			6.
 
 
 // for calculating velocity
@@ -144,5 +148,10 @@ float RR_MovingAverage(float f_input);
 
 float float_map(float x, float in_min, float in_max, float out_min, float out_max);
 uint32_t uint32_map(uint32_t x, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max);
+
+
+
+void edgeCountCheck();
+
 
 #endif  // __MY36GP_3650_HPP__
