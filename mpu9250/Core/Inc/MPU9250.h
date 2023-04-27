@@ -3,6 +3,10 @@
  *
  *  Created on: 23 ��� 2018 �.
  *      Author: Max
+ * 
+ * imu센서 초기값 보정
+ * 참고 링크
+ * https://howtomechatronics.com/tutorials/arduino/arduino-and-mpu6050-accelerometer-and-gyroscope-tutorial/
  */
 
 #ifndef MPU925_H_
@@ -11,6 +15,9 @@
 #include "main.h"
 #include "MPU9250_Config.h"
 
+#define GA							9.80665		// m/s^2
+#define CALIBRATION_COUNT			1500
+#define PI							3.141592
 typedef enum GyroRange_ {
 	GYRO_RANGE_250DPS = 0,
 	GYRO_RANGE_500DPS,
@@ -51,7 +58,7 @@ typedef enum SampleRateDivider_ {
 
 uint8_t MPU9250_Init();
 /* read the data, each argiment should point to a array for x, y, and x */
-void MPU9250_GetData(int16_t* AccData, int16_t* MagData, int16_t* GyroData);
+void MPU9250_GetRawData(int16_t* AccData, int16_t* MagData, int16_t* GyroData);
 
 /* sets the sample rate divider to values other than default */
 void MPU9250_SetSampleRateDivider(SampleRateDivider srd);
@@ -61,6 +68,17 @@ void MPU9250_SetDLPFBandwidth(DLPFBandwidth bandwidth);
 void MPU9250_SetGyroRange(GyroRange range);
 /* sets the accelerometer full scale range to values other than default */
 void MPU9250_SetAccelRange(AccelRange range);
+
+
+
+/* delcoii editted */
+
+
+// 초기값 보정 함수
+void MPU9250_Calibrate();
+void MPU9250_GetFineData(float* f_acc_mpss, float* f_gyro_dps, float* f_mag_deg);
+
+
 
 #endif /* MPU925_H_ */
 

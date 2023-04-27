@@ -7,7 +7,8 @@
 
 #include "MPU9250.h"
 #include "spi.h"
-
+#include "usart.h"
+#include "math.h"
 
 const uint8_t READWRITE_CMD = 0x80;
 const uint8_t MULTIPLEBYTE_CMD = 0x40;
@@ -241,9 +242,12 @@ uint8_t MPU9250_Init()
 	writeRegister(PWR_MGMNT_2,SEN_ENABLE);
 
 	// setting accel range to 16G as default
-	writeRegister(ACCEL_CONFIG,ACCEL_FS_SEL_16G);
+	// writeRegister(ACCEL_CONFIG,ACCEL_FS_SEL_16G);
+	// delcoii : 2G 범위 측정으로 변경
+	writeRegister(ACCEL_CONFIG, ACCEL_FS_SEL_2G);
 
 	// setting the gyro range to 2000DPS as default
+	// delcoii : default 250 아닌가??
 	writeRegister(GYRO_CONFIG,GYRO_FS_SEL_250DPS);
 
 	// setting bandwidth to 184Hz as default
@@ -367,7 +371,7 @@ void MPU9250_SetSampleRateDivider(SampleRateDivider srd)
 }
 
 /* read the data, each argiment should point to a array for x, y, and x */
-void MPU9250_GetData(int16_t* AccData, int16_t* MagData, int16_t* GyroData)
+void MPU9250_GetRawData(int16_t* AccData, int16_t* MagData, int16_t* GyroData)
 {
 	// grab the data from the MPU9250
 	readRegisters(ACCEL_OUT, 21, _buffer);
@@ -388,3 +392,88 @@ void MPU9250_GetData(int16_t* AccData, int16_t* MagData, int16_t* GyroData)
 	MagData[1] = (int16_t)((float)magy * ((float)(_mag_adjust[1] - 128) / 256.0f + 1.0f));
 	MagData[2] = (int16_t)((float)magz * ((float)(_mag_adjust[2] - 128) / 256.0f + 1.0f));
 }
+
+/* delcoii editted */
+
+float MPU9250_accel_offset[3] = {0, 0, 0};
+float MPU9250_gyro_offset[3] = {0, 0, 0};
+float MPU9250_mag_offset[3] = {0, 0, 0};
+
+float MPU9250_accel_scale[3] = {1, 1, 1};
+float MPU9250_gyro_scale[3] = {1, 1, 1};
+float MPU9250_mag_scale[3] = {1, 1, 1};
+
+/*
+ * offset만 적용..
+ * 
+ * offset은 가만히 있을 때 구하는건데
+ * 지자기 센서는 그럼 offset을 어떻게 구함.????? 
+*/ 
+void MPU9250_Calibrate()
+{
+
+    float accel_sum_mpss[3] = {0, 0, 0};
+    float gyro_sum_dps[3] = {0, 0, 0};
+    float mag_sum_deg[3] = {0, 0, 0};
+
+	int16_t Acc[3], Gyro[3], Mag[3];
+
+	for (int i = 0; i < CALIBRATION_COUNT; i++)
+	{
+		MPU9250_GetRawData(Acc, Mag, Gyro);
+
+		for (int j = 0; j < 3; j++)
+		{
+			accel_sum_mpss[j] += (Acc[j] / 32768.) * 2 * GA;
+			gyro_sum_dps[j] += (Gyro[j] / 32768.) * 250;
+			mag_sum_deg[j] += (Mag[j] / 32768.) * 180;
+		}
+
+	}
+
+	MPU9250_accel_offset[0] = accel_sum_mpss[0] / CALIBRATION_COUNT;
+	MPU9250_accel_offset[1] = accel_sum_mpss[1] / CALIBRATION_COUNT;
+	MPU9250_accel_offset[2] = accel_sum_mpss[2] / CALIBRATION_COUNT;
+    
+	MPU9250_gyro_offset[0] = gyro_sum_dps[0] / CALIBRATION_COUNT;
+	MPU9250_gyro_offset[1] = gyro_sum_dps[1] / CALIBRATION_COUNT;
+	MPU9250_gyro_offset[2] = gyro_sum_dps[2] / CALIBRATION_COUNT;
+    
+	/*
+    mag_offset[0] = mag_sum[0] / CALIBRATION_COUNT;
+    mag_offset[1] = mag_sum[1] / CALIBRATION_COUNT;
+    mag_offset[2] = mag_sum[2] / CALIBRATION_COUNT;
+	*/
+}
+
+
+/* offset값 적용
+ * acc 	-> m/s^2
+ * gyro -> deg/s
+ * mag	-> deg
+*/ 
+void MPU9250_GetFineData(float* f_acc_mpss, float* f_gyro_dps, float* f_mag_deg)
+{
+	int16_t Acc[3], Gyro[3], Mag[3];
+	
+	MPU9250_GetRawData(Acc, Mag, Gyro);
+	for(int i = 0; i < 3; i++)
+	{
+		f_acc_mpss[i] = ((float)Acc[i] / 32768.) * 2 * GA;
+		f_gyro_dps[i] = ((float)Gyro[i] / 32768.) * 250;
+		f_mag_deg[i] = ((float)Mag[i] / 32768.) * 180;
+
+	}
+	
+	f_acc_mpss[0] = f_acc_mpss[0] - MPU9250_accel_offset[0];
+	f_acc_mpss[1] = f_acc_mpss[1] - MPU9250_accel_offset[1];
+	f_acc_mpss[2] = f_acc_mpss[2] - MPU9250_accel_offset[2] + GA;
+
+	f_gyro_dps[0] = (float)f_gyro_dps[0] - MPU9250_gyro_offset[0];
+	f_gyro_dps[1] = (float)f_gyro_dps[1] - MPU9250_gyro_offset[1];
+	f_gyro_dps[2] = (float)f_gyro_dps[2] - MPU9250_gyro_offset[2];
+
+	// 지자기센서 보정 방법 알아보기
+
+}
+

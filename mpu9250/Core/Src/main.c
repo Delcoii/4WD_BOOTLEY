@@ -77,8 +77,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
-	int16_t AccData[3], GyroData[3], MagData[3];
-
+  float acc_mpss[3], gyro_DPS[3], mag_deg[3];
 
   /* USER CODE END 1 */
 
@@ -106,6 +105,9 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 	MPU9250_Init();
+	printf("Module Init Complete\r\n");
+  MPU9250_Calibrate();
+  printf("Calibration Complete\r\n");
 
 
   /* USER CODE END 2 */
@@ -117,11 +119,27 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  MPU9250_GetData(AccData, GyroData, MagData);
-	  printf("acc : %08d\t%d\t%d\r\n", (int16_t)AccData[0], (int16_t)AccData[1], (int16_t)AccData[2]);
-	  printf("gyro : %d\t%d\t%d\r\n", (int16_t)GyroData[0], (int16_t)GyroData[1], (int16_t)GyroData[2]);
-	  printf("mag : %d\t%d\t%d\r\n\n\n", (int16_t)MagData[0], (int16_t)MagData[1], (int16_t)MagData[2]);
+	  MPU9250_GetFineData(acc_mpss, gyro_DPS, mag_deg);
 
+	  // for plotting
+
+	  printf("zero:%f,", 0);
+	  printf("accX:%f,", acc_mpss[0]);
+	  printf("accY:%f,", acc_mpss[1]);
+	  printf("accZ:%f\r\n", acc_mpss[2]);
+
+	  /*
+	  printf("zero:%f,", 0);
+	  printf("gyroX:%f,", gyro_DPS[0]);
+	  printf("gyroY:%f,", gyro_DPS[1]);
+	  printf("gyroZ:%f\r\n", gyro_DPS[2]);
+	*/
+    /*
+	  printf("zero:%f,", 0);
+	  printf("magX:%f,", mag_deg[0]);
+	  printf("magY:%f,", mag_deg[1]);
+	  printf("magZ:%f\r\n", mag_deg[2]);
+    */
 
   }
   /* USER CODE END 3 */

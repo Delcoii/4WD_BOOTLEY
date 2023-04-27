@@ -15,7 +15,7 @@
 
 #define RELAY_SIGNAL_OUT    7
 #define YELLOW_LED_OUT      8
-#define TOGGLE_SWITCH_IN    4
+#define TOGGLE_SWITCH_IN    4 
 
 
 void setup() {

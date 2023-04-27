@@ -10169,3 +10169,1078 @@ Finished building: default.size.stdout
  
 Finished building: Bootley_CPP_230412.list
  
+15:52:13 **** Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f446retx.d" -MT"Core/Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f446retx.o" "../Core/Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:120:20: error: 'AccData' undeclared (first use in this function); did you mean 'i16_AccData'?
+  120 |    MPU9250_GetData(AccData, GyroData, MagData);
+      |                    ^~~~~~~
+      |                    i16_AccData
+../Core/Src/main.c:120:20: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:120:29: error: 'GyroData' undeclared (first use in this function); did you mean 'i16_GyroData'?
+  120 |    MPU9250_GetData(AccData, GyroData, MagData);
+      |                             ^~~~~~~~
+      |                             i16_GyroData
+../Core/Src/main.c:120:39: error: 'MagData' undeclared (first use in this function); did you mean 'i16_MagData'?
+  120 |    MPU9250_GetData(AccData, GyroData, MagData);
+      |                                       ^~~~~~~
+      |                                       i16_MagData
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("acc : %08d\t%d\t%d\r\n", (int16_t)i16_AccData[0], (int16_t)i16_AccData[1], (int16_t)i16_AccData[2]);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+15:52:43 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("acc : %08d\t%d\t%d\r\n", (int16_t)i16_AccData[0], (int16_t)i16_AccData[1], (int16_t)i16_AccData[2]);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20684	    120	   1848	  22652	   587c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+15:53:39 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20684	    120	   1848	  22652	   587c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+15:55:51 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("acc : %d\t%d\t%d\r\n", (int16_t)i16_AccData[0], (int16_t)i16_AccData[1], (int16_t)i16_AccData[2]);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20684	    120	   1848	  22652	   587c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+16:18:38 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20684	    120	   1848	  22652	   587c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+17:02:35 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("accX : %d\r\n", (int16_t)i16_AccData[0]);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20628	    120	   1848	  22596	   5844	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+17:04:22 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("accX : %d ,", (int16_t)i16_AccData[0]);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20628	    120	   1848	  22596	   5844	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+17:05:44 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("accX : %d,", (int16_t)i16_AccData[0]);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20628	    120	   1848	  22596	   5844	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+17:07:39 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("accX:%d,", (int16_t)i16_AccData[0]);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20628	    120	   1848	  22596	   5844	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+17:08:27 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("zero:%d", 0);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20648	    120	   1848	  22616	   5858	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+17:09:08 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:121:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  121 |    printf("zero:%d,", 0);
+      |    ^~~~~~
+../Core/Src/main.c:121:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20652	    120	   1848	  22620	   585c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+17:12:23 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  136 |    printf("zero:%d,", 0);
+      |    ^~~~~~
+../Core/Src/main.c:136:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  20652	    120	   1848	  22620	   585c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+17:58:46 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  144 |     printf("zero:%f,", 0.);
+      |     ^~~~~~
+../Core/Src/main.c:144:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/MPU9250.c: In function 'MPU9250_Init':
+../Core/Src/MPU9250.c:246:16: error: 'ACCEL_CONGIG' undeclared (first use in this function); did you mean 'ACCEL_CONFIG'?
+  246 |  writeRegister(ACCEL_CONGIG, ACCEL_FS_SEL_2G);
+      |                ^~~~~~~~~~~~
+      |                ACCEL_CONFIG
+../Core/Src/MPU9250.c:246:16: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:145:23: error: 'AccG' undeclared (first use in this function); did you mean 'Acc_G'?
+  145 |    printf("accX:%f,", AccG[0]);
+      |                       ^~~~
+      |                       Acc_G
+../Core/Src/MPU9250.c: In function 'MPU9250_RawDataConversion':
+../Core/Src/main.c:145:23: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/MPU9250.c:407:2: error: 'AccG' undeclared (first use in this function); did you mean 'Acc_G'?
+  407 |  AccG[0] = ((float)AccData[0] / 32768.) * 2. * GA;
+      |  ^~~~
+      |  Acc_G
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:49: Core/Src/MPU9250.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:59:08 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  144 |     printf("zero:%f,", 0.);
+      |     ^~~~~~
+../Core/Src/main.c:144:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/MPU9250.c: In function 'MPU9250_RawDataConversion':
+../Core/Src/MPU9250.c:407:2: error: 'AccG' undeclared (first use in this function); did you mean 'Acc_G'?
+  407 |  AccG[0] = ((float)AccData[0] / 32768.) * 2. * GA;
+      |  ^~~~
+      |  Acc_G
+../Core/Src/MPU9250.c:407:2: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:145:23: error: 'AccG' undeclared (first use in this function); did you mean 'Acc_G'?
+  145 |    printf("accX:%f,", AccG[0]);
+      |                       ^~~~
+      |                       Acc_G
+../Core/Src/main.c:145:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/MPU9250.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:59:45 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  144 |     printf("zero:%f,", 0.);
+      |     ^~~~~~
+../Core/Src/main.c:144:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/MPU9250.c: In function 'MPU9250_RawDataConversion':
+../Core/Src/MPU9250.c:407:2: error: 'AccG' undeclared (first use in this function); did you mean 'Acc_G'?
+  407 |  AccG[0] = ((float)AccData[0] / 32768.) * 2. * GA;
+      |  ^~~~
+      |  Acc_G
+../Core/Src/MPU9250.c:407:2: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:145:23: error: 'AccG' undeclared (first use in this function); did you mean 'Acc_G'?
+  145 |    printf("accX:%f,", AccG[0]);
+      |                       ^~~~
+      |                       Acc_G
+../Core/Src/main.c:145:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/MPU9250.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:49: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:00:09 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_RawDataConversion':
+../Core/Src/MPU9250.c:407:2: error: 'AccG' undeclared (first use in this function); did you mean 'Acc_G'?
+  407 |  AccG[0] = ((float)AccData[0] / 32768.) * 2. * GA;
+      |  ^~~~
+      |  Acc_G
+../Core/Src/main.c: In function 'main':
+../Core/Src/MPU9250.c:407:2: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:144:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  144 |     printf("zero:%f,", 0.);
+      |     ^~~~~~
+../Core/Src/main.c:144:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+make: *** [Core/Src/subdir.mk:49: Core/Src/MPU9250.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+18:00:25 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40088	    488	   1848	  42424	   a5b8	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+18:00:29 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40088	    488	   1848	  42424	   a5b8	mpu9250.elf
+Finished building: default.size.stdout
+ 
+18:04:00 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:150:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  150 |       printf("zero:%f,", 0.);
+      |       ^~~~~~
+../Core/Src/main.c:150:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40088	    488	   1848	  42424	   a5b8	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+18:04:18 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40088	    488	   1848	  42424	   a5b8	mpu9250.elf
+Finished building: default.size.stdout
+ 
+19:09:55 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:150:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  150 |       printf("zero:%f,", 0.);
+      |       ^~~~~~
+../Core/Src/main.c:150:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:446:33: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                 ^~~~
+../Core/Src/MPU9250.c:446:33: warning: incompatible implicit declaration of built-in function 'atan'
+../Core/Src/MPU9250.c:11:1: note: include '<math.h>' or provide a declaration of 'atan'
+   10 | #include "usart.h"
+  +++ |+#include <math.h>
+   11 | 
+../Core/Src/MPU9250.c:446:49: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                 ^~~~
+../Core/Src/MPU9250.c:446:49: warning: incompatible implicit declaration of built-in function 'sqrt'
+../Core/Src/MPU9250.c:446:49: note: include '<math.h>' or provide a declaration of 'sqrt'
+../Core/Src/MPU9250.c:446:54: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                      ^~~
+../Core/Src/MPU9250.c:446:54: warning: incompatible implicit declaration of built-in function 'pow'
+../Core/Src/MPU9250.c:446:54: note: include '<math.h>' or provide a declaration of 'pow'
+../Core/Src/MPU9250.c:475:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  475 |  printf("Error : \r\n");
+      |  ^~~~~~
+../Core/Src/MPU9250.c:475:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:11:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   10 | #include "usart.h"
+  +++ |+#include <stdio.h>
+   11 | 
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  46240	    488	   1848	  48576	   bdc0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:11:05 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:446:33: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                 ^~~~
+../Core/Src/MPU9250.c:446:33: warning: incompatible implicit declaration of built-in function 'atan'
+../Core/Src/MPU9250.c:11:1: note: include '<math.h>' or provide a declaration of 'atan'
+   10 | #include "usart.h"
+  +++ |+#include <math.h>
+   11 | 
+../Core/Src/MPU9250.c:446:49: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                 ^~~~
+../Core/Src/MPU9250.c:446:49: warning: incompatible implicit declaration of built-in function 'sqrt'
+../Core/Src/MPU9250.c:446:49: note: include '<math.h>' or provide a declaration of 'sqrt'
+../Core/Src/MPU9250.c:446:54: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                      ^~~
+../Core/Src/MPU9250.c:446:54: warning: incompatible implicit declaration of built-in function 'pow'
+../Core/Src/MPU9250.c:446:54: note: include '<math.h>' or provide a declaration of 'pow'
+../Core/Src/MPU9250.c:475:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  475 |  printf("\r\nError : \r\n");
+      |  ^~~~~~
+../Core/Src/MPU9250.c:475:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:11:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   10 | #include "usart.h"
+  +++ |+#include <stdio.h>
+   11 | 
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  46240	    488	   1848	  48576	   bdc0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:12:02 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:446:33: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                 ^~~~
+../Core/Src/MPU9250.c:446:33: warning: incompatible implicit declaration of built-in function 'atan'
+../Core/Src/MPU9250.c:11:1: note: include '<math.h>' or provide a declaration of 'atan'
+   10 | #include "usart.h"
+  +++ |+#include <math.h>
+   11 | 
+../Core/Src/MPU9250.c:446:49: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                 ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/MPU9250.c:446:49: warning: incompatible implicit declaration of built-in function 'sqrt'
+../Core/Src/MPU9250.c:446:49: note: include '<math.h>' or provide a declaration of 'sqrt'
+../Core/Src/main.c:151:7: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  151 |       printf("zero:%f,", 0.);
+      |       ^~~~~~
+../Core/Src/main.c:151:7: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/MPU9250.c:446:54: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                      ^~~
+../Core/Src/MPU9250.c:446:54: warning: incompatible implicit declaration of built-in function 'pow'
+../Core/Src/MPU9250.c:446:54: note: include '<math.h>' or provide a declaration of 'pow'
+../Core/Src/MPU9250.c:475:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  475 |  printf("\r\nError : \r\n");
+      |  ^~~~~~
+../Core/Src/MPU9250.c:475:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:11:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   10 | #include "usart.h"
+  +++ |+#include <stdio.h>
+   11 | 
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  46240	    488	   1848	  48576	   bdc0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:12:47 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:446:33: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                 ^~~~
+../Core/Src/MPU9250.c:446:33: warning: incompatible implicit declaration of built-in function 'atan'
+../Core/Src/MPU9250.c:11:1: note: include '<math.h>' or provide a declaration of 'atan'
+   10 | #include "usart.h"
+  +++ |+#include <math.h>
+   11 | 
+../Core/Src/MPU9250.c:446:49: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                 ^~~~
+../Core/Src/MPU9250.c:446:49: warning: incompatible implicit declaration of built-in function 'sqrt'
+../Core/Src/MPU9250.c:446:49: note: include '<math.h>' or provide a declaration of 'sqrt'
+../Core/Src/MPU9250.c:446:54: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+  446 |   acc_error_x = acc_error_x + ((atan((Acc[1]) / sqrt(pow((Acc[0]), 2) + pow((Acc[2]), 2))) * 180 / PI));
+      |                                                      ^~~
+../Core/Src/MPU9250.c:446:54: warning: incompatible implicit declaration of built-in function 'pow'
+../Core/Src/MPU9250.c:446:54: note: include '<math.h>' or provide a declaration of 'pow'
+../Core/Src/MPU9250.c:475:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  475 |  printf("\r\nError :\r\n");
+      |  ^~~~~~
+../Core/Src/MPU9250.c:475:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:11:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   10 | #include "usart.h"
+  +++ |+#include <stdio.h>
+   11 | 
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  46104	    488	   1848	  48440	   bd38	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:34:41 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:444:33: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+  444 |   acc_error_x = acc_error_x + ((atan((AccData[1]) / sqrt(pow((AccData[0]), 2) + pow((AccData[2]), 2))) * 180 / PI));
+      |                                 ^~~~
+../Core/Src/MPU9250.c:444:33: warning: incompatible implicit declaration of built-in function 'atan'
+../Core/Src/MPU9250.c:11:1: note: include '<math.h>' or provide a declaration of 'atan'
+   10 | #include "usart.h"
+  +++ |+#include <math.h>
+   11 | 
+../Core/Src/MPU9250.c:444:53: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
+  444 |   acc_error_x = acc_error_x + ((atan((AccData[1]) / sqrt(pow((AccData[0]), 2) + pow((AccData[2]), 2))) * 180 / PI));
+      |                                                     ^~~~
+../Core/Src/MPU9250.c:444:53: warning: incompatible implicit declaration of built-in function 'sqrt'
+../Core/Src/MPU9250.c:444:53: note: include '<math.h>' or provide a declaration of 'sqrt'
+../Core/Src/MPU9250.c:444:58: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+  444 |   acc_error_x = acc_error_x + ((atan((AccData[1]) / sqrt(pow((AccData[0]), 2) + pow((AccData[2]), 2))) * 180 / PI));
+      |                                                          ^~~
+../Core/Src/MPU9250.c:444:58: warning: incompatible implicit declaration of built-in function 'pow'
+../Core/Src/MPU9250.c:444:58: note: include '<math.h>' or provide a declaration of 'pow'
+../Core/Src/MPU9250.c:470:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  470 |  printf("\r\nError :\r\n");
+      |  ^~~~~~
+../Core/Src/MPU9250.c:470:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:11:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   10 | #include "usart.h"
+  +++ |+#include <stdio.h>
+   11 | 
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  46000	    488	   1848	  48336	   bcd0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:34:44 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46000	    488	   1848	  48336	   bcd0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+19:35:23 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46000	    488	   1848	  48336	   bcd0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+19:35:58 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46000	    488	   1848	  48336	   bcd0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+19:38:00 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:444:33: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+  444 |   acc_error_x = acc_error_x + ((atan((AccData[1]) / sqrt(pow((AccData[0]), 2) + pow((AccData[2]), 2))) * 180 / PI));
+      |                                 ^~~~
+../Core/Src/MPU9250.c:444:33: warning: incompatible implicit declaration of built-in function 'atan'
+../Core/Src/MPU9250.c:11:1: note: include '<math.h>' or provide a declaration of 'atan'
+   10 | #include "usart.h"
+  +++ |+#include <math.h>
+   11 | 
+../Core/Src/MPU9250.c:444:53: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
+  444 |   acc_error_x = acc_error_x + ((atan((AccData[1]) / sqrt(pow((AccData[0]), 2) + pow((AccData[2]), 2))) * 180 / PI));
+      |                                                     ^~~~
+../Core/Src/MPU9250.c:444:53: warning: incompatible implicit declaration of built-in function 'sqrt'
+../Core/Src/MPU9250.c:444:53: note: include '<math.h>' or provide a declaration of 'sqrt'
+../Core/Src/MPU9250.c:444:58: warning: implicit declaration of function 'pow' [-Wimplicit-function-declaration]
+  444 |   acc_error_x = acc_error_x + ((atan((AccData[1]) / sqrt(pow((AccData[0]), 2) + pow((AccData[2]), 2))) * 180 / PI));
+      |                                                          ^~~
+../Core/Src/MPU9250.c:444:58: warning: incompatible implicit declaration of built-in function 'pow'
+../Core/Src/MPU9250.c:444:58: note: include '<math.h>' or provide a declaration of 'pow'
+../Core/Src/MPU9250.c:470:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  470 |  printf("acc x : %f\r\n", acc_error_x);
+      |  ^~~~~~
+../Core/Src/MPU9250.c:470:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:11:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   10 | #include "usart.h"
+  +++ |+#include <stdio.h>
+   11 | 
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  45784	    488	   1848	  48120	   bbf8	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:38:51 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:470:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  470 |  printf("acc x : %f\r\n", acc_error_x);
+      |  ^~~~~~
+../Core/Src/MPU9250.c:470:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:12:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   11 | #include "math.h"
+  +++ |+#include <stdio.h>
+   12 | 
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  45784	    488	   1848	  48120	   bbf8	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:45:38 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_calculateError':
+../Core/Src/MPU9250.c:483:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  483 |  printf("acc x : %f\r\n", acc_error_x);
+      |  ^~~~~~
+../Core/Src/MPU9250.c:483:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/MPU9250.c:12:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   11 | #include "math.h"
+  +++ |+#include <stdio.h>
+   12 | 
+../Core/Src/MPU9250.c:427:39: warning: variable 'f_mag_data' set but not used [-Wunused-but-set-variable]
+  427 |  float f_acc_data[3], f_gyro_data[3], f_mag_data[3];
+      |                                       ^~~~~~~~~~
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  45968	    488	   1848	  48304	   bcb0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+19:45:40 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45968	    488	   1848	  48304	   bcb0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+02:23:00 **** Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  124 |    printf("zero:%f,", 0);
+      |    ^~~~~~
+../Core/Src/main.c:124:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:124:18: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+  124 |    printf("zero:%f,", 0);
+      |                 ~^    ~
+      |                  |    |
+      |                  |    int
+      |                  double
+      |                 %d
+../Core/Src/MPU9250.c: In function 'MPU9250_Calibrate':
+../Core/Src/MPU9250.c:414:35: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  414 |  for (i = 0; i < CALIBRATION_COUNT, i++)
+      |                                   ^
+../Core/Src/MPU9250.c:414:40: error: expected ';' before ')' token
+  414 |  for (i = 0; i < CALIBRATION_COUNT, i++)
+      |                                        ^
+      |                                        ;
+../Core/Src/MPU9250.c:427:2: error: 'accel_offset' undeclared (first use in this function)
+  427 |  accel_offset[0] = accel_sum_G[0] / CALIBRATION_COUNT;
+      |  ^~~~~~~~~~~~
+../Core/Src/MPU9250.c:427:2: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/MPU9250.c:427:20: error: 'accel_sum_G' undeclared (first use in this function); did you mean 'accel_sum_mpss'?
+  427 |  accel_offset[0] = accel_sum_G[0] / CALIBRATION_COUNT;
+      |                    ^~~~~~~~~~~
+      |                    accel_sum_mpss
+../Core/Src/MPU9250.c:431:5: error: 'gyro_offset' undeclared (first use in this function)
+  431 |     gyro_offset[0] = gyro_sum_dps[0] / CALIBRATION_COUNT;
+      |     ^~~~~~~~~~~
+../Core/Src/MPU9250.c: In function 'MPU9250_GetFineData':
+../Core/Src/MPU9250.c:461:41: error: 'accel_offset' undeclared (first use in this function)
+  461 |  f_acc_mpss[0] = (float)f_acc_mpss[0] - accel_offset[0];
+      |                                         ^~~~~~~~~~~~
+../Core/Src/MPU9250.c:465:41: error: 'gyro_offset' undeclared (first use in this function)
+  465 |  f_gyro_dps[0] = (float)f_gyro_dps[0] - gyro_offset[0];
+      |                                         ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:49: Core/Src/MPU9250.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+02:24:28 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_Calibrate':
+../Core/Src/MPU9250.c:414:35: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  414 |  for (i = 0; i < CALIBRATION_COUNT, i++)
+      |                                   ^
+../Core/Src/MPU9250.c:414:40: error: expected ';' before ')' token
+  414 |  for (i = 0; i < CALIBRATION_COUNT, i++)
+      |                                        ^
+      |                                        ;
+../Core/Src/MPU9250.c:427:28: error: 'accel_sum_G' undeclared (first use in this function); did you mean 'accel_sum_mpss'?
+  427 |  MPU9250_accel_offset[0] = accel_sum_G[0] / CALIBRATION_COUNT;
+      |                            ^~~~~~~~~~~
+      |                            accel_sum_mpss
+../Core/Src/MPU9250.c:427:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:49: Core/Src/MPU9250.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+02:25:02 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+../Core/Src/MPU9250.c: In function 'MPU9250_Calibrate':
+../Core/Src/MPU9250.c:414:35: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  414 |  for (i = 0; i < CALIBRATION_COUNT, i++)
+      |                                   ^
+../Core/Src/MPU9250.c:414:40: error: expected ';' before ')' token
+  414 |  for (i = 0; i < CALIBRATION_COUNT, i++)
+      |                                        ^
+      |                                        ;
+make: *** [Core/Src/subdir.mk:49: Core/Src/MPU9250.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+02:25:21 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:75: multiple definition of `MPU9250_accel_offset'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:75: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:76: multiple definition of `MPU9250_gyro_offset'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:76: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:77: multiple definition of `MPU9250_mag_offset'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:77: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:79: multiple definition of `MPU9250_accel_scale'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:79: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:80: multiple definition of `MPU9250_gyro_scale'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:80: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:81: multiple definition of `MPU9250_mag_scale'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:81: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: mpu9250.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+02:29:38 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:75: multiple definition of `MPU9250_accel_offset'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:75: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:76: multiple definition of `MPU9250_gyro_offset'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:76: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:77: multiple definition of `MPU9250_mag_offset'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:77: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:79: multiple definition of `MPU9250_accel_scale'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:79: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:80: multiple definition of `MPU9250_gyro_scale'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:80: first defined here
+c:\st\stm32cubeide_1.12.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:81: multiple definition of `MPU9250_mag_scale'; ./Core/Src/MPU9250.o:C:/Users/Delcoii/Desktop/Bootley/mpu9250/Debug/../Core/Inc/MPU9250.h:81: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: mpu9250.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+02:31:34 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  124 |    printf("zero:%f,", 0);
+      |    ^~~~~~
+../Core/Src/main.c:124:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:124:18: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+  124 |    printf("zero:%f,", 0);
+      |                 ~^    ~
+      |                  |    |
+      |                  |    int
+      |                  double
+      |                 %d
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40312	    488	   1872	  42672	   a6b0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+02:32:01 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-size   mpu9250.elf 
+   text	   data	    bss	    dec	    hex	filename
+  40312	    488	   1872	  42672	   a6b0	mpu9250.elf
+Finished building: default.size.stdout
+ 
+02:33:51 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  109 |   printf("Calibration Complete\r\n");
+      |   ^~~~~~
+../Core/Src/main.c:109:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:125:18: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+  125 |    printf("zero:%f,", 0);
+      |                 ~^    ~
+      |                  |    |
+      |                  |    int
+      |                  double
+      |                 %d
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40572	    488	   1872	  42932	   a7b4	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+02:34:32 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  108 |  printf("Module Init Complete\r\n");
+      |  ^~~~~~
+../Core/Src/main.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:126:18: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+  126 |    printf("zero:%f,", 0);
+      |                 ~^    ~
+      |                  |    |
+      |                  |    int
+      |                  double
+      |                 %d
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40612	    488	   1872	  42972	   a7dc	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+02:35:51 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40716	    488	   1872	  43076	   a844	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+02:38:43 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/MPU9250.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MPU9250.d" -MT"Core/Src/MPU9250.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/MPU9250.o"
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40756	    488	   1872	  43116	   a86c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+02:41:50 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  108 |  printf("Module Init Complete\r\n");
+      |  ^~~~~~
+../Core/Src/main.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:132:18: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+  132 |    printf("zero:%f,", 0);
+      |                 ~^    ~
+      |                  |    |
+      |                  |    int
+      |                  double
+      |                 %d
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40756	    488	   1872	  43116	   a86c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
+02:44:43 **** Incremental Build of configuration Debug for project mpu9250 ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  108 |  printf("Module Init Complete\r\n");
+      |  ^~~~~~
+../Core/Src/main.c:108:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:30:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   29 | #include <MPU9250.h>
+  +++ |+#include <stdio.h>
+   30 | /* USER CODE END Includes */
+../Core/Src/main.c:126:18: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
+  126 |    printf("zero:%f,", 0);
+      |                 ~^    ~
+      |                  |    |
+      |                  |    int
+      |                  double
+      |                 %d
+arm-none-eabi-gcc -o "mpu9250.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\mpu9250\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="mpu9250.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: mpu9250.elf
+ 
+arm-none-eabi-size   mpu9250.elf 
+arm-none-eabi-objdump -h -S  mpu9250.elf  > "mpu9250.list"
+   text	   data	    bss	    dec	    hex	filename
+  40756	    488	   1872	  43116	   a86c	mpu9250.elf
+Finished building: default.size.stdout
+ 
+Finished building: mpu9250.list
+ 
