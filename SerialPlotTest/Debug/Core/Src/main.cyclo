@@ -1,0 +1,4 @@
+main.cpp:61:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	2
+main.cpp:76:5:int main()	2
+main.cpp:149:6:void SystemClock_Config()	3
+main.cpp:200:6:void Error_Handler()	1

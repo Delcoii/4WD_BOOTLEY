@@ -1,0 +1,6 @@
+../Core/Src/hal_plotting.cpp:3:1:Plotting::Plotting()	24	static
+../Core/Src/hal_plotting.cpp:12:6:void Plotting::reset()	24	static
+../Core/Src/hal_plotting.cpp:21:6:void Plotting::put(float, int)	24	static
+../Core/Src/hal_plotting.cpp:27:6:void Plotting::put(int, int)	24	static
+../Core/Src/hal_plotting.cpp:33:6:void Plotting::put(unsigned int, int)	24	static
+../Core/Src/hal_plotting.cpp:40:6:void Plotting::send(UART_HandleTypeDef*)	32	static

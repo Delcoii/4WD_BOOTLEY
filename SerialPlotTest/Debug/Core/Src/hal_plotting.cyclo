@@ -1,0 +1,6 @@
+hal_plotting.cpp:3:1:Plotting::Plotting()	2
+hal_plotting.cpp:12:6:void Plotting::reset()	2
+hal_plotting.cpp:21:6:void Plotting::put(float, int)	1
+hal_plotting.cpp:27:6:void Plotting::put(int, int)	1
+hal_plotting.cpp:33:6:void Plotting::put(unsigned int, int)	1
+hal_plotting.cpp:40:6:void Plotting::send(UART_HandleTypeDef*)	2
