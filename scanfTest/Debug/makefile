@@ -75,8 +75,8 @@ all: main-build
 main-build: scanfTest.elf secondary-outputs
 
 # Tool invocations
-scanfTest.elf scanfTest.map: $(OBJS) $(USER_OBJS) C:\Users\Delcoii\Desktop\Bootley\scanfTest\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "scanfTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\scanfTest\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="scanfTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+scanfTest.elf scanfTest.map: $(OBJS) $(USER_OBJS) /home/delcoii/Bootley/scanfTest/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "scanfTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/delcoii/Bootley/scanfTest/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="scanfTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

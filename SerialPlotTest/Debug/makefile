@@ -75,8 +75,8 @@ all: main-build
 main-build: SerialPlotTest.elf secondary-outputs
 
 # Tool invocations
-SerialPlotTest.elf SerialPlotTest.map: $(OBJS) $(USER_OBJS) C:\Users\Delcoii\Desktop\Bootley\SerialPlotTest\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "SerialPlotTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Delcoii\Desktop\Bootley\SerialPlotTest\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SerialPlotTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+SerialPlotTest.elf SerialPlotTest.map: $(OBJS) $(USER_OBJS) /home/delcoii/Bootley/SerialPlotTest/STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "SerialPlotTest.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/delcoii/Bootley/SerialPlotTest/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SerialPlotTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
